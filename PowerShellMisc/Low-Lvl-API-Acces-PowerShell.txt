@@ -1,0 +1,101 @@
+================================================================================
+*                                                                              *
+*                    Powershell - Low Level API Access                         *
+*                                                                              *
+*  https://devblogs.microsoft.com/scripting/\\                                 *
+*       use-powershell-to-interact-with-the-windows-api-part-1/                *
+*                                                                              *
+================================================================================
+
+* Functionality exposed by built-in system DLLs
+- e.g. kernel32.dll exposes functions for working with the OS
+
+* Powershell can be used in 3 ways to interact with the Windows API
+- Use Add-Type cmdlet to compile C# code (Officially document method)
+- Get reference to private type in the .NET framework that calls the method
+- Use reflection to dynamically define a method that calls the Win API function
+
+----------------
+[*] Add-Type [*]
+----------------
+* Background: Example using CopyFile function from kernel32.dll
+- Why CopyFile instead of PShell Copy-Item cmdlet?
+-- Certain file paths that PShell file provider does not know how to handle
+-- e.g. Special device object paths:
+    \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\System32\calc.exe
+
+-- Such paths must be dealt with when working with Volume Shadow Copy Service
+-- e.g. The following cmd lists the dev object paths of each volume shadow copy:
+    # Requires Admin
+    Get-WmiObject Win32_ShadowCopy | Select-Object DeviceObject
+
+- Background to C/C++ types vs .NET types (Re: MSDN documentation)
+-- For CopyFile (C++):
+    BOOL WINAPI CopyFile (
+        _In_ LPCTSTR lpExistingFileName,
+        _In_ LPCTSTR lpNewFileName,
+        _In_ BOOL bFailIfExists
+        );
+        
+-- So CopyFile has a return type of 'BOOL' and 3 parameters (2 T strings and a
+    bool)
+-- Key to interacting with WinAPI is knowing how to convert these C/C++ types to
+    equivalent .NET type. 
+--- Website to help: PINVOKE.NET
+--- CopyFile on PINVOKE:
+    [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+    static extern bool CopyFile(string lpExistingFileName, 
+                                string lpNewFileName, 
+                                bool bFailIfExists);
+--- This illustrates the translation of C/C++ to .NET types
+---- BOOL -> bool | LPCTSTR -> string
+-- This should be sufficient background for using PShell to interact with the
+    CopyFile function. 
+    
+* Using Add-Type to call the CopyItem function
+- Add-Type cmdlet is used to define .NET types that will be made available to 
+    your Windows PShell session
+-- Can compile C# code on the fly.
+-- NB: Get-Help for Add-Type has good examples of how to call the Windows API in
+    PShell
+
+* Example: Calling CopyItem in Powershell
+- $MethodDefinition = @'
+
+[DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+
+public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
+
+'@
+
+$kernel32 = Add-Type -MemberDefinition $MethodDefinition -Name 'Kernel32' -Namespace 'Win32' -PassThru
+
+# Now call the CopyFile function and copy 'calc.exe' to the Desktop:
+
+$Kernel32::CopyFile("$($Env:SystemRoot)\System32\calc.exe", "$($Env:USERPROFILE)\Desktop\calc.exe", $False)
+
+
+* Explanation
+- $MethodDefinition var contains the C# definition from PINVOKE.NET with a minor
+    modification: 'CopyFile' method was defined as *public*
+-- Methods added with Add-Type must be public to easily interact with them in 
+    PShell.
+- Add-Type is then called with the C# source code, type name, and a namespace.
+-- Specifying the type name and namespace permits referencing the new type in
+    PShell with '[Win32.Kernel32]'
+- NB: Add-Type does not output the type def that it creates
+-- The -PassThru parameter tells it to output the type definition
+
+- The two colons '::' indicate that the code is calling a static .NET method; all
+    static methods are called this way in PowerShell
+
+* Errors
+- If an error occurs a Win32 error can be displayed:
+    throw (New-Object ComponentModel.Win32Exception)
+- This allows the error to be accessed from a Win API without calling the C/C++
+    'GetLastError'
+
+
+
+
+
