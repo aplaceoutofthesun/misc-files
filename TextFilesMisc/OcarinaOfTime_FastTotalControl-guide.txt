@@ -1,0 +1,32 @@
+Extended description for https://www.youtube.com/watch?v=wIyEUScOMxc
+ 
+Recently, methods have been found in Ocarina of Time to execute arbitrary code using a glitch known as Stale Reference Manipulation (SRM). However these methods only let you run a couple instructions or so. This is enough to make tiny patches to RAM, but not enough to write large payloads that can completely rewrite core gameplay. In this video I demonstrate a human-viable way to do exactly that, which also happens to be much faster than the existing TAS-only method that exploits Bonooru's song.
+ 
+The central idea here is to remove the 8 character limit on the title screen, and use that to enter and then run a payload. This can be broken down into three steps:
+ 
+1) Removing the filename character limit (0:00 - 0:19)
+Actually, there are six different bounds checks for navigating file entry. Two for scrolling with c-left and c-right, one that runs after erasing a character for B, and three that run after entering a character with A (one per page of characters). We will be removing only the c-right check as this is the most powerful option.
+Erasing the single MIPS instruction at 803AB288 on the title screen will erase the c-right check. Unfortunately we can't do this with ACE during regular gameplay as the file select code isn't loaded at that time. So we need a more indirect method. If we can change the value located at 800CE0F2 from 000C to 61F8, the then some unrelated heap management code will corrupt the above instruction right after it loads on the file select screen, thereby erasing the c-right bounds check.
+Note that I have _not_ worked out exactly how to set 800CE0F2 to 61F8 - in this video I simply start with it hacked to that value. However rest assured, doing that write is within the range of possibility of existing limited ACE methods.
+ 
+2) Inputting a payload into RAM (0:32 - 1:38)
+For this stage, we need to point the file entry screen at some block of memory that is non volatile enough that the payload will stick around. Also, to actually able to type in a payload, we need to somehow set the "current selected character" index to be negative. This is because we never removed the bounds check that triggers after pressing the A button, so we can only enter a single character out of bounds to the right of the filename before the cursor jumps back to the filename again. But this bounds check only checks that we're past the 8th character, not that we're before the first one, so if the current character index is negative then we can enter a large payload without issue.
+Fortunately most variables that control the title screen are themselves located in memory just past the filenames, so we can reach them just by pressing c-right a few times. In fact this is the reason it was the c-right bounds check that we chose to eliminate in the first place.
+To setup the payload write, enter file 3 name entry. Press c-right 39 times and then enter 'ち', then c-left all the way and enter 'リ'.  This will set the character index to 0x8101, a large negative value.
+At this point, any subsequent characters entered will write to 801DD065, which is part of a region that the game generally doesn't seem to overwrite. Enter three more random characters to point to 801DD068 so that we're word aligned.
+From here on, you can enter any payload, there's room for a large one of nearly 300 instructions. This is far more than anyone should need in practice and much larger than the payload I input.
+ 
+3) Jumping into the payload (0:19 - 0:32 and 1:38 - 1:58)
+The core idea for this stage is that the game has two function pointers at 801C84A4/8. The first is the "gamestate update function", a pointer to code to run every frame. The other is the "gamestate deconstructor", which runs only once the current game mode (title screen) unloads. By poking at some internal variables for the title screen, we can trick the game into trying to copy file 1 (0000) over file C6C2. Because this file index is so far out of range, the filename of file 1 will get copied far from the usual place - exactly over the two function pointers mentioned previously. We want file 1's name to be "80 3B 2F A0 80 1D D0 68" (ラぇよバラとlソ), so that the update function is unchanged from its normal value, and the deconstructor points exactly at the payload we constructed in step 2.
+To actually trigger the glitched copy, Enter file 3 name entry. Press c-right 39 times and then enter '7', then press c-right until the cursor is on 'a' and enter 'b', then press c-right until the cursor is on 'b' and enter 'X'. This will set the "file to copy over" value to C6C2.
+Next, press c-left twice and enter 'い'. This will put the game in "confirm copy" mode. Blindly press up then A to choose yes, making sure not to press up twice. The copy will complete, and the payload is now ready to run as soon as we load a file. Note that as a side effect this will also erase file 1, so it's necessary that we use file 2 for actual gameplay instead.
+ 
+Loading a file will cause the game to jump to our payload a single time. Nothing stops us, however, from having a payload that hooks itself back into the game loop and causes itself to keep running, so that's exactly what I do in this video.
+ 
+ 
+Needless to say, if ACE were to be allowed in longer speedrun categories, this technique would revolutionize all of them. With a well chosen payload, you could continuously warp from one goal directly to the next, as in to the classic SMW example: https://www.youtube.com/watch?v=voL3e0iqugo
+ 
+some ram watches I used while making this, potentially useful for other glitch hunters: https://pastebin.com/Q97QtLHm
+Bizhawk movie file: https://www.dropbox.com/s/eejwoppns1isyhj/Zelda%20no%20Densetsu%20-%20Toki%20no%20Ocarina%20%28Japan%29%20-%20total%20control3.bk2?dl=0
+The example payload: https://pastebin.com/8qmrS4HTS
+The example payload: https://pastebin.com/8qmrS4HT
