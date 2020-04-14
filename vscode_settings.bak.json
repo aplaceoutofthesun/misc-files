@@ -1,0 +1,62 @@
+{
+    "editor.fontSize": 12,
+    "editor.wordWrap": "bounded",
+    "editor.hover.delay": 350,
+
+    "workbench.enableExperiments": false,
+    "workbench.startupEditor": "none",
+    "workbench.editor.highlightModifiedTabs": true,
+
+    "search.showLineNumbers": true,
+
+    "extensions.autoUpdate": false,
+
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cwd": "${fileDirname}",
+    //"C:\\Users\\ag\\Documents\\Programming\\python_files\\",
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.rightClickBehavior": "selectWord",
+    "terminal.integrated.scrollback": 4000,
+
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "manual",
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintCategorySeverity.refactor": "Information",
+    "python.linting.pylintPath":
+    "C:\\Users\\ag\\Documents\\Programming\\Python37_install\\Scripts\\pylint",
+    //"C:\\Users\\ag\\AppData\\Roaming\\Python\\Python37\\Scripts\\pylint",
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame,turtle",
+        "--max-line-length=81",
+        "--verbose",
+        "--disable=C0116"
+    ],
+
+    "editor.detectIndentation": false,
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.maxColumn": 60,
+    "editor.suggest.maxVisibleSuggestions": 10,
+    "editor.quickSuggestionsDelay": 25,
+    "editor.rulers": [
+        {"column":80, "color": "#aa77aa"},
+    ],
+
+    "files.trimTrailingWhitespace": true,
+
+    "python.autoComplete.addBrackets": true,
+    "python.pythonPath": "C:\\Users\\ag\\Documents\\Programming\\Python37_install\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.dataScience.allowLiveShare": false,
+    "python.dataScience.liveShareConnectionTimeout": 100,
+
+
+    "workbench.panel.defaultLocation": "right",
+}
