@@ -1,0 +1,1923 @@
+﻿================================================================================
+
+                    APG5092 - Human Rights in Global Politics
+                        * Zoom Seminar - 03082020 *
+                        
+================================================================================
+
+
+* ---------------------------------------------------------------------------- *
+1st Activity
+
+* Document: Answer and How many knew it
+APG 5092 - â€˜PUBâ€™ QUIZ.
+
+(Questions will appear once the quiz has started)
+
+Q1.     Who is the current Secretary General of the United Nations?
+Q2.  What does INGO stand for?
+Q3.     What does ICCPR stand for?
+Q.4      What is the key difference between a declaration and a treaty?
+Q.5     Which of the following is not an international human rights
+        declaration/treaty/covenant?
+a.     UNDRIP
+b.     CEDAW
+c.     CEDRO
+d.     CAT
+Q.6      The Rome Statute established which institution?
+Q.7     Place the following events in chronological order:
+a.     The Rome Statute
+b.     The Universal Declaration of Human Rights
+c.     The UN Charter
+d.     The Convention on Torture
+e.     The Declaration on the Rights of Indigenous Peoples
+Q.8    Which human rights treaty/convention/covenant has the most reservations?
+Q.9     If someone working in human rights mentions â€˜The Guiding Principlesâ€™, 
+        what are they referring to?
+Q.10    List five of the top 10 host countries of refugees*, as of the end of 
+        2019. (*people displaced across borders, so not including internally
+        displaced persons. Stats taken from the UNHCR 2020 report.)
+
+* ---------------------------------------------------------------------------- *
+
+================================================================================
+*                                                                              *
+*                   APG5092 - Human Rights in Global Context                   *
+*                       Week 2 - Readings/Lecture Notes                        *
+*                                                                              *
+================================================================================
+
+--------------------------------------------------------------------------------
+* Reading 1) Jones, P. "Natural Rights and Human Rights"
+--------------------------------------------------------------------------------
+
+* Natural Rights vs Human Rights
+- Natural Rights
+    - 2 Conceptions: 
+        - "Strong" sense (Dworkin)
+            - basic entitlements of all Humans
+            - Govt obligation to ensure these are respected
+            - Levellers, Locke, Paine, decl. of rights re Revolutions
+            - H.Rights evolved from this conception
+        - "Weak" sense (Dworkin)
+            - reduced rights to 'liberties'
+    - Hobbes's state of nature 
+        - shared w e.g. Selden, Diggs, Hammond, Taylor, Spinoza
+        - Rights individuals would enjoy in state of nature
+        - Individual liberty for self-preservation
+            - No "correlative duties upon everyone else"
+            - Thus conflict increased
+            - Only by "divest"ing rights to common authority => Peace
+    - Locke's "natural law"
+        - Body of rules governing Human conduct as part of nat order of 
+            things
+        - Re: God
+        - Man subject to God's law in special way (b/c reason)
+        - Natural rights:
+            - Laws bestow rights and impose duties 
+            - Natural laws bestows natural rights and imposes natural duties
+            - re: Life, liberty, property 
+        - Conflict arose b/c failure to recognise/conform to laws God had
+            provided (c.f. a lack of common body of laws)
+        - Mankind is the failing c.f. state of nature
+        - "executive right of nature" (76)
+            - protection of rights by individual
+            - surrendered to pol authority => single auth to judge violators
+                - c.f. individuals themselves
+            - Establishment of pol auth was to better protect rights
+    - Upholding of rights: traditionally primary func of govt
+        - e.g. American Declaration of Independence 1776
+        - e.g. French Declaration of the RIghts of Man and the Citizen 1789
+        - Govt only valid if !infringe on rights else legit to overthrow
+            - Locke's justification of Glorious Rebellion 1688
+    - Social Contract
+        - consent of the governed and govern by consent
+        - Aquinas: "man a social & pol animal" (77)
+            - cooporation nec for "good earthly life"
+        - Contractarianism (re: contracts)
+            - Filmer, Robert: proponent divine Right of Kings thought it danger
+        - Nat rights & Soc contract
+            - led to idea of equality (morally)
+            - None could claim natural auth over others
+            - Pol auth must be est by men themselves and given by those over
+                whom it was wielded.
+    - Rights claimed as Nat Rights
+        - Life: right not to be murdered
+        - Liberty: conduct one's life as one chose w/in limits
+        - Locke: right to liberty as right to live as he saw fit
+            - if he stayed within realm of law of nature
+        - French: liberty !injure another
+            - freedom of opinion (incl. religious)
+            - free communication of thoughts and opinions
+        - Authority only with indiv own consent
+        - Nat rights theorists: right to resist/unseat oppressors violating
+    - Generally, 17-18th C. fundamental rights attr to indiv. essentially 
+        negative in char (i.e. 'keep out')
+        - right 'from' sthing (c.f. right 'to' sthing)
+    - Criticims of idea of Nat rights
+        - moral notions passed off as truth or fact
+        - Abstract ideas that are not tangible
+        - h/e: Context matters re 17-18th C & the cosmology surrounding their 
+            conception
+    - Rawls (1971): natural duties
+    - Rights possessed as H beings regardless of state or members of organisation
+    
+- Human Rights
+    - Clearer than Nat Rights & does not rely on specific cosmological world 
+        view entailed by Nat rights
+    - Possession of HRights does not depend upon formal recognition (p. 81)
+    - Natural in the sense "that people are conceived as possessing those rights
+        in their natural capacity as human beings..." (p.81)
+        - Not just as citizens
+    - Hart (1967): general rights c.f. special; Universal to all humanity
+        - special rights: from special transaction/relationship b/n ppl
+            - exclusive to those members thereof
+    - Being Human suffices
+    - Egalitarian idea
+        - all possess and have same status
+    - HR now legal or semilegal b/c inclusion in international declarations etc
+        - Nevertheless, idea of HRs a fundamentally non-legal one
+- Content of Human Rights
+    - Many conditions and goods claimed as HRs
+    - Universal Declaration of Human Rights (Gen Assembly UN in 1948)
+        - flawed but useful
+    - Types of Rights
+        - Right to life
+            - may be fundamental (prerequisite for others) 
+                - h/e precisedly what right to life is a right _to_ is undefined
+            - right not to be murdered or safeguarded from
+            - Complications: right to personal security
+                - murderer: is right to life retained after act?
+                - self defense? Wartime?
+        - Rights to libert[y|ies] 
+            - Ppl not just free to do what they like
+                - violates rights of others
+            - right not to be enslaved
+            - right to a certain 'area' of personal liberty undefined
+            - Often includes freedom of/from:
+                - opinion & expression 
+                - religion 
+                - movement 
+                - association 
+                - intrusions into one's privacy
+        - Right to property
+            - unclear how to understand scope and content
+        - Civil Rights
+            - Concern admin of justice & govt. power
+            - Art 5: no torture or cruel, inhumane treatment or punishment
+            - Art 7: All equal b4 the law & entitled w/o discrimination to equal
+                protection of the law
+            - Art 11: all charged w criminal offence innocent until prove guilty
+        - Political Rights
+            - Relate to the workings of political processes
+            - Art 21: e/one righ to take part in govt of country
+                - directly or via freely chosen representative
+        - Socioeconomic Rights
+            - Art 22: right to soc sec 
+    - Groupings are loose
+    - UN doc: important but not "the definitive statement of human rights"
+        - produced under difficult circumstances
+        - considerable achievement in Int Cooporation
+        - still flawed and not a 'touchstone'
+        - Discussion of HRs as an idea separate from Declaration
+            - Multiple theories of HRs
+            - differing reasons for ascribing HRs to Human Beings
+        - Significantly longer than 17-18th C. docs
+            - e.g. French Decl Rights of Man & Cit (1789): 17 articles
+            - UN Decl. Human Rights: 30 articles
+        - Other declations/conventions have more
+        - Efforts made to improve precision of entailed rights or provide 
+            more detail
+            - e.g. Eu Convention of Human Rights expands on the right to liberty
+    - 20th C greater rights to things not generally claimed as nat rights in 
+        earlier periods
+        - e.g. Welfare rights
+        - Ideas re rights changes over time
+        - Nevertheless idea that Humans have rights remains constant
+        
+- Human Rights and the RIghts of Citizens
+    - Nat rights: indiv.s possess in state of nature (i.e. no pol/govt)
+    - HRs no longer associated w cosmology of nat law but still conceived as 
+        rights Humans enjoy simply in virtue of being human
+    - Q: HRs vs Citizen rights
+        - i.e. Rights common to all vs Rights by virtue of exclusive membership
+        - Melden (1977): indivs that enjoy rights only as members of states 
+            cannot be considered truly human rights
+        - H/e: Overlap b/n the two
+            - e.g. Freedom of [expression | association]
+            - Some rights specific to citizenship: Articulation of constraints
+                HRs place of govts & state to exercise powers
+            - HRs can inform cit rights and ground them
+        - Citizen rights as HRs under political conditions
+    - Rights made possible by existence of organised pol communities
+        - Can look to the idea that Humans have often lived in communities of
+            some sort 
+    - Rights ascribed to individual citizens can be grounded in the rights 
+        ascribed to them as human beings
+    
+- Scepticism about Human Rights
+    - phrase 'Human Rights' does not carry same ontological overtones as 
+        'natural rights'
+    - Dispute re existence of human rights (intangible, abstract 'thing')
+    - Bentham (1962) dismissed nat rights as 'simple nonsense'
+    - Alasdair MacIntyre (1985) no such rights & belief in them akin to belief
+         in witches and unicorns
+     - Consider:
+        - "I have a [legal | moral | human] right to x"
+        - Categorically different statements
+        - legal claim is staetment of fact
+            - assertion of institutional fact (cf brute fact)
+                - hence it is True or False
+        - Does not rely on opinion of whether good or bad thing that ppl should
+            have a legal right to x
+    - rights claiming moral fouundation subject to all doubts & difficulties that
+        characterise any moral position
+    - HRs as Moral rights cannot be matters of indisputable truth
+    - Criticism only succeeds as casting doubt on idea of moral rights not HRs
+    
+- Human Rights and Ideal Rights
+    - Real rights: rights that people really have
+    - Ideal rights: rights that people would ideally have
+    - 'is' vs 'ought'
+    - 
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+* Reading 2) Nickells?? ""
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+* Lecture: What are Human Rights?
+--------------------------------------------------------------------------------
+- Hohfeld: Taxonomy/Legal Analysis
+    - Types:
+        - Claim rights/Liberty/Power/Immunity
+    - Correlative
+        - Duty/No Right/Liability/DIsability
+- Rights as Relationships
+
+- What are liberties
+    - no one else has claim right against them
+    - no one is obligated to 
+- Claim rights vs Natural Rights?
+    - Almost always claim rights in discussions
+    - Rights Holder + Obj(x) + Duty Bearer
+    - RH is entitled to obj(x) and DB has corresponding obligation to
+        - SYMMETRY
+    - Positive & Negative
+        - Positive
+            - Obligations to provide and receive
+            - DB: Provide
+            - RH: Receive
+            - e.g. Education
+            - e.g. Health care
+        - Negative
+            - Obligations DB is under
+            - DB: Refrain from doing sthing
+            - RH: Freedom from sthing
+                - e.g. freedom from torture
+                - e.g. bodily integrity
+                - e.g. property rights
+        - Useful vocab/tool to have
+            - but distinction is slippery
+            - difficult to categorise
+            - oft mixture or ambiguous
+        - Influences thinking on rights
+            - some say no positive only negative
+- What are Human Rights
+    - Every Human is RH and has Rights
+    - Differs from other rights e.g. citizen rights
+    - Object is bare minimum
+    - Who are DBs? 
+        - focus on legal sense
+        - Generally _States_ are primary (not sole) DB
+        
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+================================================================================
+
+                    APG5092 - Human Rights in Global Politics
+
+================================================================================
+* Week 2: What are Human Rights?
+
+0htoperuseitAllatPerusall_
+Introduction
+
+The core goal this week is to familiarise yourself with some basic concepts related to human rights, and to start to grapple with what it means to say that something is a human right. We'll start by exploring the concept of a right - which is a necessary starting point for understanding human rights. We'll also spend some time looking at the relationship between natural rights and human rights (a theme that will continue next week).
+
+The structure of each week will remain constant throughout the semester: there are pre-class activities, which you are expected to have completed prior to the Zoom seminar each Monday; then there are links and resources for use during the Zoom seminar; following the seminar, you should make sure to complete the weekly feedback survey, since this is where you nominate your participation grade for the week - you'll find this in the post-class activities section.
+
+The best place to start with the pre-class activities each week is the mini-lecture. The core readings often take for granted that readers have familiarity with certain concepts or authors, so the mini-lectures provides some necessary background.
+
+Once you've worked through the mini-lecture, it's time to tackle the readings. It's important to make use of the Perusall's annotation features here:
+
+        If there is something in the text you don't understand, highlight it and ask for clarification
+        If there is something in the text you disagree with, highlight it and explain why
+        If there is something in the text you would like us to discuss as a class in the Zoom seminar, highlight it and explain why.
+
+Once you're confident you understand the reading, you should take the quiz (due each Monday at 10am). The quiz is not timed, and you are welcome to have the readings open while you take it.
+
+Throughout the week, remember to revisit the readings and the discussion forum to continue conversation threads.
+
+
+Core Readings
+
+If you haven't yet created a Perusall account, you'll need to do that first. Instructions on what to do, along with the necessary course code, are on the Overview page of Moodle.
+
+1. Peter Jones, 'Rights', Ch 4 URL
+2. James Nickel, Making Sense of Human Rights
+================================================================================
+*                                                                              * 
+*                         APG5092 - Week 2: Zoom Seminar                       *
+*                                                                              * 
+================================================================================
+
+* Housekeeping
+
+* Cultural Relativism
+
+* Q: What are Human Rights
+- What do you think?
+- The obligations and entitlements due to all humans by other humans and their institutions or powers
+
+* Workshop
+
+* Discussion 
+================================================================================
+*                                                                              *
+*           APG5092: Human Rights in Global Context - Overview/Notes           *
+*                  Week 3: Tracing the Intellectual History                    *
+*                                                                              *
+================================================================================
+
+--------------------------------------------------------------------------------
+                                  * Overview *
+--------------------------------------------------------------------------------
+
+* Introduction
+
+This week we'll be focused on a particular story that's often told about human
+rights. According to this story human rights originated in western philosophical
+ thought, and more precisely in the Enlightenment idea of 'natural rights'. The
+ reading by Ishay offers her historical overview of the rise of human rights, 
+ while the Locke reading provides an example of one of the key thinkers often
+ identified as a precursor to contemporary human rights.
+
+In the pre-class mini lectures I've focused on two distinct but interrelated 
+issues, both of which I'd like you to bear in mind when you do the readings. In 
+the first lecture, I introduce the concept of 'teleological thinking', as a way 
+of interpreting what Ishay is implicitly doing in her chapter (this is followed 
+by a short youtube video that I think exemplifies teleological thinking). In the
+ second lecture I discuss the prominence Ishay gives to Western history and
+ intellectual thought in her explanation of the rise of human rights. These 
+ issues are interconnected, because if contemporary human rights are understood 
+ as the inevitable end-point of Enlightenment thinking, it becomes harder to
+ disentangle them from the sometimes problematic commitments of those thinkers.
+
+(I've also included some optional mini-lectures down in the supplementary 
+materials, giving a bit more of an overview of the social contract theories of 
+Hobbes and Locke for those who are interested.)
+
+
+--------------------------------------------------------------------------------
+                               * Pre-class Tasks *
+--------------------------------------------------------------------------------
+
+* Mini Lectures
+--------------------------------------------------------------------------------
+1. Teleological Thinking
+
+1.a Teleological Thinking (6 mins)
+--------------------------------------------------------------------------------
+- Teleology: Processes have purpose
+    - Purpose-driven
+    - Aiming at an end
+
+- Ustand Hist. Events
+    - Random
+        - Earlier events !effect
+    - Take some event in past and use it to explain following events
+        - "Great Man"
+    - Teleological
+        - Events leading up to it are _aiming_ or driving toward event
+        - Not accurate
+        - Interesting framework for ustanding how Human Rights are told
+
+- Moyn, Sam: "The Last Utopia" (p. 5)
+    - Criticism of Historian views of Human Rights 
+    - Disagrees w Teleological view of history
+
+- Summary
+    - T thinking: HR dev as "inevitable"
+        - Milestones through history
+
+
+--------------------------------------------------------------------------------
+1b. The Story of Human Rights (10 mins)
+https://www.youtube.com/watch?v=6XXGF_V8_7M
+--------------------------------------------------------------------------------
+- Have just bc Human
+- Universal
+- Decl. HR
+- History
+    - Cyrus the Great: Cyrus Cylinder
+    - Rome: Natural Law
+    - Magna Carta
+    - U.S. & French
+    - Eurocentric
+    - Gandhi
+    - WWI & II
+    - 1945: UN
+    
+    
+
+--------------------------------------------------------------------------------
+2. Are Human Rights a Western Invention? (20 mins)
+--------------------------------------------------------------------------------
+* What Does it mean to say that HR are a Western Invention
+
+* 'Human Rights' in what sense?
+- Intnl Standards for States (Pol/legal)
+    - Complex regime for HRs
+    - List of prohibitions for states
+- Moral Rights of all Humans
+    - Abstracts away from Pol/law
+    - Rights ppl have in virtue of being human
+
+* HRs as Int. Standards
+- Easier to ustand as independent of Western Intellectual History
+- idea of 'overlapping consensus'
+    - take a commitment/principle & divorce it from theoretical underpinning
+        - agreement on standard but !nec on the reasons behind it
+    - e.g. Prohibition of Torture
+        - Multiple views
+            - Liberalism
+            - Religious
+    - Focus on getting agreement easier than getting agreement on the underlying
+      justification
+
+* HRs as Moral Rights
+- Rights merely in virtue of being human
+    - re diagram 
+    - relationship: entitled & obligated
+        - Rights Holder
+        - Duty Bearer
+- Power of the Rights Holder
+    - Can demand the right ("directs" the right)
+- Duty Bearer's obligations are _directed_to_ the Rights Holder
+- If r/ship idea holds
+    - Harder to trace history of HRs
+    - Fundamental relationship underpinning earlier traditions is different
+    - e.g. Prohibition in Torture
+        - Not counted as Right if it does not tie participants in rship of
+          entitled and obligated (to)
+        - e.g. Religious trad: 
+            - Prohibition is directed to Deity
+            
+* If HRs are moral rights (i.e. r/ship) it is more difficult to create a
+  pluralist foundation for them
+- More directly connected to certain kind of intellectual tradition            
+
+* Teleology Revisited
+- Ishay:
+    - Locke & HRs Regime
+    - Locke is driving inevitably towards the dev of HRs (Declaration etc)
+    - Questionable as to approach
+    - Carries additional 'baggage' or ideas that may be better thought of 
+      separated out of HRs
+        - e.g. HR as Negative rights 
+        - e.g. HR as Individualistic 
+        - e.g. HR as Implicated in Colonialism
+- Locke: 
+    - Imperialistic
+    - More baggage
+
+
+--------------------------------------------------------------------------------
+                                * Core Readings *
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Micheline Ishay, 'Human Rights and the Enlightenment'
+--------------------------------------------------------------------------------
+* Lot of Generalisation in 2nd para (p.64)
+
+* Discussing General history of enlightenment era
+- There is a lot of "sine qua non" in this
+- More sources also needed for events described and conclusions drawn
+- Causative assumptions throughout
+
+* Freedom of Religion and Opinion
+- Luther & Protestantism
+    - "cuius regio, eius religio": whose realm, his religion
+- Conflict bn Catholic & Protestants
+- "Treaty of Westphalia" (ratified 1648)
+- Locke: "Letter concerning Toleration" (1690)
+    - Be nice
+- Index librorum prohibitorum
+    - Proscribed books
+- Milton: "Aeropagetica"
+    - Freedom of the press
+- Calvinists
+- Thomas Paine
+- Jefferson
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+John Locke, 'Two Treatises of Government'
+
+================================================================================
+================================================================================
+*                                                                              *
+*               APG5092: Human Rights in Global Contexts - Notes, etc.         *
+*                          Week 4: Conceptual Frameworks                       *
+*                                                                              *
+================================================================================
+
+* Introduction *
+
+There are many different ways to understand what human rights are. As a result,
+theorists have developed taxonomies for identifying similarities and differences
+between various conceptions. Each of these taxonomies focus on different
+elements, and so group conceptions of human rights in different ways. This week
+we'll be comparing two taxonomies,  considering what issues each helps
+illuminate, as well as what they obscure.
+
+
+================================================================================
+*                                   Pre-class                                  *
+================================================================================
+* Mini Lectures *
+--------------------------------------------------------------------------------
+1. Introduction to Dembour (13 mins)
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+2. Background and Context for Beitz (13 mins)
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+3. Introduction to Beitz (18 mins)
+--------------------------------------------------------------------------------
+
+
+================================================================================
+*                                  Core Readings                               *
+================================================================================
+
+--------------------------------------------------------------------------------
+1) Marie Dembour, 'What Are Human Rights?'
+--------------------------------------------------------------------------------
+
+* Conceptions of Human Rights
+- Differing ideas
+    - lack of agreement about what they are
+    - Proposal: 4 schools (ideal types) around 2 axes
+        - cover whole conceptual field of HRs
+    - NB: Term 'Schools' is used to connote implicit/explicit adherence to a 
+      number of precepts
+        - more used for convenience
+- 4 'schools' of thought:
+    - "natural scholars": human rights as _given_
+    - "deliberative scholars": human rights as _agreed upon_
+    - "protest scholars": human rights as _fought for_
+    - "discourse scholars": human rights as _talked about_
+
+* Summary of Schools
+- Natural School
+    - most common idea of HR: rights one possesses simply by being human
+    - HRs as _given_
+    - HRs entitlements that are *negative* in character, thus absolute
+        - i.e. obligation to refrain from something
+    - Nature: stands for God, Universe, reason, etc.
+    - HRs exist independently of social recognition (h/e recog is preferable)
+    - Welcome inscription of HRs in positive law
+    - traditionally represented the heart of the human rights orthodoxy
+- Deliberative
+    - HRs as pol values that liberal societies choose to adopt
+    - Tend to reject natural element
+    - Existence arises from & via societal agreement
+    - Like to see universality but recognise req time
+        - Also it reqs global recognition that HRs are best possible legal/pol
+            standards that can rule soc & thus be adopted
+    - Stresses the limits of HRs
+        - regarded as fit to govern exclusively the polity 
+        - not relevant to whole of moral/soc human life
+    - Constitutional law: one of prime was to express HR values agreed upon
+- Protest 
+    - Concern: redressing injustice
+    - HR articulate rightful claims made by/on behalf of poor, unprivileged, and
+      oppressed.
+    - HRs as claims and aspitations that allow status quo to be contested in fav
+        of oppressed.
+    - Not focussed on HRs as entitlements
+    - relentless fighting for hRs
+    - Accept idea that ultimate source of HRs is 'transcendental plane'
+        - h/e more concerned with concrete source of HRs in soc struggles
+    - Suspicious of HRs law
+        - view HR law as participating in a routinization proc favoring elite
+- Discourse 
+    - Lack of reverence towards HRs
+    - HRs exist bc they are talked about
+    - Not given nor the right answer to ills of the world
+    - Language surrounding HRs has become powerful with which to express 
+        political claims
+    - Fear imperialism of HRs imposition
+    - Stress limitations of an ethic based on individualistic HRs
+    - Some accept HRs discourse can yield positive results
+    - H/e: Do not _believe_ in HRs
+        - Wish for superior projects of emancipation could be imagined & 
+          implemented
+          
+* Mapping the Field
+- Schools are more like Weberian ideal types c.f. fixed categories
+- Model
+    - !nec map to reality
+    - Disagreements within the schools
+    - h/e model can help to ID the connections among broad orientations
+    - permits mapping of the entire HRs field
+    - Constructed _abductively_
+        - i.e. arose out of the data and readings
+    - Heuristic value over time must be confirmed via persistence in its abilty
+        to assoc any HR thinker w a particular school
+
+* The Position of the Schools
+- On Human Rights Law
+    - Nat Scholars: 
+        - celebrate HR law
+        - embodies HR concept: law exists continuing w transcendental existence
+          of human rights
+    - Deliberative Scholars
+        - efforts geared toward IDing, agreeing, entrenching principles allowing
+          for democratic decision and fair adjudication
+            - No HRs beyond HR law
+            - Procedural in nature:  guide on how to do things
+    - Protest Scholars
+        - hard to convince conditions of effective HRs protections realized
+        - Always need to further redress injustice
+        - Distrust HRs law b/c fear of hijack by elites
+        - wary of bureaucratization
+        - Do not trust institutions
+    - Discourse Scholars
+        - HRs law as good/bad as any other law
+        - relativistic
+
+- On the Foundation of Human Rights
+    - Nat Scholars
+        - HR founded in nature
+        - aware of issues around it (re: God or whatever)
+        - Generally follow legal consensus
+            - h/e legal consensus can only be _proof_ of existence of HRs
+                - Not foundation
+            - Some disagree
+    - Protest Scholars
+        - Cannot adopt Nat Schol re following legal consensus b/c suspect HR law
+        - rely on "tradition"
+        - Guy Haarscher: "dressage"
+            - training of animals
+            - thus internalisation by individual of a logic that is not entirely
+              instinctive
+        - Tradition base explains interest in education of HRs
+    - Discourse and Deliberative scholars
+        - Not interested in foundation of HRs
+        - more interested in justification c.f. foundation
+
+- On the Realisation of Human Rights
+     - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+2) Charles Beitz, 'What Human Rights Mean'
+--------------------------------------------------------------------------------
+- UN Decl. HRs: 1948
+    - Framers found it easier to agree on content c.f. underlying principles
+    - Philosophical args difficult
+    - Doc does not propose justifying theory
+        - Merely declares things to be true
+    - Practical focus
+- Issues with ambiguity and generality
+- Maurice Cranston "Are there any Human Rights?"
+    - Decl. HR: Philosophically fraudulent
+    - Negative rights
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+*                                                                              *
+*                  APG5092: Human Rights in Global Contexts                    *
+*                Week 5: How Human Rights Work - The UN System                 *
+*                                                                              *
+================================================================================
+
+
+* Introduction
+
+This week we're going to take a break from theory (and from reading!) to fill in some necessary background on the mechanics of human rights practice. We'll focus on the United Nations, and the treaty system that constitutes the bulk of international human rights law.
+
+This week will also be structured a bit differently to other weeks. There will be one short video lecture, giving a brief overview of the international human rights system. However, since there are no core readings, there is no quiz. Also, there are no Perusall annotations, so there won't be the possibility to participate on that platform.
+
+Instead, I'm going to ask you to undertake some collaborative research into a particular treaty or covenant.
+
+I've created Google Docs for five treaties: the Refugee Convention; The Convention Against Torture; the Convention on the Elimination of Discrimination Against Women; the International Covenant on Civil and Political Rights; and the International Covenant on Economic, Social, and Cultural Rights.
+
+Please allocate yourself to one of these treaties (there's space at the top of the Google Doc to do this - please choose another treaty if the spaces are all already taken).
+
+Then you should independently research some aspect of that treaty, and its role in global politics. This might involve looking at the history of its ratification; or the scope and extent of reservations states have made to it; or the treaty body authorised to monitor compliance; or the enforcement mechanisms that accompany it; or so on. Share your findings on the Google Doc, and then we'll use these as the basis for our discussion in Monday's Zoom seminar.
+
+* Pre-class
+
+Mini Lecture
+
+How Human Rights Work (23 mins)
+how human rights work
+
+
+*Collaborative Research on Treaties
+The Refugee Convention URL
+The Convention Against Torture URL
+The Convention on the Elimination of Discrimination Against Women URL
+===>International Covenant on Civil and Political Rights URL
+International Covenant on Economic, Social, and Cultural Rights URL
+In-class
+
+* Zoom Seminar
+
+Monday 11am URL
+Seminar 'Handout'
+
+This week's Zoom seminar will be focused on the research you've done on the
+five  treaties. We'll start by going into breakout rooms according to the treaty
+you selected, where as a group you'll have 15 minutes to share what you've
+learned, and fill in any final gaps in your research. You'll then be asked to
+present a short (5 minute) overview of the treaty to the rest of the class. The
+remainder of the class time will be devoted to open discussion on the human
+rights treaty system.
+
+
+
+================================================================================
+================================================================================
+*                                                                              *
+*                        Week 6: Human Rights as Weapons                       *
+*                                                                              *
+================================================================================
+
+* Introduction
+--------------------------------------------------------------------------------
+
+This week we'll be looking at some critiques of human rights practice. The 
+chapter from Clifford Bob provides the framework for this discussion: Bob argues
+that rights are not inherently progressive, but are better thought of as a
+strategic tool that gets used for political ends - whether those ends are good
+or bad. The article by Nakissa supplements this analysis, by showing how human 
+rights can be used for imperialistic ends, reinforcing hierarchies between the 
+'West' and the Islamic world.
+
+Since the Nakissa article is much more theoretically complex, and requires a bit
+more background, I've focused the pre-class videos there. You'll find additional
+videos on Bob in the supplementary materials for this week.
+
+--------------------------------------------------------------------------------
+* Mini Lectures
+--------------------------------------------------------------------------------
+
+1. Intro to Bob (10 mins)
+(Please note: I refer in this video to other videos on Bob - I decided after
+recording that these should be optional rather than required, so you'll find 
+them in the supplementary materials section if you're interested.)
+
+* Contextualises Bob's book
+- Fits in Bembour's Schools Discourse School
+- Analysing way different people use Rights/Push for rights to be realised
+    - Attributes to them 'protest school' of thought
+    - Thses ppl use language of Natural School ("Natural rights")
+- Bob: Discourse
+    - Things of rights discourse as an effective political tool to achieve end
+        - Words to get what is wanted
+    - Does not nec have deeper reality
+    - Not just HRs:
+        - Includes human rights but interested in all kinds of rights
+    - H/e: Uses concept of rights:
+        - rights as claims/entitlement -> duties
+        - The r/ship idea
+* Rights as Weapons
+- Goal of book: studuy way rights talk gets used
+    - by whom? to what ends? why is it effective?
+- Key points: Rights talk used by both sides
+    - Does not attribute moral sides (No good vs bad)
+    - Notes that both sides invoke language of rights
+    - Can be used to oppress as much as protest
+- 4 Key metaphors
+    - Rallying cries; Shields; Spears; Blockades
+    
+* Extra video if nec
+
+--------------------------------------------------------------------------------
+2. Background to Nakissa - Bourdieu's Distinction Strategy (20 mins)
+
+* Intro to Pierre Bourdieu
+- Anthropologist
+- Book "Distinction"
+- Ppt from Harvard: NB: applies theory to different area
+- Kinds of Capital (links/rships between)
+    - Economic: Financial, etc
+    - Social: Networking
+    - Cultural: Knowledge, demonstration of taste, judgment
+- Capitals are interlinked and reciprocal
+- 'Distinction'
+    - Idea of cultural capital and taste
+    - Idea that Bourdieu was challenging charisma as a 'gift of nature'
+        - Argues that upbringing and education influences
+        - Interplay b/n social and cultural capital
+    - Hierarchy of taste
+- Room Rater example
+- Distinctions between e.g. TV shows, books, music, food, etc.
+- B: One of the key ways that cultural capital maintains status
+    - What counts as high class is always changing
+    - Nakissa builds on this idea
+- Distinction Strategies
+    - e.g. Avo smash w latte -> luna croissants -> sourdough starter
+- What counts as cultural capital is constantly changing
+
+* From Bourdieu to Nakissa
+- What B describes in terms of Aesthetic judgements
+    - can be described in terms of Moral judgements
+    
+
+--------------------------------------------------------------------------------
+3. Introduction to Nakissa (15 mins)
+
+* How Nakissa uses Bourdieu in HRs
+- As cultural capital changes, so does focus of HRs shifts over time
+- e.g. Religious freedom -> Increasing attention on Women's rights (-> burqa
+    ban) -> LGBT rights
+- Elites come to view certain things as important and frame them as HRs
+- From B to N:
+    - From Aesthetics to Moral judgements
+    - From informal norms to laws
+- Not a progression, arbitrary changes
+- Whenever a new right is brought out
+    - reshapes earlier content of HRs
+
+* Values Subversion
+- Lib regimes create subjects who idealise subversion
+    - e.g. movies depict iconoclaust or freethinker
+    - Taken to be a natural expression of Human freedom
+    - H/e: N believes it is a culturally shaped preference
+        - Connects back to edward saed
+            - East vs West: Stagnation vs Progression
+    - Inculcation of subversive elements
+
+* From Distinction Strategy to War
+- Evolving norms/stds in HRs not only create Hierarchy but also 
+    - perpetuates war against Muslim nations
+- Interpretations of rights shaped by perceptions
+- Reshaping rights -> reshaping duties
+- Can see shifting in content of rights occur b/c they generate kinds of duties
+    that justify going to war.
+- NB: N does not believe it is deliberate manipulation but is an effect of the
+    desire to maintain status quo
+    
+
+
+--------------------------------------------------------------------------------
+* Core Readings
+--------------------------------------------------------------------------------
+
+Clifford Bob, 'Rights as Weapons - Introduction'
+
+Aria Nakissa, 'Evolving Conceptions of Human Rights'
+
+================================================================================
+================================================================================
+*                                                                              *
+*                APG5092: Human Rights in Global Contexts                      *
+*               Week 7: Human Rights and State Sovereignty                     *
+*                                                                              *
+================================================================================
+
+* Introduction
+
+This week we'll shift to a more international relations focus, looking at the 
+relationship between human rights and state sovereignty. For many theorists, 
+human rights are seen as part of a broader process of eroding state sovereignty 
+in the post WWII world. More specifically, human rights are commonly understood 
+to place limits on state sovereignty because they specify rules all states must 
+follow, and also because - as we saw with Beitz - their violation is widely 
+considered to justify the international community intervening in the domestic 
+affairs of the state.
+
+The two readings we'll be focused on this week complicate this simple story of 
+human rights eroding state sovereignty. Henkin points to the continuing 
+importance of sovereignty, even in an age of globalisation, and to the 
+difficulties this raises for the human rights movement; Lafont, by contrast, 
+considers how human rights can be used to strengthen state sovereignty, by 
+providing a mechanism for states to resist demands made by International 
+Organisations (e.g. the WTO), and large corporations.
+
+
+================================================================================
+* Mini Lectures
+================================================================================
+
+[I've tried to increase the volume for the videos this week, but please do let 
+me know if you're still having trouble hearing them.]
+
+1. Sovereignty: An Introduction (24 mins)
+
+2. Sovereignty and Human Rights (25 mins)
+
+================================================================================
+* Core Readings
+================================================================================
+
+--------------------------------------------------------------------------------
+Louis Henkin, 'That 'S' Word'
+--------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+Lafont, C. (2015) 'Human Rights, Sovereignty, and the Responsibility to Protect'
+--------------------------------------------------------------------------------
+
+- 2005: Consensus of High Level Plenary Meeting of General Assembly
+    - Protect vulnerable from genocide, war crimes, ethnic cleansing, etc
+    - b/c of 2001 Report of the International Commission on Intervention and
+        State Sovereignty
+        
+- Universal Decl of Human Rights (UHDR)
+    - Worldwide rights 
+        - c.f. e.g. 1789 French Decl
+        - International in scope
+    - Unanimous endorsement by General Assembly
+        - indicates responsibility to protect (R2P) principle not just an 
+            aspiriation
+        - emergent norm of customary Intl law
+
+- H/e: Issues raised b/c intnl intervention a direct threat to sovereignty and
+    equality of states
+    - Fear linkage of HR law & Humanitarian intervention could lead to invasions
+        of weak states by pwrful ones for any reason
+        - e.g. Art 25 of IC-CPR
+            - Right to Democracy -> intnl community intervene for pro-democratic
+                reasons
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+* In-class
+================================================================================
+
+Zoom Seminar Link
+Monday 11am URL
+Seminar 'Handout'
+Post-class
+Weekly Reflections Feedback
+Not completed: Weekly Reflections
+
+* Supplementary Materials
+
+UN Guiding Principles of Business and Human Rights File 1.1MB PDF document
+
+Tim Dunne, 'The English School' File 174.1KB PDF document in Dunne, Kirki and 
+    Smith (eds), International Relations Theories: Discipline and Diversity 
+    (3rd ed), Oxford: Oxford University Press, 2013
+================================================================================
+================================================================================
+*                                                                              *
+*                 APG5092 - Week 8: Theories of Compliance                     *
+*                                                                              *
+================================================================================
+
+================================================================================
+                               * Introduction *
+================================================================================
+
+This week we'll stick with the international relations focus of last week, but
+turning now to consider why sovereign states choose to comply with international
+human rights law. Given that there are very few effective enforcement mechanisms,
+and given that it is often not in states' immediate self-interest to comply with
+international human rights law, how often should we expect compliance, and what
+explains that compliance?
+
+Our core reading for this week rejects both realist and neoliberal 
+institutionalist explanations of compliance, instead pointing to more complex
+domestic factors influencing states behaviour.
+
+[Please note: I originally set two core readings for this week, but given the 
+long length of the Simmons reading, I have decided to make the second reading, 
+by Risse and Ropp, optional (you can find it in the supplementary readings for 
+this week). This means all six quiz questions will be on Simmons.]
+
+================================================================================
+                                * Pre-class *
+================================================================================
+
+* Mini Lectures 
+
+1. International Relations: The Basics (40 mins)
+
+
+2. Introduction to Simmons (40mins)
+
+
+================================================================================
+                                 * Core Reading *
+================================================================================
+
+* Beth Simmons, 'Mobilizing for Human Rights', Ch 4 URL
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+================================================================================
+* Supplementary Materials *
+--------------------------------------------------------------------------------
+
+Beth Simmons, 'Mobilizing for Human Rights' URL
+Risse and Ropp, 'Introduction and Overview' URL
+Oona Hathaway, 'Between Power and Principle' File
+2.3MB PDF document
+Eric Neumayer, 'Do International Human Rights Treaties Improve Compliance?' File
+127.5KB PDF document
+Stephen M. Walt, 'International Relations: One World, Many Theories' File
+652.5KB PDF document
+================================================================================
+*                                                                              * 
+*                           Week 9: The Role of NGOs                           *
+*               (Guest Seminar by Conor Costello, OXFAM Australia)             *  
+*                                                                              * 
+================================================================================
+
+* Introduction
+
+This week we're focused on the role of NGOs within the contemporary human rights
+system. We'll look at how NGOs have helped shape - and enforce - human rights
+norms. We'll also consider some criticisms of NGOs, looking particularly at the
+claim that they reflect a problematic 'white saviour' mentality.
+
+[Please note I've swapped out one of the core readings that was originally set,
+though you can still find it in the supplementary materials section.]
+
+================================================================================
+* Mini Lectures
+--------------------------------------------------------------------------------
+
+1. Introduction (2 mins)
+
+2. Oxfam Overview (6 mins)
+- 20 members
+    - Independent entities & such
+- Oxfam Aus: 1990s?
+    - 2000 employees
+    - supporting teams in SE Asia
+- Poverty is political
+    - Choice of resource, opportunities, and protection distribution
+- "One Program Approach"
+    - Dev programmes
+    - Humanitarian response
+    - Advocacy (Conor's bit)
+- Common design principles
+    - Transformational change
+    - Rights based & people centred
+    - Dynamic context analysis
+    - Work with others
+    - Measureable
+    - Shared accountability
+
+3. A Case Study - ATT (15 mins)
+- Arms Trade Treaty
+- Advocacy efforts by Oxfam significant
+- Credit to Anna Mcdonald
+    - reflection piece (with Duncan Green)
+- Armed violence & poverty
+- Applying ethical framework to arms trade was 'niche'
+    - but 1997 landmine banning
+- Oscar Arez?
+- Control Arms Coalition 
+    - focus efforts on ATT
+    - Only 3 countries willing to consider
+    - 10 yrs
+    - Research and advocacy
+    - Develop narratives around personal experiences
+    - Mobilizing public support
+- ~2012: Accepted it was possible to make Treaty
+- April 2013: ATT adopted
+    - Entered into force 24 December 2014 (ratified 90 days prior)
+- Framework for upholding & supporting Human Rights
+- Aus. supporter of ATT
+    - H/e Qs re Australia's activities re this space
+- Implementation
+    - Good platform on which to build
+    - 1st global treaty to achieve proscriptions against gender based violence
+    - Lack of enforcement mechanism
+    - 2019: Strong statements re gender-based violence
+    - 2020: Virtual conference
+        - Qs re Substantive progress that could be made
+    - Journey continues
+- Policy funnel
+
+
+
+
+================================================================================
+* Core Readings
+================================================================================
+
+--------------------------------------------------------------------------------
+* Ann-Marie Clark, 'How Norms Grow'
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+* Daniel Bell, 'Reflections on Dialogues Between Practitioners and Theorists of
+Human Rights'
+--------------------------------------------------------------------------------
+
+
+- "pornography of poverty" Plewes & Stuart
+    - re raising funds by using emotive pictures of e.g. children in poverty
+- Alternative approaches
+- Tension between ethics and exploitation
+- 
+
+
+
+--------------------------------------------------------------------------------
+* Questions for Conor - Google Doc
+
+If you have a question you would like Conor to address in the seminar, please
+post it here.
+
+- How do you choose which issues/projects/causes to pursue?
+    - Is there a criteria that is used or assessment guideline that is followed?
+    - Does the chance of success influence the choice?
+- How do you allocate resources?
+- Why would you choose to pursue one issue over another if both were equally
+  valid?
+
+--------------------------------------------------------------------------------
+
+================================================================================
+* In-class
+================================================================================
+
+* Seminar 'Handout'
+
+- Break out groups discussing questions below (10m) 
+    - Can you think of an example where NGOs and other international actors have
+      influenced international politics and policy to uphold or further human
+      rights that mirrored the process outlined in the policy funnel (covered in
+      video 3, and diagram below)?
+    
+    - Can you think of examples where politics and policy where influenced in a
+      way not reflected by the funnel? What happened, and why do you think the
+      â€˜typicalâ€™ process represented by the funnel didnâ€™t occur?
+    
+- Group feedback and discussion (10m) 
+
+- Break out groups discussing question below (5-10m)
+
+    - What do you think are some of the key challenges facing NGOs and others 
+      like them, as such and particularly in relation to their role in 
+      supporting human rights to be upheld and advanced?
+
+- Group feedback (10m) 
+
+- Challenges facing NGOs & Int'l Devt groups (15m)
+
+- Q&A (15-30m)
+
+================================================================================
+* Post-class
+Power and Change - Oxfam Active Citizenship Case Study File 230.4KB PDF 
+Marie Tornquist-Chesnier, 'NGOs and International Law' File 263.9KB PDF
+Andrew Clapham, 'The Use of International Human Rights Law by Civil Society
+ Organisations' 134KB PDF 
+    in Sheeran and Rodley (eds), The Routledge Handbook of International Human Rights Law, (New York: Routledge, 2013)
+Makau Mutua, 'Savages, Victims, and Saviors' 3.4MB PDF 
+Makau Mutua, 'Human Rights International INGOs' 954.5KB PDF 
+Daniel Bell and Jean-Marc Coicaud (eds), 'Ethics in Action: The Ethical
+Challenges of International Human Rights Nongovernmental Organizations'
+Ann-Marie Clark, 'Diplomacy of Conscience: Amnesty International and Changing
+Human Rights Norms'
+
+================================================================================
+================================================================================
+*                                                                              *
+*                  APG5092 - Week 10: Human Rights and Refugees                * 
+*                                                                              *
+================================================================================
+
+* Introduction
+--------------------------------------------------------------------------------
+
+This week we're looking at the first of our three applied topics. We'll learn 
+about the history and content of the Refugee Convention; consider the 
+limitations of the legal definition of a refugee; and explore moral challenges 
+to the existing system of international law concerning refugees.
+
+
+================================================================================
+* Mini Lectures
+
+--------------------------------------------------------------------------------
+1. Background and Context (10 mins)
+--------------------------------------------------------------------------------
+* Refugee Convention (1951) 
+    - 1967 Protocol Addendum
+- Definition of a Refugee: Current
+    - Only includes what is in the def
+    - What is NOT in the convention
+        - Other contexts that may be relevant but not covered
+        - Climate Refugees
+- Relevant Articles
+    - Article 32: The right to remain
+        - Can't expel refugee excepting nat sec or public order
+    - Article 33: The principle of non-refoulement
+        - Don't send them back to place of persecution
+    - Article 31: No Punishment
+        - Can't punish those who come to territory and apply as refugee, even if
+          they come illegally
+        - NB: Australia is shit at this
+
+* Seeking Asylum
+- Everyone who arrives in a state and claims refugee status must be given a fair
+  hearing and those found to be refugees must be granted asylum
+    - Must be able to arrive to claim
+  
+- Australia's Response
+    - Preventing Access
+        - Turning back boats
+        - Offshore Detention
+        - Exclusion of off-shore territories
+        - Regulation of airline carriers
+        - etc...
+    - Deterring Access
+        - Indefinite detention 
+        - Refusal to resettle
+        
+- If asylum seekers do not reach Austrailian territory they cannot claim asylum
+
+================================================================================
+* Short Discussion - Beginning of Lecture #2
+================================================================================
+
+* NB: Unit is Shifting Disciplines
+- From International Theory to Political Philosophy
+    - From explanatory framework to moral/political critique
+        - From: "why are things the way they are?"
+        - To: "Is the way things are justifiable and what whould a just system 
+          look like?"
+- Strategies of Political Philosophers in argument 
+    - Theories as b/ground or framework
+    - Often take these theories as 'granted' for expediency
+        - Moral Theories 
+            - e.g. Consequentialism vs deontology
+                - Things are morally good/correct if they lead to good 
+                  consequences
+                - Versus rules that should be followed and the end does not nec
+                  justify the means
+        - Political theories
+            - Liberalism (individual freedom/equality)
+        - Shared Moral/Political commitments (General statements)
+            - i.e. "if you agree that...then..."
+            - e.g. Slavery is wrong/Holocaust was bad
+            
+--------------------------------------------------------------------------------
+2. Introduction to Carens (25 mins)
+--------------------------------------------------------------------------------
+
+* Joseph Carens
+- Starting Assumption (for the purpose of this chapter)
+    - States are morally entitled to control who enters
+    - Privilege of sovereignty
+    - NB: Only used for didactic purposes; Critiques later in the book
+- Key Q
+    - Do States have a duty to admit refugees?
+- Moral Framework
+    - States should have admitted Jewish people fleeing Nazi Germany
+    
+- 3 Ways to justify such a duty
+    - 1) Caused responsibility
+        - if a state is in some way causally responsible for a person becoming a
+          refugee they have a responsibility to fleeing people to grant asylum
+        - Iraq Interpreters
+    - 2) Humanitarian Considerations
+        - Basic moral duty to other human beings
+    - 3) The 'Normative Presuppositions of the modern state system'
+        - The idea that institutions such as states and norms like sovereignty
+            are not inevitable, they are the result of choices made; the system
+            is created
+        - Many argue sys is justified (seperate sov states)
+        - some justify by saying ppl are better overall in this system
+        - h/e: Caren suggests that setting up such a system w sov states that 
+          control own territory predictibly leads to refugees
+            - thus we owe it to them to ameliorate the harms/damage to them
+                - Grant refugees asylum
+- Clarifying content of the duty
+    - Who is a refugee?
+        - The inadequacy of the Convention Definition 
+            - "Fear of persecution"
+    - WHAT must they be given?
+        - What does it mean to admit someone
+        - what obligations come with this?
+        - Admission to a territory is insufficient
+            - From admission to membership
+            - The act of admission creates additional duties
+    - HOW should the duty be allocated?
+        - WHich states should admit which refugees?
+        - Multiple considerations
+
+- Closing Considerations
+    - Need to distinguish b/n two Qs
+        - Should states have the authority to determine entry?
+        - Is their exercise of that authority criticisable?
+        - Should keep these questions distinct and separate
+    - Morality and Self-interest
+        - Carens: Pessimistic of the idea of reform of refugee system
+            - Good moral reasons to change
+                - But moral reasons do not overlap with self-interest reasons
+                    - i.e. Can't appeal to self-interest to override morals
+
+
+--------------------------------------------------------------------------------
+3. Introduction to Kukathas (12 mins)
+--------------------------------------------------------------------------------
+
+* Are Refugees Special?
+
+* Starting Point
+- Common Assumptions
+    - Modern state system is basically just, at least in theory
+    - States entitled to decide who enters
+        - similar to Caren: Moral authority to decide who enters
+    - It is just in so far as they have a duty to accept refugees
+- Kukathas Challenges the 'justness' of the assumption 
+
+* Posing the Challenge
+- 1) There is no morally justifiable way to differentiate refugees from other 
+     kinds of immigrants
+- 2) When we create institutions to allow entry to refugees they undermine the
+     interests of the refugees
+    - If we have this common assumptions institutions must be created
+        - determine genuine from not refugees
+    - These institutions undermine the interests of the people they are meant to
+        be protecting
+
+- The moral Challenge 
+    - How could we justify treating refugees as special?
+        - B/c their lives are at risk
+            - h/e Kuk notes issues
+                - that risk !nec correlate w persecution
+                - Economic migrants may be suffering more
+    - The desire to differentiate b/n refugees and migrants suggests a morally
+      relevant difference in the reasons that ppl leave their countries
+        - Kuk. argues no way to make sense of this
+- The Institutional Challenge
+    - Institutions, even if working with imperfect definition, are needed
+        - e.g. a working definition of refugee
+            - h/e how to ensure most needy are helped?
+    - Purpose of the institutions is to keep non-refugees out
+        - Else they would not be needed
+        - Filter out non-genuine refugees
+    - Given their purpose, they make it hard to claim asylum
+    - Force refugees to prove themselves
+        - The onus is on a refugee to prove they meet the standard
+    - There are predictable consequences of the state system
+        - These institutions will be designed to put the burden on refugees and
+            err on the side of keeping ppl out
+* The Solution
+- No morally justifiable way to distinguish b/n migrants/refugees
+- No real way to create institutions that will look after refugees
+- Thus
+    - Open borders
+        - Remove state system
+        - Challenging and difficult prospect
+    - In the meantime
+        - Alter institutions to make the best of what we've got
+        - H/e don't pretend the system is justifiable
+    
+
+================================================================================
+* Core Readings
+
+--------------------------------------------------------------------------------
+* Joseph Carens, 'Refugees'
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Chandran Kukathas, 'Are Refugees Special?'
+
+
+================================================================================
+* Supplementary Materials
+
+--------------------------------------------------------------------------------
+The Refugee Convention File 476KB PDF
+
+The Global Compact on Refugees File 520.6KB PDF
+
+Matthew Gibney, '1000 Little Guantanamos' File 121.5KB PDF
+
+Serena Parekh, 'Beyond the Ethics of Admission' File 199.9KB PDF
+
+Emma Larking, 'Scum of the Earth II' File 1.8MB PDF
+
+Hannah Arendt, 'The Decline of the Nation-State and the Ends of the Rights of 
+                Man', Origins of Totalitarianism File 1.8MB PDF
+                
+================================================================================
+================================================================================
+*                                                                              *
+*            APG5092: Week 11 - Human Rights and Global Inequality             * 
+*                                                                              *
+================================================================================
+
+* Introduction
+
+This week we'll explore the relationship between human rights and global 
+inequality. We'll revisit the distinction between negative and positive rights, 
+in order to consider what the duties related to freedom from poverty might look
+like, and who they may apply to. We'll also consider whether human rights'
+commitment to achieving a bare minimum for all, rather than pushing for a more
+robust kind of equality, renders them ineffective in challenging global 
+inequality.
+
+
+================================================================================
+* Mini Lectures
+================================================================================
+
+--------------------------------------------------------------------------------
+1. Introduction to Week 11 (8 mins)
+--------------------------------------------------------------------------------
+* Q: How we should think about HRs on one hand and Equality on the other
+* 2 Readings dealing with this from diff directions
+- Shue: Socioeconomic rights
+    - basic subsistence
+    - a right not widely accepted at time of writing
+    - worry that rights->duties
+        - req. s/one else to provide duties
+    - if there is such a right, whose responsibility is it to provide duties?
+    - Is it justifiable?
+    - Oneill, Kahn, collins explore this as well
+- Moyn: Alternative direction
+    - Socioeconomic rights are insufficient
+    - Worry: HRs have failed b/c aimed too low
+        - Base lvl of subsistence as goal has encouraged/enabled global 
+          inequality
+    - Q: Are HRs up to challenge of properly addressing problems or just mopping
+      up
+      
+* Empirical Context
+- Pop living in extreme poverty has decreased over past few decades
+    - Global downward trend
+- Advocate of HR could argue this is good achievement
+- H/e: Sobering statistic
+    - Distribution of Global Wealth (the "1%")
+    - Just under 1% command ~= 45% of worlds wealth
+        - c.f. 64% command <2% of world wealth
+    - Gap b/n rich and poor has accelerated significantly
+
+
+--------------------------------------------------------------------------------
+2. Introduction to Shue (28mins)
+--------------------------------------------------------------------------------
+* Negative and Positive Rights
+- Relationship b/n rights holder and duty bearer
+- Neg: Reqs duty bearer NOT to do something
+- Pos: Reqs duty bearer TO provide something
+
+* Complicating the Picture
+- Division bn Neg/Pos rights popular until Henry Shue
+- 1980: "Basic Rights" book
+    - Context: Responding to the US assumption that subsistence rights are less
+      important than political/civil rights
+    - Dominant Idea in US 
+    - Assumption appeals to the fact that subsistence rights are positive rights
+        - i.e. obligation to provide something
+        - It is worse to actively harm someone than it is to fail to assist them
+        - It's easier to satisfy Negative rights (more realistic)
+    - Positive rights are hard and complicated and requires active participation
+      and institutions
+
+* Key Claims
+- THe right to subsistence is one of the most important human rights
+- The right to subsistence is not best understood as a positive right
+- The right to subsistence is no harder to satisfy to 'negative' rights such as
+  freedom from assault
+
+* Beyond Negative and Positive Rights
+- Reconsidering the right to freedom from assault
+    - reqs "demand to be protected against harm"
+    - demand for positive action
+    - Reqs an obligation/entitlement to a system to protect you
+- Complicating Neg/Pos rights
+
+* A Case Study: The Right to Subsistence - A Different Perspective
+- No relevant diff b/n right to freedom from assault and freedom to susbsitence
+- Example:
+    - Small Community of subsistence farmers
+    - Mostly impoverished
+    - No means of generating wealth/income outside of farming
+    - slightly uneven distribution 
+        - e.g. Head of village: grows most, comfortable
+        - e.g. some have less, only just getting by
+    - What to do?
+        - Poorer villages work for chief, Chief pays them (food/$$$)
+        - Stable system
+    - Multinat coorporation arrives
+        - Makes deal with chief for access to land, etc
+        - Chnage from growing beans to e.g. flowers
+    - Now farmers that can't get/work enough
+        - No way of earning extra money or access to basic sustenance needs
+        - Chief does not need them
+        - Cannot survive or struggle to do so...
+    - Not a radically unusual situation
+- "Rights to physical subsistence often can be completely satisfied withouth the
+   provision by others of any commodities to those whose rights are in question.
+   All that is sometimes necessary is to protect the persons whose sunsistence
+   is threateend from the individuals and institiutions that will otherwise 
+   intentionally harm them" (Shue, p.40)
+    - Can satisfy right to subsistence w/o having to give any aid
+    - Why did they suddenly lack ability to survive?
+        - Someone did something (Chief/Multinational)
+    - Can we begrudge the farmers from wanting more money?
+- "The design, building and maintenance of institutions and practices that 
+   protect people's subsistence against the callous - and even  the merely 
+   over-energetic - is no more and no less positive than the conception and 
+   execution of programs to control violent crimes aagainst the person" 
+   (Shue, p.45)
+   - Need to create infrastructure to disincentivize the situation
+
+* Rethinking Duties - Shue's Proposal
+- Every Human Right involves the following three kinds of duty:
+    1) duties to _avoid_ depriving (e.g. assaulting, removing livelihood)
+    2) duties to _protect_ others from deprivation
+        i/  enforcing duty 1 (criminalising assault; outlaw predatory commoerce)
+        ii/ design institutions that disincentivize violations of duty 1 (police 
+            presence; tack schemes)
+    3) duties to _aid_ the deprived
+
+* Shue - A closer Look
+- "The central core of the right is a right that others not act in certain ways.
+  But the mere core of the right indicates little about the social institutions 
+  needed to secure it, and the core of the right does not contain its whole 
+  structure" (Shue, p.39)
+- Complicates the idea of Neg/Pos rights
+    - A 'layered' approach to rights
+
+
+
+
+--------------------------------------------------------------------------------
+3. Background to Moyn (19mins)
+--------------------------------------------------------------------------------
+* Egalitarianism
+
+* Sufficiency vs Equality
+- Differentiating between
+- Sufficiency
+    - Identifying a threshold below which no one should fall
+    - Recognising that it is improper
+- Equality
+    - Concerned about the gap b/n the best off and worst off
+
+* Equality of What?
+- What is this good that we need to be concerned about?
+    - e.g. Goods
+        - Money, wealth
+    - e.g. respect or status
+        - Social Hierarchies
+        - How some can move through the world easier than others
+    - e.g. Opportunity
+        - Not about how much money ppl have now
+        - Concerned with ppl having the same opportunity to gain e.g. wealth
+- Not necessarily distinct categories
+- Moyn
+    - Combating Equality of Wealth
+    - Material equality
+    
+* Why Equality?
+- Equality as intrinsic good
+    - good for its own sake
+        - less common for material good
+- Equality as instrumental good
+    - Good because it secures/protects some other goal
+    - Massive inequality undermines Democratic ideals, etc.
+
+* What Kind of Equality?
+- Different kind of ideas that can fall under egalitarianism
+- 3 different things
+    - Strict Equality
+        - E/one gets the same (e.g. e/one has same amount of wealth)
+        - Criticism: can be viewed as potentially authoritarian 
+    - Prioritarianism
+        - Distribute towards the worst off
+        - Unlike sufficiency, no threshold
+        - Prioritise redistribution towards worst off
+        - Rawls' theory of justice
+            - Argues: take as default that the could should be strict equality
+            - Only way to justify deviating is if things are unequal(?)
+    - Limits on Inequality
+        - Focus on the gap b/n richest and poorest
+        - Limit on how wide this should be
+
+* Moyn
+- Unclear how clear he is to advocating strict equality
+- Not a prioritarianist
+- HRs have become captive to Sufficiency and are failing to have impact on 
+  inequality
+
+--------------------------------------------------------------------------------
+4. Introduction to Moyn (16 mins)
+--------------------------------------------------------------------------------
+
+* Socialism vs Human Rights
+- Human Rights
+    - protect basic rights
+    - status equality
+        - e/one irrespective of id has the same rights
+- Socialism
+    - pursue economic justice
+- Consider these two ideas as complementary
+- Reconciliation b/n Socialism and Human Rights
+
+* HR and Economic Rights
+- Socioeconomic rights
+- Equality vs Sufficiency and the tension between
+- Moyn
+    - HRs are commited to sufficiency and only sufficiency
+    - Not the kind of material equality the socialist ideal demands
+- Historical trajectories
+    - Global commitment to Equality decreased
+    - Global commitment to Sufficiency increased
+- The role of HRs advocates in this
+
+* Sufficiency vs Equality
+- Is there really a tension b/n these?
+- Ideas/thinking around this
+    - 1) Can pursue sufficiency, then equality
+        - Moyn implicitly suggests this
+    - 2) Sufficiency requires inequality
+        - Concern w e/one getting above threshold req some inequality
+        - to raise ppl out of poverty, must generate material goods
+        - in doing so will sacrifice equality, by using ideas that tend to 
+          increase inequality
+    - 3) Sufficiency requires Equality
+        - If we want to achieve sufficiency, then must establish some lvl of 
+          equality
+        - or at least reduce inequality
+        - Gross inequality decreases support for social safety net
+
+* Human Rights vs Equality
+- Why has Sufficiency come to dominate?
+- Differing views
+    - Liberal individualism & tension b/n
+        - neoliberal market fundamentalism
+            - rejects human rights
+        - vice versa
+- Moyn's view
+    - Not necessarily tied
+    - Missed opportunity
+    - Welfare state could have led to Equality
+    - Over time, HRs movement chose to distance self from this
+    - Human rights began focusing on Sufficiency
+
+* Closing Thoughts
+- Where to from here?
+- Moyn
+    - Need to reinfuse HRs towards greater commitment to equality
+- Are Human Rights conceptually compatible with material equality?
+    - Potentially not:
+        - Built into def of HR
+        - Morality of the depth
+        - set a sufficient minimum
+    - Change definition or how we think about it?
+    - if yes:
+        - reshape human rights
+    - if no:
+        - supplement rights w another ideal
+    - pros/cons of both approaches
+        - Something to think about it?
+
+================================================================================
+* Core Readings
+================================================================================
+
+--------------------------------------------------------------------------------
+1) Henry Shue. 1980. 'Correlative Duties'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2) Sam Moyn.2018. 'Not Enough - Introduction'
+--------------------------------------------------------------------------------
+
+
+================================================================================
+* Supplementary Materials
+================================================================================
+
+Onora O'Neil, 'The Dark Side of Human Rights' File
+
+Stephanie Collins, 'The Claims and Duties of Socio-Economic Rights'
+
+Elizabeth Kahn, 'Beyond Claim Rights'
+
+Richard Arneson, 'Egalitarianism' (Stanford Encyclopedia of Philosophy)
+
+Wendy Brown, 'The Most That We Can Hope For' File
+
+================================================================================
+================================================================================
+*                                                                              *
+*              APG5092 - Week 12: Human Rights and Climate Change              *
+*                                                                              *
+================================================================================
+
+ 
+* Introduction
+
+We'll close out the semester by considering the role of human rights in a time 
+of climate emergency. Can human rights provide an effective framework for 
+preventing climate change, or does their inherent anthropocentrism render them
+ inadequate to the task?
+ 
+================================================================================
+* Mini Lectures
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. Background and Context (11 mins)
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+2. Introduction to Hiskes (20 mins)
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+3.Introduction to Burdon (15 mins)
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+* Core Readings
+================================================================================
+
+--------------------------------------------------------------------------------
+* Richard Hiskes, 'Environmental Human Rights'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+* Peter Burdon, 'Environmental Human Rights: A Constructive Critique'
+--------------------------------------------------------------------------------
+
+================================================================================
+* Supplementary Materials
+================================================================================
+
+William Aikin, 'Human Rights in an Ecological Era'
+
+================================================================================
