@@ -1,0 +1,139 @@
+{
+
+    "csharp.suppressHiddenDiagnostics": false,
+
+    "debug.console.fontSize": 11,
+
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.cursorStyle": "block",
+    "editor.detectIndentation": true,
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace, lucida console",
+    "editor.fontSize": 12,
+    "editor.hover.delay": 400,
+    // "editor.maxTokenizationLineLength": 20000,
+    "editor.minimap.maxColumn": 60,
+    "editor.parameterHints.cycle": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        // {"column": 80, "color": "#323639"},
+        {"column": 80, "color": "#423669"},
+        {"column": 100, "color": "#223659"},
+        {"column": 120, "color": "#414141"}
+    ],
+    "editor.suggest.showStatusBar": true,
+    // "editor.suggest.statusBar.visible": true,
+    "editor.tabCompletion": "on",
+    // "editor.wordWrap": "wordWrapColumn",
+    // "editor.wordWrapColumn": 80,
+
+
+    // "editor.semanticTokenColorCustomizations": {
+        //     // "[Default Dark+]": {
+            //     "[Visual Studio Dark]": {
+                //         "enabled": true,
+                //         "rules": {
+                    //             "parameter": {
+                        //                 "foreground":"#ff0000",
+                        //             }
+                        //         }
+                        //     }
+                        // },
+
+                        "extensions.autoUpdate": false,
+
+                        "files.insertFinalNewline": true,
+    "files.participants.timeout": 0,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "jupyter.allowLiveShare": false,
+    //"jupyter.experiments.optInto": [],
+    "jupyter.liveShareConnectionTimeout": 200,
+    "jupyter.maxOutputSize": 200,
+    "jupyter.experiments.enabled": false,
+
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.startAsLoginShell.osx": false,
+
+    "python.autoComplete.addBrackets": true,
+    "python.experiments.enabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=pygame,turtle",
+        "--max-line-length=81",
+        "--verbose",
+        "--disable=C0116"
+    ],
+    "python.pythonPath": "" //ADD PYTHON PATH,
+    "python.showStartPage": false,
+    "python.venvPath": "" // ADD VIRTUAL ENVIROMENT PATH
+
+    "problems.showCurrentInStatus": true,
+
+    "search.showLineNumbers": true,
+    "security.workspace.trust.startupPrompt": "always",
+
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.scrollback": 9000,
+
+    "window.autoDetectHighContrast": false,
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground":"#ff21ff",
+        "terminalCursor.foreground": "#ff21ff",
+        // "editorLineNumber.activeForeground": "#ea36e9",
+        // "editorLineNumber.foreground": "#0faaff",
+
+        // "statusBar.foreground": "#0000af",
+        // "[python]": {
+        //     "editorLineNumber.foreground": "#ffffff",
+        //     "statusBar.background": "#60f150",
+        // "tab.activeBorder": "#6a6cff"
+        // },
+    },
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.enableExperiments": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
+    // "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+
+    "update.enableWindowsBackgroundUpdates": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "[html]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+        "editor.suggest.insertMode": "replace"
+    },
+    "[markdown]": {
+        // "editor.wordWrap": "on",
+        "editor.quickSuggestions": false,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+    },
+    "[python]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+    },
+    "[powershell]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 115,
+    },
+    "editor.tokenColorCustomizations": null,
+    "workbench.colorTheme": "Visual Studio Dark",
+    // "python.analysis.completeFunctionParens": true
+
+    }
