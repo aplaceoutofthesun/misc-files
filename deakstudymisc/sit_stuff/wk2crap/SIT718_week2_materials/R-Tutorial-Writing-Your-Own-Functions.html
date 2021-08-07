@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/R-Tutorial-Writing-Your-Own-Functions-image-1%20.png" alt="Screen capture from RStudio showing a box and whisker plot" title="Screen capture from RStudio showing a box and whisker plot" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address>&copy; RStudio, Inc.</address>
+<h1>R Tutorial: Writing Your Own Functions</h1>
+<div>
+<p>In many situations it is convenient for us to program our own functions so that we can use them again.</p>
+<p>If you haven&rsquo;t already, create a new script (<code>Ctrl+Shift+N</code>) to save our functions in. We can also have multiple functions in a single script file as it will allow us to load all functions at once in future.</p>
+<p>As I mentioned, ideally by the end of the week we&rsquo;ll have one or more script files that contain the functions we&rsquo;ve programmed and implemented.</p>
+<h3 id="general-structure-of-a-function">General structure of a function</h3>
+<p>As we saw in the last step, the general structure of a function is:</p>
+<div>
+<div>
+<pre><code class="language-r">name.of.function = function(input1, input2) {
+  # Comment describing what the function does, or explaining a step in calculations.
+  # Sequence of calculations
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li><strong><code>name.of.function</code></strong> - the name of a function can be any variable name and should be descriptive.</li>
+<li><strong><code>input1, input2</code></strong> - a function can have one or many inputs and they can be of any data type. When writing the function it should be clear as to what form you intend the inputs to be: a number, array or string.</li>
+<li><strong><code># Comments</code></strong> - comments can be written in your code as long as they start with a hash sign <code>#</code>. It is recommended to insert comments in your code that explain any aspect of the code that is not immediately familiar to you or anyone reading it. You will notice that RStudio will colour comments differently.</li>
+<li><strong><code># Sequence of calculations</code></strong> - the calculations happening inside of a function that depend on the inputs given.</li>
+</ul>
+<p>A naive implementation of the <code>sum</code> function which adds up all the numbers in an array can be written as follows. Type (not copy and paste!) the following code into your script file, and then load the function into your Environment by clicking on &lsquo;Source&rsquo; (or, assuming you&rsquo;ve saved the script file as <code>sumArray.r</code>, type <code>source("sumArray.r")</code> into the console). In the console, typing <code>sumArray(c(1,2,3,4))</code> should give you a result of 10.</p>
+<div>
+<div>
+<pre><code class="language-r">sumArray = function(arrayOfNumbers) {
+  result = 0
+  for(i in c(1:length(arrayOfNumbers))) {
+    result = result + arrayOfNumbers[i]
+  }
+  result
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li><code>sumArray</code> takes a single input, an array of numbers e.g. <code>c(1,2,3,4)</code>, which is then assigned to a temporary variable <code>arrayOfNumbers</code></li>
+<li><code>sumArray</code> starts by initialising a variable <code>result</code> and setting it to zero</li>
+<li>the for loop iterates through the array and adds each number to <code>result</code></li>
+<li>lastly, after all the numbers have been added to <code>result</code>, we print the value of <code>result</code> to the console</li>
+</ul>
+<p>Let&rsquo;s say that we want <code>sumArray</code> to stop calculating and print a warning message to the console if the array contains an element that is not a number.</p>
+<p>Often times one will be dealing with messy data. This can happen for any number of reasons: faulty equipment, users entering survey information incorrectly etc. Implementing checks at every step in the data analysis process helps to identify these errors that would otherwise lead to inaccurate analyses. This is an example of <em>&lsquo;defensive programming&rsquo;</em> where implementing these checks or tests can save us from future problems.</p>
+<p>One way we can do this is by using an &lsquo;if condition&rsquo; that checks the type of array and indicates what kind of elements it contains.</p>
+<div>
+<pre><code class="language-r">sumArray = function(arrayOfNumbers) {
+  result = 0
+  if(typeof(arrayOfNumbers)=="double") {
+    for(i in c(1:length(arrayOfNumbers))) {
+      result = result + arrayOfNumbers[i]
+    }
+    result
+  } else 
+    print("Warning: There is a non-numeric element in your array.")
+}
+</code></pre>
+</div>
+</div>
+<p>Test your updated <code>sumArray</code> with inputs <code>c(1,2,3,4)</code>, <code>c(9,4,"t",5)</code> and <code>c("not","a","number")</code> and try to guess what might happen.</p>
+<p>Beyond this tutorial, we won&rsquo;t be expecting you to write R functions from scratch as they will all be provided for your use. It&rsquo;s best to consider this tutorial as a stepping stone that gives you the confidence to consult external resources for building up your programming skills as needed. It is normal to consult external resources/tutorials should this one be too &lsquo;hands-off&rsquo;. Feel free to look at other resources.</p>
+<h2 id="your-task">Activity</h2>
+<p>In your script file where you&rsquo;ve typed up <code>sumArray</code>, add comments describing what the function does in your own words. Comments should either go in the line before each step that you intend to address, or on the same line after the step.</p>
+<p>One component of <code>sumArray</code> not explicitly addressed is <code>c(1:length(arrayOfNumbers))</code>.</p>
+<p>The following questions are designed to assist you in breaking down a part of a function and understanding what each component means.</p>
+<ul>
+<li>What does the function <code>length</code> do? What should I expect <code>length(c(1,2,3,4))</code> to give me?</li>
+<li>What does <code>c(1:4)</code> and <code>c(1:20)</code> give you when you type them into the console?</li>
+<li>Why do we use <code>c(1:length(arrayOfNumbers))</code> instead of <code>c(1:4)</code> in <code>sumArray</code>? How would the latter affect or restrict the inputs of <code>sumArray</code>?</li>
+</ul>
+<p>Add comments to your script file as needed. Note: You can do the same for <code>typeof(arrayOfNumbers)=="double"</code> within the if conditional, but this dives into computer science knowledge that is beyond the scope of this material.</p>
+<p>Answer the following questions below by writing and modifying your own function.</p>
+<p><strong>a.</strong> Define the function&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mfrac></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(f(x,y) = \frac{x^2+y^2}{x+y}\)"}</annotation></semantics></math> and evaluate&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>f</mi><mo stretchy="false">(</mo><mn>0.3</mn><mo>,</mo><mn>0.9</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(f(0.3, 0.9)\)"}</annotation></semantics></math> and <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>f</mi><mo stretchy="false">(</mo><mn>0.4</mn><mo>,</mo><mn>0.9</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(f(0.4, 0.9)\)"}</annotation></semantics></math>.<br />Based on your results, is&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>f</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(f\)"}</annotation></semantics></math> an aggregation function or not?</p>
+<p><strong>b.</strong> Notice that in our function, we cannot have&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x+y=0\)"}</annotation></semantics></math> as it would mean the denominator would equal zero resulting in an undefined value. Write an if conditional in your function to return a warning message if <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x+y=0\)"}</annotation></semantics></math>.</p>
+<p><strong>c.</strong> Add another if conditional to ensure that <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(f(0,0)=0\)"}</annotation></semantics></math>. Should this go before or after our previous if conditional?</p>
+<p><a href="../Solution%20for%202_4%20Actrivity.R" target="_self">Solution for 2_4 Actrivity.R</a></p>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.r.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!")
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+
+<body class="cloudFirst">
+<p><img src="../images/Properties-of-aggregation-functions-image-1.jpeg" alt="abstract rippled twisted dotted blended gradient lines background" title="abstract rippled twisted dotted blended gradient lines background" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h1>Properties of Aggregation functions</h1>
+<div>
+<p>There are common properties between all the functions this week that allow us to classify them as aggregation functions.</p>
+<p>More formally, for an input vector&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mathbf{x} = (x_1, x_2, \dots, x_n)\)"}</annotation></semantics></math>, a function&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(\mathbf{x})\)"}</annotation></semantics></math>&nbsp;is an aggregation function if it:</p>
+<ul>
+<li>is monotone increasing i.e. an increase in any of the inputs does not result in a decrease in the output.</li>
+</ul>
+<p>In other words, if we increase any of the inputs of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mathbf{x}\)"}</annotation></semantics></math>, then&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(\mathbf{x})\)"}</annotation></semantics></math>&nbsp;will either be larger or remain the same, but never smaller. This can be expressed mathematically as</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtext>if&#xA0;</mtext><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo>&#x2264;<!-- ≤ --></mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">y</mi></mrow><mtext>&#xA0;then&#xA0;</mtext><mi>A</mi><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo><mo>&#x2264;<!-- ≤ --></mo><mi>A</mi><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">y</mi></mrow><mo stretchy="false">)</mo><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+  \text{if } \mathbf{x} \leq \mathbf{y} \text{ then } A(\mathbf{x}) \leq A(\mathbf{y}) 
+\\"}</annotation></semantics></math></p>
+<ul>
+<li>satisfies the boundary conditions. If&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>a</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(a\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>b</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(b\)"}</annotation></semantics></math>&nbsp;represent the minimum and maximum values respectively, then</li>
+</ul>
+<p>&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>A</mi><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mtext>&#xA0;and&#xA0;</mtext><mi>A</mi><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+A(a,a, \dots, a) = a \text{ and } A(b,b, \dots, b)
+\\"}</annotation></semantics></math></p>
+<p>For example, if all our values are in the unit interval [0,1], then we can expect&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(0,0, \dots, 0) = 0\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(1,1,\dots, 1) = 1\)"}</annotation></semantics></math>.&nbsp;Similarly, if our data range is from 1 to 1000 then we would require&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(0,0, \dots, 0) = 0\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mn>1000</mn><mo>,</mo><mn>1000</mn><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mn>1000</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1000</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(1000,1000,\dots, 1000) = 1000\)"}</annotation></semantics></math></p>
+<p>A function like&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(x,y) = xy\)"}</annotation></semantics></math>&nbsp;is an aggregation function over the interval [0,1], but not over the interval [1,10] since it does not satisfy the boundary conditions:&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><mn>10</mn><mo>,</mo><mn>10</mn><mo stretchy="false">)</mo><mo>=</mo><mn>10</mn><mo>&#x00D7;<!-- × --></mo><mn>10</mn><mo>=</mo><mn>100</mn><mo>&#x2260;<!-- ≠ --></mo><mn>10</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(10, 10) = 10 \times 10 = 100 \neq 10\)"}</annotation></semantics></math>.</p>
+<p>A subclass of aggregation functions are&nbsp;<strong>averaging functions</strong>&nbsp;whose output are bounded between the minimum and maximum of its inputs i.e.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mo movablelimits="true" form="prefix">min</mo><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo><mo>&#x2264;<!-- ≤ --></mo><mi>A</mi><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo><mo>&#x2264;<!-- ≤ --></mo><mo movablelimits="true" form="prefix">max</mo><mo stretchy="false">(</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mo stretchy="false">)</mo><mo>.</mo><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\min(\mathbf{x}) \leq A(\mathbf{x}) \leq \max(\mathbf{x}).
+\\"}</annotation></semantics></math></p>
+<p>While this is not universal terminology, aggregation functions falling into this category have the convenience of their results being interpreted on the same scale and units as the inputs.</p>
+<h2 id="your-task">Activity</h2>
+<p>Verify that all the aggregation functions this week satisfy the monotone increasing property by generating a random array and calculating its output. Increase one of the values of your array and observe whether your output increases or not. Some hints:</p>
+<ul>
+<li>The function&nbsp;<code>runif(n, min = a, max = b)</code>&nbsp;generates an array of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>n</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(n\)"}</annotation></semantics></math>&nbsp;random numbers between&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>a</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(a\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>b</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(b\)"}</annotation></semantics></math>.&nbsp; Type&nbsp;<code>?runif</code>&nbsp;in the console to view the documentation for this function.</li>
+<li><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">We can replace a single element within an array by assigning it a new value. Let&rsquo;s say we have an array&nbsp;</span><code style="font-size: 0.95rem;">arr = c(2, 5, 8, 9)</code><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">, then we can replace the second value by typing&nbsp;</span><code style="font-size: 0.95rem;">arr[2] = 6</code><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">.</span></li>
+</ul>
+<p>Which of the aggregation functions this week are averaging aggregation functions and how can we verify this?</p>
+<p>Referring back to the properties mentioned in the topic 'Arithmetic Mean'.</p>
+<ul>
+<li><strong style="font-family: Lato, sans-serif; font-size: 0.95rem;">symmetry</strong><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">&nbsp;- the order of the numbers doesn&rsquo;t affect the output.</span></li>
+<li><strong style="font-family: Lato, sans-serif; font-size: 0.95rem;">translation invariant</strong><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">&nbsp;- if we add a constant to every value and take the average, then the output will change by that same constant.</span></li>
+<li><strong style="font-family: Lato, sans-serif; font-size: 0.95rem;">homogeneous</strong><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">&nbsp;- if we multiply all values by a constant, the output will also change by the same factor.</span></li>
+<li><strong style="font-family: Lato, sans-serif; font-size: 0.95rem;">idempotent</strong><span style="font-family: Lato, sans-serif; font-size: 0.95rem;">&nbsp;- if all values are the same, then the output will also be the same value. Which of these properties also apply to the other aggregation functions?</span><span style="font-family: Lato, sans-serif; font-size: 0.95rem;"></span></li>
+</ul>
+<p>Read <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=1030459&amp;type=content&amp;rcode=DeakinUniversity-2941122" target="_self">the paper</a> and find out the properties of commonly used aggregation functions/methods.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+
+<body class="cloudFirst">
+<h1>RStudio: Writing, Saving and Importing Scripts</h1>
+<p>Script files are an essential component of your R programming arsenal. They are useful for storing commands and functions that you&rsquo;d like to use in future.</p>
+<p>Watch Matt Mack in this short tutorial that shows how to store functions in scripts and load them when you need them again. This function was covered briefly in week 1, so this reintroduction has been provided as a refresher. Once you are confident with the navigation apply what you have learned by completing the following programming tasks.</p>
+<p>Create a new script (<code>Ctrl+Shift+N</code>) to save our functions in. We can also have multiple functions in a single script file as it will allow us to load all functions at once in future. Ideally by the end of the week we&rsquo;ll have one or more script files that contain the functions we&rsquo;ve programmed and implemented.</p>
+<p>The general structure of a function is as such:</p>
+<div>
+<div>
+<pre><code class="language-r">name.of.function = function(input1, input2) {
+  # Comment describing what the function does, or explaining a step in calculations.
+  # Sequence of calculations
+}
+</code></pre>
+</div>
+</div>
+<ul>
+<li><strong><code>name.of.function</code></strong> - the name of a function can be any variable name and should be descriptive.</li>
+<li><strong><code>input1, input2</code></strong> - a function can have one or many inputs and they can be of any data type. When writing the function it should be clear as to what form you intend the inputs to be: a number, array or string.</li>
+<li><strong><code># Comments</code></strong> - comments can be written in your code as long as they start with a hash sign <code>#</code>. It is recommended to insert comments in your code that explain any aspect of the code that is not immediately familiar to you or anyone reading it. You will notice that RStudio will colour comments differently.</li>
+<li><strong><code># Sequence of calculations</code></strong> - the calculations happening inside of a function that depend on the inputs given.</li>
+</ul>
+<p>A simple implementation of the <code>sum</code> function which adds up all the numbers in an array can be written as follows.</p>
+<div>
+<div>
+<pre><code class="language-r">sumArray = function(arrayOfNumbers) {
+    result = 0
+    for (i in range(arrayOfNumbers)) {
+        result = result + arrayOfNumbers[i]
+    }
+    result
+}
+</code></pre>
+</div>
+</div>
+<p style="text-align: center;"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_cje0j9lu&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_3yp3rx7s" width="500" height="281" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<article class="transcript" id="transcript-en">
+<p class="transcript__para">MATT MACK: All right, welcome back. This week will be a shorter video where we're just going to quickly go over how we can store functions in our scripts, and just load them when we need to. So what you'll be doing this week is that you will be implementing-- you'll be playing around with R and RStudio in implementing some of the aggregation functions. And basically what will happen is that you will have your script file where you'll be typing up your functions, and like I said in the last screencast, what we're going to do is that we're going to save all these functions in the single script file, and then it's going to be saved into our working directory.</p>
+<p class="transcript__para">So I'm going to do this and then we're going to go to File and Save, or if you know your keyboard shortcut, you can go Control-S and basically say, you could say this is going to be Week Two Functions dot al. And then by default it should save in your working directory. Now since we've saved this now, what we can do now is that we can basically load this in fairly quickly. So we can click on this to open this, and as I've shown you in the last screencast, what we can do is that we can click on Source to basically load up the whole thing again. Now I'm going to clear this for a second.</p>
+<p class="transcript__para">And what I'm going to show you is how we can do it via the console. When you saw the Source, it had a longer file name. But what I can do here, because this is in our working directory, I can type in Source, and then this is going to be Week Two Functions dot al. And then it's going to do the exact same thing. So the main thing I want to get across here is that any files, any scripts that you save in the working directory, you can access sort of directly without having to have a long-- like, say, long directory name kind of thing. This is the same for when you're given a set of data.</p>
+<p class="transcript__para">If you want to import the data, it's going to be like, say, week data, and as long as the data file is in your working directory, you shouldn't have any problems at all in loading that data into your workspace. That's it from me for now. So hopefully you're looking forward to implementing your own aggregation functions this week. And as always, have fun!</p>
+</article>
+<h2 id="your-task">Activity</h2>
+<p>Open up a script file, type a comment in it such as <code># You are an awesome person!</code> and save the script file in your working directory under any name you like.</p>
+<p></p>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.r.js"></script>
+<script  type="text/javascript">
+ 
+ 
+function localProc(){
+ 
+  console.log("ready!");
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>
