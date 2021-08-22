@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Normal-distribution-image-1.jpeg" alt="Reflection of Mt Fuji, Japan" title="Reflection of Mt Fuji, Japan" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>The form of a &ldquo;bell curve&rdquo; in nature.</h5>
+<h1>Normal Distribution</h1>
+<div>
+<p>There are cases where our data appears in the form of a &ldquo;bell curve&rdquo; where data gathers around a central value with a relatively even left/right spread.</p>
+<p>This is the normal distribution, which surfaces in various scenarios such as heights, blood pressure, and scores on an test (provided the test is of sufficient difficulty!).</p>
+<h3 id="normal-distributions-in-practice">Normal distributions in practice</h3>
+<p>In the topic 'Standard Deviation'&nbsp;two different normal distributions were shown. We repeat the images here for reference.</p>
+<h5><img class="centerImg" src="../images/Normal-distribution-image-2.png" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></h5>
+<h5 style="text-align: center;">&nbsp;Normal Distribution&nbsp; with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu=0\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma=1\)"}</annotation></semantics></math></h5>
+<h5><img class="centerImg" src="../images/Normal-distribution-image-3.png" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></h5>
+<h5 style="text-align: center;">&nbsp;Normal Distribution with&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu=0\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma=3\)"}</annotation></semantics></math></h5>
+<p>We can infer some common characteristics about normal distributions:</p>
+<ul>
+<li><strong>unimodal</strong>&nbsp;there is only one peak, or maximum. Distributions with two peaks/humps are called bimodal, and distributions with more are called multimodal.</li>
+<li><strong>symmetric</strong>&nbsp;- they look (roughly) the same on both sides</li>
+<li><strong>asymptotic</strong>&nbsp;- the left and right ends of the distribution will approach but not hit zero, or the x-axis.</li>
+</ul>
+<p>In mathematical notation, we typically use&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mi>&#x03BC;<!-- μ --></mi><mo>,</mo><mi>&#x03C3;<!-- σ --></mi><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(\mu, \sigma)\)"}</annotation></semantics></math>&nbsp;to refer to a normal distribution with mean&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;&nbsp;and standard deviation <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math>.</p>
+<h3>Test For Normality</h3>
+<p>A normality test is used to determine whether sample data has been drawn from a normally distributed population (within some tolerance). A number of statistical tests, such as the Student's t-test and the one-way and two-way ANOVA require a normally distributed sample population. If the assumption of normality is not valid, the results of the tests will be unreliable.</p>
+<p>An informal approach to testing normality is to compare a histogram of the sample data to a normal probability curve. The empirical distribution of the data (the histogram) should be bell-shaped and resemble the normal distribution. This might be difficult to see if the sample is small. In this case one might proceed by regressing the data against the quantiles of a normal distribution with the same mean and variance as the sample.&nbsp; There are several methods for normality test such as Kolmogorov-Smirnov (K-S) normality test and Shapiro-Wilk&rsquo;s test.&nbsp; An example is <a href="https://datasharkie.com/how-to-test-for-normality-in-r/" target="_blank" rel="noopener">here</a>.&nbsp;</p>
+<p></p>
+<h3 id="standardisation">Standardisation</h3>
+<p>Since many measures fall naturally into the normal distribution, it makes sense to want to compare them all on the same scale. Standardisation is the process of converting a set of data to a&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(0,1)\)"}</annotation></semantics></math>&nbsp;distribution i.e. a normal distribution with mean&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(0\)"}</annotation></semantics></math>and standard deviation&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1\)"}</annotation></semantics></math>.</p>
+<p>Given a set of values&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1, x_2, \dots, x_n\)"}</annotation></semantics></math>, we standardise them by subtracting the mean (of the x-values) and dividing the result by the standard deviation:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><msub><mi>z</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2212;<!-- − --></mo><mi>&#x03BC;<!-- μ --></mi></mrow><mi>&#x03C3;<!-- σ --></mi></mfrac><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+z_i = \frac{x_i - \mu}{\sigma}
+\\"}</annotation></semantics></math></p>
+<div></div>
+<p>The resulting values now follow a&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(0,1)\)"}</annotation></semantics></math>&nbsp; distribution, and are now standardised values (also referred to as&nbsp;<code>z-scores</code>). We&rsquo;ll be using standardisation as part of transforming data next week.</p>
+<h4 id="applying-standardisation">Applying Standardisation</h4>
+<p>For now we&rsquo;ll generate a set of random values following a normal distribution, apply standardisation and then confirm that our results should mostly be correct.</p>
+<ul>
+<li>Decide on values for the mean&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;(except zero) and standard deviation&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math>&nbsp;(except one).</li>
+<li>As we work through the next set of R you will need to substitute&nbsp;<strong>your</strong>&nbsp;values for&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;and <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>σ<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math>. R&nbsp;<strong>will not</strong>&nbsp;accept these symbols.</li>
+<li>Generate an array of normally distributed values using your choice of&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>σ<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math> .</li>
+</ul>
+<p><code>normalData = rnorm(1000,<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi><mo>,</mo><mi>&#x03C3;<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu,\sigma\)"}</annotation></semantics></math></code><code>)</code></p>
+<ul>
+<li>View your data in a histogram:&nbsp;<code>hist(normalData)</code>&nbsp;and confirm that the majority of the values fall within 3 standard deviations from the mean. Keep a mental note of any values that fall outside that.</li>
+<li>Transform your data using the standardisation formula and applying your values of&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>σ<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math>.</li>
+</ul>
+<p>So this expression:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>r</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>e</mi><mi>d</mi><mi>D</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>D</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>&#x2212;<!-- − --></mo><mi>&#x03BC;<!-- μ --></mi></mrow><mi>&#x03C3;<!-- σ --></mi></mfrac><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+standardisedData = \frac{normalData - \mu}{\sigma}
+\\"}</annotation></semantics></math></p>
+<p>Is entered in R as:</p>
+<p><code>standardisedData = (normalData -&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>)/<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>σ<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math></code></p>
+<ul>
+<li>Plot your now transformed data and observe that it should look similar to your previous histogram:</li>
+</ul>
+<p><code>hist(standardisedData)</code></p>
+<ul>
+<li>Your new histogram should have a mean of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(0\)"}</annotation></semantics></math>&nbsp;(the peak should be at or close to&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(0\)"}</annotation></semantics></math>), and a standard deviation of <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1\)"}</annotation></semantics></math>&nbsp;(all values should mostly fall between&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo>&#x2212;<!-- − --></mo><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(-3\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(3\)"}</annotation></semantics></math>, three standard deviations from the mean).</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<h4 id="independent-researchreading">Independent Research/Reading</h4>
+<ul>
+<li>Look up the&nbsp;<em>68-95-99.7 rule</em>&nbsp;- this is crucial to understanding the rest of the tasks!</li>
+<li>In 2012, a nuclear research organisation called CERN announced that they were confident in the existence of a Higgs-boson particle up to 5 sigma certainty. Look up various press releases that aim to describe the significance of this event, and think about why 5 sigma is considered significant enough for a scientific discovery (from analytical, results and practical perspectives):
+<ul>
+<li>Why not 6 sigma or more? How many more experiments would they probably need to achieve a higher confidence level?</li>
+<li>Would it be worth the time, money and effort?</li>
+</ul>
+</li>
+</ul>
+<p>These questions are more to prompt your thinking and need not necessarily be answered - however your thoughts are definitely welcome in the discussion&nbsp;forum! Here is <a href="https://www.physicscentral.com/buzz/blog/index.cfm?postid=5248358123737529836" target="_blank" rel="noopener">an interesting article</a>.&nbsp;</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

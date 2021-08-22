@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Log-and-polynomial-transformations-image-1.jpeg" alt="Colourful stack of cotton thread reels" title="Colourful stack of cotton thread reels" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>The image is reflective of the variety ways that data can be distributed. In this case size, colour or weight.</h5>
+<div>
+<h1>Log &amp; Polynomial Transformations</h1>
+</div>
+<div>
+<p>Some scatterplots will show data appearing on a curve, or data clumping up or skewing towards one end instead of being spread out normally.</p>
+<p>A log or polynomial transformation can transform the data into something more linear and easier to look at.</p>
+<h3 id="log-transformations">Log Transformations</h3>
+<p>Another common technique in statistical regression is to transform the data using functions like:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mspace linebreak="newline" /><msub><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">w</mi></mrow></mrow></msub><mo>=</mo><mi>ln</mi><mo>&#x2061;<!-- ⁡ --></mo><mo stretchy="false">(</mo><msub><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">d</mi></mrow></mrow></msub><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\\ x_{\mathrm{new}} = \ln (x_{\mathrm{old}})\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">n</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">w</mi></mrow></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">o</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">d</mi></mrow></mrow></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_{\mathrm{new}} =  (x_{\mathrm{old}})^2\)"}</annotation></semantics></math></p>
+<ul>
+<li>Such functions can help&nbsp;<strong>if data are exponentially distributed or skewed</strong>.</li>
+<li>The&nbsp;<strong>log function</strong>&nbsp;in particular is useful for data that can&nbsp;<strong>have a few very large inputs</strong>&nbsp;.</li>
+<li>Incomes, populations in ecology and academic journal citations are all examples of data that could exhibit such properties.</li>
+</ul>
+<p>Showing the distribution of journal &lsquo;impact factors&rsquo; according to Australian research council ranking.</p>
+<p><em>Impact Factors:</em>&nbsp;the ratio of citations to a journal&rsquo;s papers within the last two years to articles published.</p>
+<p><img class="centerImg" src="../images/Log-and-polynomial-transformations-image-2.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Impact Factors 1</h5>
+<ul>
+<li>Showing the distribution after applying a log transformation.</li>
+<li>Although the general difference between the values is somewhat maintained, values toward the lower end of the scale become more spread out while higher values are pushed closer together.</li>
+</ul>
+<p><img class="centerImg" src="../images/Log-and-polynomial-transformations-image-3.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Impact factors 2</h5>
+<h3 id="polynomial-transformations">Polynomial Transformations</h3>
+<ul>
+<li>Polynomial functions <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mi>t</mi><mn>2</mn></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(t^2\)"}</annotation></semantics></math>&nbsp;or <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mi>t</mi><mrow class="MJX-TeXAtom-ORD"><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(t^{\frac{1}{2}}\)"}</annotation></semantics></math>) can have a similar (but less dramatic) affect, allowing&nbsp;<em>skewed distributions to look more like normal distributions</em>.</li>
+<li>For <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mi>t</mi><mi>p</mi></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(t^p\)"}</annotation></semantics></math>,&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>0</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(0 &lt; p &lt; 1 %\)"}</annotation></semantics></math>,&nbsp;&nbsp;can be used when there are fewer very high values (positive skew), while&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>&gt;</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p &gt; 1\)"}</annotation></semantics></math>&nbsp;when there are fewer very low values (negative skew). This transforms work well when the data is already on the unit interval.</li>
+</ul>
+<h3 id="read-more">Read more</h3>
+<p>Have a look at he set text <a href="https://link-springer-com.ezproxy-f.deakin.edu.au/book/10.1007%2F978-3-319-46762-7" target="_blank" rel="noopener noreferrer">An Introduction to Data Analysis using Aggregation Functions in R</a>&nbsp;(James 2016).</p>
+<p>Note that in the reference book, the above statement is mentioned in the wrong way around (page 52, first paragraph). The statement provided above is the correct one.</p>
+<h2 id="your-task">Activity</h2>
+<p>As a small refresher on log, exponential and polynomial functions, head over to <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer">Desmos</a>, enter in the following equations and hit Enter after each of them.</p>
+<ul>
+<li><code>a log(x + b) + c</code></li>
+<li><code>d e^(fx) + g</code></li>
+<li><code>hx^2 + ix + j</code></li>
+<li><code>kx^3 + lx^2 + mx + n</code></li>
+</ul>
+<p>Sliders will appear for any letters besides&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x\)"}</annotation></semantics></math>. Drag them around to see how changing those values affects how the graph plots. Some will be less easier to figure out than others, and that&rsquo;s OK!.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

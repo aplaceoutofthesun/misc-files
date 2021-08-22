@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Generating-random-data-image-1.jpeg" alt="An arial view of a heard of zebras" title="An arial view of a heard of zebras" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h1>Generating random data</h1>
+<div>There are times where we want to experiment or test certain methods and analyses.</div>
+<div>
+<p>One way to do this, is to test them on a dataset that is generated according to a known distribution. This allows us to confirm any hypotheses against a dataset whose behaviour we are familiar with.</p>
+<p>The aim of this article is to show you how to generate random data according to specific distributions, and plot their associated histograms. You can then use this knowledge to practice applying transformations to this generated data and plotting the histogram (and/or scatterplot) after each transformation to see how your data changes.</p>
+<p>For a full list of distributions supported in R&rsquo;s base packages, see the topic, <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html" target="_blank" rel="noopener noreferrer">&ldquo;Distributions in the stats package&rdquo;</a>, in the R Documentation .</p>
+<h3 id="uniform-distribution-in-r">Uniform Distribution in R</h3>
+<p>Looking at the <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Uniform.html" target="_blank" rel="noopener noreferrer">documentation</a>, the function for generating random numbers in a uniform distribution is&nbsp;<code>runif(n, min = 0, max = 1)</code>&nbsp;where&nbsp;<code>n</code>&nbsp;is the number of values that we want to generate,&nbsp;<code>min</code>&nbsp;is the lowest number and&nbsp;<code>max</code>&nbsp;is the highest number.</p>
+<p>For example, if we want to randomly generate&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1000</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1000\)"}</annotation></semantics></math>&nbsp;numbers in a uniform distribution between&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo>&#x2212;<!-- − --></mo><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(-2\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(4\)"}</annotation></semantics></math>&nbsp;and assign this to a variable called&nbsp;<code>uniformdata</code>, we would type:</p>
+<div>
+<div>
+<pre><code class="language-r">uniformdata = runif(1000,-2, 4)
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Type&nbsp;<code>uniformdata</code>&nbsp;or&nbsp;<code>head(uniformdata)</code>&nbsp;to view the data itself.
+<ul>
+<li>What do you notice?</li>
+</ul>
+</li>
+<li>Type&nbsp;<code>hist(uniformdata)</code>&nbsp;and take a look at the histogram.
+<ul>
+<li>Does it look like a uniform distribution?</li>
+<li>If it doesn&rsquo;t, why?</li>
+</ul>
+</li>
+</ul>
+<h3 id="normal-distribution-in-r">Normal Distribution in R</h3>
+<p>Similarly for the normal distribution, the <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Normal.html" target="_blank" rel="noopener noreferrer">documentation</a>&nbsp;states that the function for generating numbers in a normal distribution is done by the function</p>
+<div>
+<div>
+<pre><code class="language-r">rnorm(n, mean = 0, sd = 1)
+</code></pre>
+</div>
+</div>
+<p>For example, if we want to randomly generate 9999 numbers in a normal distribution with mean<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>5</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(5\)"}</annotation></semantics></math>&nbsp;and standard deviation<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2\)"}</annotation></semantics></math>&nbsp;and assign it to a variable&nbsp;<code>normaldata</code>, then we would type:</p>
+<div>
+<div>
+<pre><code class="language-r">normaldata = rnorm(9999, 5, 2)
+</code></pre>
+</div>
+</div>
+<ul>
+<li>Like before, type&nbsp;<code>hist(normaldata)</code>&nbsp;to view the histogram.</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<p>What happens if we only enter in one argument for each of&nbsp;<code>runif</code>&nbsp;and&nbsp;<code>rnorm</code>&nbsp;e.g.&nbsp;<code>runif(100)</code>?</p>
+<ul>
+<li>What does R assume to be&nbsp;<code>min</code>/<code>max</code>&nbsp;and&nbsp;<code>mean</code>/<code>sd</code>&nbsp;respectively?</li>
+<li>What does this tell you about how the function is programmed?</li>
+</ul>
+<p>You can manipulate how many columns your histogram shows by specifying how many columns/bins you want to show (e.g.&nbsp;<code>hist(uniformdata, 100)</code>) or by specifying a vector of intervals (e.g.&nbsp;<code>hist(uniformdata, seq(-2, 4, 0.1))</code>).</p>
+<ul>
+<li>Does the histogram appear more or less reflective of the intended distribution?</li>
+<li>What happens to the histogram if we had more or less values?</li>
+</ul>
+<p>Read up on R&rsquo;s built in function&nbsp;<code>set.seed</code>&nbsp;and its significance in generating random numbers. Share anything interesting that you learnt as a result of this research in the discussion forum.</p>
+<p></p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.r.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Negations-and-utility-transformations-image-1.jpeg" alt="A tree reflected in a mirror" title="A tree reflected in a mirror" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>The optical trick of a mirror reflecting the sky with in a grassy field turn everything upside down.</h5>
+<div>
+<h1>Negations and Utility Transformations</h1>
+</div>
+<div>
+<p>How do we use negation functions to transform data?</p>
+<p>When we have a scatterplot showing a negative correlation but we require it to be a positive correlation for the purposes of our analyses, we can apply a negation function to one of the variables.</p>
+<h3 id="negations-functions-to-transform-data">Negations functions to transform data</h3>
+<p>Negation functions transform the data so that&nbsp;<em>high values become low and low values become high</em>. For the unit interval (between 0 and 1), the&nbsp;<strong>standard negation</strong>&nbsp;is given by</p>
+<div><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>&#x2212;<!-- − --></mo><mi>t</mi><mo>.</mo><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+N(t) = 1 - t.
+\\"}</annotation></semantics></math></div>
+<ul>
+<li>When defined over a particular interval, a strong negation is one which satisfies the property of&nbsp;<strong>involution</strong>, i.e. if we perform a negation of the negation then we get the original value.</li>
+</ul>
+<div><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>N</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi>t</mi><mo>.</mo><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+N(N(t)) = t.
+\\"}</annotation></semantics></math></div>
+<p>We need to pay attention to the values over which our data is distributed.</p>
+<p>For the girls&rsquo; volleyball team, we wanted to transform the Sprint variable. The data ranges from <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>10</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(10\)"}</annotation></semantics></math>&nbsp;to&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>40</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(40\)"}</annotation></semantics></math>.&nbsp;So we can use a negation:</p>
+<div><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>40</mn><mo>&#x2212;<!-- − --></mo><mi>t</mi><mo>+</mo><mn>10.</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+N(t) = 40 - t + 10.
+\\"}</annotation></semantics></math></div>
+<p>In general, if our interval is&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\([a,b]\)"}</annotation></semantics></math>, we can use&nbsp;<strong><span style="color: #e60000;"><em>N(t)=b-t+a =a+b-t</em></span></strong></p>
+<p>Does this satisfy involution?</p>
+<p>Let&rsquo;s check:</p>
+<div><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>N</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi>b</mi><mo>&#x2212;<!-- − --></mo><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mi>a</mi><mspace linebreak="newline" /><mo>=</mo><mi>b</mi><mo>&#x2212;<!-- − --></mo><mo stretchy="false">(</mo><mi>b</mi><mo>&#x2212;<!-- − --></mo><mi>t</mi><mo>+</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2212;<!-- − --></mo><mi>b</mi><mo>+</mo><mi>t</mi><mo>&#x2212;<!-- − --></mo><mi>a</mi><mo>+</mo><mi>a</mi><mo>=</mo><mi>t</mi><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+N(N(t)) = b - N(t) +a
+\\
+= b- (b-t+a) + a = b - b + t - a + a = t
+\\"}</annotation></semantics></math></div>
+<p>We can have other negations too.</p>
+<ul>
+<li>Formally, for the interval&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\([0,1]\)"}</annotation></semantics></math>&nbsp;a negation is any function that satisfies&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo>,</mo><mi>N</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(1)=0, N(0)=1\)"}</annotation></semantics></math>&nbsp;and is monotone decreasing.</li>
+<li>If we have a general interval, this would become&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>=</mo><mi>b</mi><mo>,</mo><mi>N</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(a) = b, N(b) = a\)"}</annotation></semantics></math>.</li>
+<li>Remember that if it&rsquo;s a&nbsp;<strong>strong</strong>&nbsp;negation, then we require&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi>t</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N(N(t)) = t\)"}</annotation></semantics></math>.</li>
+</ul>
+<p>Whether we use the standard negation or something more complicated, our main concern is usually with the tendency of our output to increase or decrease with respect to our input variable. The standard negation will preserve most of the characteristics of our data distribution, e.g. if the majority of data lie within a given range then this density should stay the same if we only use a standard negation</p>
+<h3 id="utilitysuitability-transformation">Utility/Suitability Transformation:</h3>
+<ul>
+<li>Rather than just our data going in the wrong direction, we might have situations where &lsquo;good&rsquo; might actually refer to some&nbsp;<strong>intermediate value</strong>, and values get worse as they go further away.</li>
+<li>E.g. In judging the suitability of porridge temperature, Goldilocks might consider the following:</li>
+</ul>
+<p><img class="centerImg" src="../images/Negations-and-utility-transformations-image-2.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Perfect porridge temperature</h5>
+<ul>
+<li>Whether we use the standard negation or something more complicated, there aren&rsquo;t necessarily set rules here.</li>
+<li>The standard negation will ensure that most of the features of the distribution are preserved, we are essentially just flipping the data so that it is consistent with the other variables.</li>
+<li>The transformed scores would then satisfy the &lsquo;higher is better&rsquo; property needed for monotonicity to make sense.</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<ul>
+<li>Generate random values between 10 and 50:<br /><code>rawData = runif(100, 10, 50)</code><br />and plot this data:<br /><code>plot(rawData)</code>&nbsp;them.</li>
+<li>We&rsquo;re going to apply a negation transformation:<br /><code>transformedData = 50-rawData+10</code>.<br />Ensure that this matches the formula presented above.</li>
+<li>View the transformed data to confirm that all the values have been &lsquo;flipped&rsquo; as needed:<br /><code>plot(transformedData)</code></li>
+</ul>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

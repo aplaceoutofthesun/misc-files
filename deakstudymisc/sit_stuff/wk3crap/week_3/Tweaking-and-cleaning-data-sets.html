@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1>Tweaking and cleaning datasets</h1>
+<div>
+<p>When we import data, we want it in a form that makes it easy to work with.</p>
+<p>However, we&rsquo;re not always so lucky. The following links give you the opportunity to look at some datasets that might need a little adjustment as practice. The video tutorial presents a demonstration of how to work with this kind of data.</p>
+<p><strong>Note:</strong>&nbsp;Any datasets we provide for assessment purposes will be sufficiently cleaned and problem-free. Therefore, this is more of an informative heads-up that real-world datasets (depending on where you work) may not be so easy to work with for various reasons.</p>
+<h3 id="preparation-for-video-tutorial">Preparation for video tutorial</h3>
+<p>Before you watch this video, it may be a good idea to have a look at the datasets we&rsquo;ll be using. You can get them here via the following links:</p>
+<ul>
+<li><a href="https://data.humdata.org/dataset/ebola-outbreaks-before-2014" target="_blank" rel="noopener noreferrer">Ebola Outbreaks Before 2014 Source Page</a><br />
+<ul class="subList">
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/6z9x0CU0iUuWOuI" target="_blank" rel="noopener noreferrer">ebola-outbreaks-before-2014.xlsx</a></li>
+</ul>
+</li>
+<li><a href="http://www.scq.ubc.ca/so-much-candy-data-seriously/" target="_blank" rel="noopener noreferrer">Candy Hierarchy Source Page</a><br />
+<ul class="subList">
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/9lZl3BU1Qhz17ei" target="_blank" rel="noopener noreferrer">candyhierarchy2017.csv</a></li>
+</ul>
+</li>
+<li><a href="http://www.abs.gov.au/ausstats/abs@.nsf/mf/1800.0" target="_blank" rel="noopener noreferrer">Australian Marriage Law Postal Survey 2017 (Australian Bureau of Statistics) Source Page</a> - The data can be found via the Downloads tab)
+<ul class="subList">
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/BqysX0ncFHZWpaa" target="_blank" rel="noopener noreferrer">australian_marriage_law_postal_survey_2017_-_participation_final.xls</a></li>
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/twM2pdKxNrvqxSr" target="_blank" rel="noopener noreferrer">australian_marriage_law_postal_survey_2017_-_response_final</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="references--extra-reading">References &amp; Extra Reading</h3>
+<ul>
+<li><a href="https://medium.com/@miles.mcbain/tidying-the-australian-same-sex-marriage-postal-survey-data-with-r-5d35cea07962" target="_blank" rel="noopener noreferrer" style="font-size: 1rem;">Blog Post: Tidying the Australian Same Sex Marriage Postal Survey Data with R</a><span style="font-family: Lato, sans-serif; font-size: 1rem;"> </span><span style="font-family: Lato, sans-serif; font-size: 1rem;">This blog post demonstrates a thorough way of looking at the data and figuring out the associated R code to clean it. You won&rsquo;t be expected to understand all the details and terminology, but should be able to extract the key ideas and get a rough idea of what the code snippets do.</span></li>
+<li><a href="https://makingnoiseandhearingthings.com/2018/04/19/datasets-for-data-cleaning-practice/" target="_blank" rel="noopener noreferrer">Blog Post: Datasets for data cleaning practice</a></li>
+</ul>
+<p style="text-align: center;"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_tygk0eil&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_h89vvizg" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="Kaltura Player" width="500" height="281" frameborder="0"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<article class="transcript" id="transcript-en">SPEAKER 1: Hello, hello. Welcome back to something that's not quite in R tutorial entirely, but it's still something that's going to happen in your data cleaning process. So as you can see by the title, we're going to be looking at how we're going to be tweaking and cleaning data because effectively, there is a number of things that can happen that will cause our data to not be so easy to work with. So what I'm going to do, I'm going to look at a few publicly available data sets which you can download a copy in the links below. So make sure you pause the video and do just that before we go on.
+<p class="transcript__para">The first data set we're going to look at is going to be the one that caught Ebola Outbreak Before 2014. So you will have seen a modified version of this data set in the previous R tutorial where I basically done a bit of cleaning, a bit of cleaning just for the convenience of the exercise. But here now, you can actually see the raw data set in all its not so clean glory. So basically, this should be what you see in the screening. And the first thing I want to point out is that it's in an Excel file.</p>
+<p class="transcript__para">Now, there is actually an R package to or what we call a library to actually deal with Excel files, but in general, what we can do with Excel files and tables is that we can basically export them as a CSV file, a Comma Separated Values files. So basically, File, Save As, and then make sure you click the option to save as a CSV file-- comma delimited, and make sure he's got the right extension as well. So you can basically do just that. Before I do just that, though, the one main problem I personally see with this data is basically in this first column, the years.</p>
+<p class="transcript__para">What's happening here is that effectively, I've got some years which are basically staying, OK, here's the month range from one year to another. And here are some others which are kind of just saying a year. Now when I'm thinking ahead to how I'm going to be working with this data in R, I am sort of realising this is not going to be very easy to philtre or to work with. So one way I can deal with this before I export it as a CSV file is that basically, I can-- what I'm going to do is that I'm going to insert another column. And I'm going to rename these columns to basically Start Date and End Date.</p>
+<p class="transcript__para">And then basically, what I'm going to do is that I'm going to manually convert each of these into basically a separate starting date and end day, put properly in the proper date format, which I won't cover but you will eventually experience as part of your work in your data analysis. So basically, this one will be November 2012. I've already forgotten, so [? WJan ?] 2013 or just Jan 13, depending on which format. Excel obviously has its own data format, which basically you can kind of see there. So that's something you kind of want to be a bit careful with. And this will be November 12. And then Excel will automatically format that for you.</p>
+<p class="transcript__para">So I could do things that way. One of the main problems you probably have realised already is that if I've got such a giant data set, it's going to take me a while to manually do all that. So the question now becomes is, is that something I do manually or is that something I could automate? And there are methods for doing both. So obviously, I won't do this here right now, but that's one way to do that. So what I'm going to do, I'm going to Save As, export as a CSV file, and then I'll move on to the next data set.</p>
+<p class="transcript__para">So-- oh, and unfortunately, the Excel likes to complain, at least for me every time you save as a CSV file. And then like in the previous R tutorial, you can import the CSV file-- so Ebola data-- oh-- read.csv Ebola Outbreaks Before 2014. Oh, pardon me, .csv, and I forgot to set my working directory. OK let's do that again. There we go. So if we click on that, we can kind of see that I've set my start date up at the top and my end date as appropriate. And it's formatted into-- it's basically taken to Excel and it's formatted it out into the way I wanted. So ideally, obviously, in the data cleaning exercise, I [?</p>
+<p class="transcript__para">will ?] be tweaking all that and formatting it properly before I import it to R. All, right the next data set I want to look at is that the candyhierarchy2017.csv. Thankfully, it's already put in a CSV file for us. And this is what I'm looking at right here. So basically, the rough description, if you haven't read the source link, is that this is a survey of a whole bunch of different types of candy. So basically, there's like an internal ID here. And if we double check this one, this says it's going out. So the question is basically saying, are you going out for Halloween? Here we can see the gender. Here we can see the age.</p>
+<p class="transcript__para">Here we can see the country, state, and so on. Obviously, the states are United States of America. And here's a whole bunch of what they think about the candy where you can kind of see meh, they think the candy is kind of meh and they don't like the candy, or they really like the candy. So one thing I want to point out in terms of data cleaning is that usually in surveys, some people-- or if the survey options are not formatted correctly, some people may not enter in all the same thing as you would expect because if you look in the Country column, you can see that we've got USA, USA, US, which is still technically the USA.</p>
+<p class="transcript__para">So if we try to analyse this data, we're going to have a whole bunch of entries that are saying USA, US, and then lowercase usa when technically, they all mean the same thing, which in terms of analysis is actually going to make things a little bit harder for us. So in terms of data cleaning, what you can do right here in Excel is that obviously, you can do the highlight column. You could do a Find and Replace. So basically, I could just say US and then replace it with USA. I could replace all.</p>
+<p class="transcript__para">And then-- but as you can see, that comes with its own set of problems where it's actually converted lowercase usa, and now it's added an extra A. So obviously, this is not working out very well for me right now, but that's just one of the small things you can do. Or at least within Excel, that's one of the things you can do in terms of cleaning the data before you actually import it into Excel. So I'm just going to reverse that. So what I want to stress is that data cleaning will come with its own set of challenges. So this is like, say-- this is like, say, this is one way you could do things in Excel.</p>
+<p class="transcript__para">But again, that's going to come with its own set of problems. Now, I'm just going to show you one way you could do it in R. I'm not going to say it's going to be the most-- I'm not going to say it's the perfect way to do it. I'm not going to say it's the best way to do it. I'm just going to say that this is one way you can do it. So what I'm going to do now is that I'm going to close this. Don't save any changes. And then I'm just going to import this into R right now. So one candy data equals read.csv. Thankfully, it's already in a comma separated values file-- candyhierarchy2017.csv.</p>
+<p class="transcript__para">OK, let's just check the candy data. And-- oh, OK. There's a lot of data it's trying to load right now. So it's taking a while. And we can kind of just see what's happening there. So we can kind of see-- and like, it's picked up the titles. It's picked up the rows, the columns. All right, so what we're going to try and do is that in R we're going to try and do the exact same thing. We want to try and replace this string u-s with the capital USA. So basically, let me count the columns-- first, second, third, fourth, fifth column. So that means I want to replace candy data.</p>
+<p class="transcript__para">I want to replace the fifth column with basically a function called gsub. gsub basically means that I want to replace all occurrences of the first [INAUDIBLE],, which in this case, it'll be u-s, And I want to replace all instances of small u-s with capital USA. And I want to apply this to the same column that I want to replace-- so candy data comma five. Fingers crossed-- let's hope this works. All right, now obviously, we can't see-- OK, oh, now things have changed. OK, I see this happening here. Unfortunately, I see the same result happening here as I did in Excel because it specifically matches the small us and the small USA.</p>
+<p class="transcript__para">That means this spare a is actually remaining as well. So one way I probably want to work around this is that before I did this one, I probably want to replace all instances of the small USA with the big USA first. Then I will replace the small US with the big USA. So again, this is-- again, data cleaning is a skill in itself, and it's going to be something that you will get better with experience. But one thing-- but this is something that you can always practise.</p>
+<p class="transcript__para">This is something that you can always practise, and you want to make sure that you have a single source of unmodified raw data so that you can always go back to it in case you make any mistakes. The last set of data I want to point out but not necessarily show how to clean is basically the Australian marriage law postal survey. So for those of you who were in Australia in 2017 will know that there was basically a postal survey which asked people, do you think we should change the law to allow for same sex marriage?</p>
+<p class="transcript__para">Now regardless of your opinions on the matter, we do have a set of data, a set of publicly available data, that we can work with. So I've got the response Excel spreadsheet here. And already, I can see a lot of problems that is actually going to make things a bit difficult. One thing I see here is that when I want a single table-- however, they've kind of included, like, these-- like, they kind of included the raw numbers here. But they've also included the percentage. Now one thing I want to stress is that this data was obviously prepared to be sort of viewed publicly and not so much for people to actually work with.</p>
+<p class="transcript__para">So-- which is, again, when people put data publicly on the internet or they want to put [INAUDIBLE] statistics, they're going to have their own way of doing it whether it's through a visualisation. And sometimes they will format or massage the data that will better represent the information they're trying to convey. But I have put a link to a blog post in the reference below that I think will be really interesting reading based on how one person went through this data and he basically figured out how to do everything in R. One question you may be thinking is why should we learn how to do things in R if Excel makes things convenient enough to do.</p>
+<p class="transcript__para">The main answer to that is that not every data set you'll come across will conveniently be put into an Excel spreadsheet for you. However, while some workplaces do use only exclusively Excel, other times larger organisations with bigger data architecture will have, like, say, SQL databases and other databases they'll be pulling data form. And that kind of data will not necessarily be in an Excel format that we can so easily manipulate and work with. The other thing you may also realise is that basically, the actions you do in Excel, you basically have to manually do yourself, whereas in R, what you can do is that you can actually write a script to automate the cleaning process.</p>
+<p class="transcript__para">So it's a lot more initial work to begin with. But essentially, it will save you a lot more time in the long run. So to round things off, as part of the data analysis process, the first step is usually just taking a look at the data, figuring out what you need to clean, figuring out how you need to do things, and figuring out how to massage the data so that you can properly analyse it and get the results you want. As always, happy typing.</p>
+</article>
+<h2 id="your-task">Activity</h2>
+<p>Search online for features of clean data, or what makes a &lsquo;clean&rsquo; dataset. Use your newfound knowledge to have another look at the Candy Hierarchy data demonstrated in the video above.</p>
+<p>Consider the following points:</p>
+<ul>
+<li>Can you see a potential problem with the data?</li>
+<li>Why do you think it&rsquo;s a problem?</li>
+<li>How might you go about dealing with it?</li>
+<li>What measures can one take to prevent this problem from showing up in future datasets?</li>
+</ul>
+<p>Share you thoughts in the discussion forum:</p>
+<p><strong>Note:</strong>You are expected to explore and manipulate the data in any way you like, to the best of your capabilities. If you&rsquo;re working with an Excel spreadsheet, one thing you might like to do first (that was not demonstrated in the video) is to format the data into a table, as it&rsquo;ll allow you more convenient options for filtering the data.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

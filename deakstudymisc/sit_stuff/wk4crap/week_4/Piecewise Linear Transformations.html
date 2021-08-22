@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Piecewise-linear-transformations-image-1.jpeg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>The irregular density of the rings in this tree is reflective of the idea data can deviate from what you would consider to be normal.</h5>
+<div>
+<h1>Piecewise Linear Transformations</h1>
+</div>
+<div>
+<p>Data can be surprising and at times present you with unexpected deviations from what we might consider normal.</p>
+<p>Here you will learn about what happens if your data is a little less predictable and parts of it can be transformed one way, but others should be transformed a different way? Rest assured, we can certainly do just that!</p>
+<h3 id="data-that-is-less-predictable">Data that is less predictable</h3>
+<p>The following points address how you can work with data that is less predictable:</p>
+<ul>
+<li>
+<p>construct a transformation from linear &lsquo;pieces&rsquo;.</p>
+</li>
+<li><span style="font-family: Lato, sans-serif; font-size: 1rem;">The following was used with the journals data set so that the quartiles corresponded with certain values along the interval, e.g. if the journal was in the top&nbsp;</span><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>5</mn><mi mathvariant="normal">&#x0025;<!-- % --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(5\%\)"}</annotation></semantics></math><span style="font-family: Lato, sans-serif; font-size: 1rem;">&nbsp;then it should have a score of between&nbsp;&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>95</mn><mi mathvariant="normal">&#x0025;<!-- % --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(95\%\)"}</annotation></semantics></math>&nbsp;to <math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>100</mn><mi mathvariant="normal">&#x0025;<!-- % --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(100\%\)"}</annotation></semantics></math></span><span style="font-family: Lato, sans-serif; font-size: 1rem;">.</span></li>
+<li><span style="font-family: Lato, sans-serif; font-size: 1rem;">In this ranking exercise, the&nbsp;</span><strong style="font-family: Lato, sans-serif; font-size: 1rem;">A*</strong><span style="font-family: Lato, sans-serif; font-size: 1rem;">&nbsp;ranked journals were considered to be in the top&nbsp;</span><span style="font-family: Lato, sans-serif; font-size: 1rem;">&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>5</mn><mi mathvariant="normal">%<!-- % --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(5\%\)"}</annotation></semantics></math>&nbsp;of journals, the A ranked.</span></li>
+<li><span style="font-family: Lato, sans-serif; font-size: 1rem;">The domain was split into sub-intervals corresponding with the median impact factor score for each journal and the values in the unit interval these values were chosen so that the percentiles values would fall between them:</span></li>
+</ul>
+<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><msub><mi>y</mi><mi>C</mi></msub><mo>=</mo><mn>0.3</mn><mo>,</mo><msub><mi>y</mi><mi>B</mi></msub><mo>=</mo><mn>0.7</mn><mo>,</mo><msub><mi>y</mi><mi>A</mi></msub><mo>=</mo><mn>0.9</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\ y_C=0.3, y_B= 0.7, y_A=0.9 \\"}</annotation></semantics></math><br />
+<h4 id="a-piecewise-linear-transformation">A piecewise linear transformation.</h4>
+<p><img class="centerImg" src="../images/Piecewise-linear-transformations-image-2.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Piecewise transformation 1</h5>
+<p><img class="centerImg" src="../images/Piecewise-linear-transformations-image-3.png" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Piecewise transformation 1</h5>
+<h4 id="distribution-before-and-after-using-piecewise-transformation">Distribution before and after using piecewise transformation.</h4>
+<p><img class="centerImg" src="../images/Piecewise-linear-transformations-image-4.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Before piecewise transformation</h5>
+<p><img class="centerImg" src="../images/Piecewise-linear-transformations-image-5.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;After piecewise transformation</h5>
+<h3 id="ordinal-inputs">Ordinal Inputs</h3>
+<p>Be careful if converting&nbsp;<strong>ordinal (or non-numeric)</strong>&nbsp;data to numeric data!</p>
+<ul>
+<li>For example, it is common to take Likert scale type questions &ldquo;strongly disagree, disagree, agree, strongly agree&rdquo;, etc, and give each of these a numeric value.</li>
+<li><span style="font-family: Lato, sans-serif; font-size: 1rem;">It can be very dangerous to draw inferences from such data, because people don&rsquo;t usually think on a linear scale. The real difference between disagree and neutral could be very different to the difference between neutral and agree or agree and strongly agree. Furthermore, people often don&rsquo;t think on the same scale.</span></li>
+<li>If you&rsquo;re going to transform such data for purposes of aggregation or regression, make sure you treat the results with this kind of thing in mind.</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<p>If you are experiencing any difficulties with the programming functions presented in the content above, share your thoughts in the discussion forum.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

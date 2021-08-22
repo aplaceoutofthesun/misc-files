@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1>Data transformations</h1>
+<div>
+<p>Transforming data allows us to combine them with aggregation functions and models.</p>
+<p>This will be covered in greater detail in this and next week, resulting in potentially better analyses. The following content will take you through a real world case study that demonstrates this. The scenario focuses on the data associated with a volleyball team how it can be aggregated and distributed.</p>
+<h3 id="the-volley-ball-problem">The volley ball problem</h3>
+<p>Consider the problem of allocating into two &lsquo;fair&rsquo; volleyball teams.</p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Sprint 100m</th>
+<th>Height(cm)</th>
+<th>Serving</th>
+<th>Endurance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mizuho</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>15.78</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"15.78"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>148</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"148"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>94</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"94"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"17"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yukie</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>21.15</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"21.15"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>147</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"147"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>94</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"94"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>20</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"20"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Megumi</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>14.30</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"14.30"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>134</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"134"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>91</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"91"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"17"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Sakura</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>19.59</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"19.59"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>174</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"174"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>88</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"88"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>16</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"16"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Izumi</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>10.96</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"10.96"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>145</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"145"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>93</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"93"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>16</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"16"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yukiko</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>19.17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"19.17"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>158</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"158"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>83</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"83"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>12</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"12"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yumiko</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>18.35</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"18.35"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>157</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"157"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>99</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"99"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>20</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"20"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Kayoko</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>14.09</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"14.09
+"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>177</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"177"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>82</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"82"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>23</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"23"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>If we can get an &lsquo;overall rating&rsquo; of each player. One reasonably simple method would be to aggregate their scores in each of the separate columns.</p>
+<p>But we have several problems if we do this&hellip;.</p>
+<p><strong>Scale</strong></p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Sprint 100m</th>
+<th>Height(cm)</th>
+<th>Serving</th>
+<th>Endurance</th>
+<th>AM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mizuho</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>15.78</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"15.78"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>148</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"148"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>94</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"94"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"17"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>68.55</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"68.55"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yukie</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>21.15</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"21.15"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>147</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"147"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>94</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"94"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>20</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"20"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>70.43</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"70.43"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Megumi</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>14.30</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"14.30"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>134</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"134"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>91</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"91"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"17"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>64.36</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"64.36"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Sakura</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>19.59</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"19.59"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>174</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"174"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>88</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"88"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>16</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"16"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>74.50</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"74.50"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Izumi</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>10.96</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"10.96"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>145</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"145"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>93</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"93"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>16</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"16"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>66.37</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"66.37"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yukiko</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>19.17</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"19.17"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>158</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"158"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>83</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"83"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>12</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"12"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>68.06</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"68.06"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Yumiko</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>18.35</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"18.35"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>157</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"157"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>99</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"99"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>20</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"20"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>73.44</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"73.44"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Kayoko</td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>14.09</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"14.09
+"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>177</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"177"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>82</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"82"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>23</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"23"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>73.92</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"73.92"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Megumi</strong>&nbsp;has the lowest score here - but that&rsquo;s largely due to her height. Not only are the heights higher, but importantly they are much more variable.</p>
+<h3 id="raw-score-or-utility">Raw score or utility?</h3>
+<p>In this case, we want to reward&nbsp;<em>lower</em>&nbsp;sprinting times!</p>
+<h4 id="distribution">3# Distribution</h4>
+<p><img class="centerImg" src="../images/Data-transformations-image-1.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Figure: Example of Sprint</h5>
+<p><img class="centerImg" src="../images/Data-transformations-image-2.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Figure: Example of Height</h5>
+<p><img class="centerImg" src="../images/Data-transformations-image-3.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Figure: Example of Endurance</h5>
+<p><img class="centerImg" src="../images/Data-transformations-image-4.jpg" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5 style="text-align: center;"><br />&nbsp;Figure: Example of Serve</h5>
+<p>Correcting for distributions can be very difficult. There are some standard approaches we can use, however none of these are fool-proof and so we are often required to make a judgement call about what is reasonable.</p>
+<p>So essentially we should be considering the following:</p>
+<ul>
+<li>If we are using&nbsp;<em>aggregation functions</em>, we need to bear in mind the interpretation of&nbsp;<strong>monotonicity</strong>. We need to ensure that it makes sense that an&nbsp;<strong>increase in the input should result in an increase to the output</strong>.</li>
+<li><strong>Scale</strong>&nbsp;and distribution of the data may differ. We may want/need to have all the data transformed to a particular interval, and we also might want to to ensure that increases are treated similarly no matter where they are on the interval.</li>
+<li>Specific to averaging aggregation functions, we might want to consider the role that&nbsp;<strong>idempotency</strong>&nbsp;of the function plays.</li>
+<li>The data&nbsp;<strong>might not be numeric</strong>&nbsp;at all (e.g., ordinal variables). If we assign numeric values, are these reasonable and justified?</li>
+</ul>
+<p class="centerVideo"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_daoit23q&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_jx7qbjp3" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="Kaltura Player" width="500" height="281" frameborder="0"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<article class="transcript" id="transcript-en">
+<p class="transcript__para">MAIA ANGELOVA TURLEDJLEVA: Now, we will learn how to transform data. Data may be linked with functions. If we only have one variable-- an attribute-- the function is a single variable. If we have many variables or many attributes, the function is multivariate. To transform the data, we can think of transforming a function. We can transform just one variable or more than one variable. We will learn to normalise data. For example, we can think of all data representing one variable as a vector. And the data as coordinates of this vector. For many applications, we will need to normalise the vector representing this variable to one, which means that the length of this vector is one.</p>
+<p class="transcript__para">For other purposes, we may want to scale the vector variable. We can apply linear scaling. Negation can also be considered as a type of linear scaling. If the coordinates or values in one variable are too big or too small, we can apply a logarithmic transformation. Other transformations we will use are polynomial transformations. This will help to convert a skewed distribution to be closer to a normal distribution. You will be using these skills to complete both your first and second assignments.</p>
+</article>
+<h2 id="your-task">Activity</h2>
+<p>If you are experiencing any difficulties with the programming functions presented in the content above, share your thoughts in the discussion forum.</p>
+<p></p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+ 
+ 
+function localProc(){
+ 
+  console.log("ready!");
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

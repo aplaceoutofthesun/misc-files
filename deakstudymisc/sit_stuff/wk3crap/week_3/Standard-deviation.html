@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Standard-deviation-image-1.jpeg" alt="Laser light interrupted by zig zag of paper" title="Laser light interrupted by zig zag of paper" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Evenly distributed light shapes on paper folded in an accordion.</h5>
+<h1>Standard deviation</h1>
+<div>
+<p>When plotting data, some datasets are more clumped up together whilst others appear much more spread out.</p>
+<p>The standard deviation is a single number that allows us to discern how spread out our data is. The variance and standard deviation are technically not aggregation functions as they do not satisfy the boundary properties. However they do share the same feature in that they take in a set of data and use a single value to express a feature of that data.</p>
+<h4 id="standard-deviation-in-practice">Standard deviation in practice</h4>
+<p>The higher the standard deviation, the higher the spread. Consider the two following histograms:</p>
+<h5><img class="centerImg" src="../images/Standard-deviation-image-2.png" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></h5>
+<h5><br />&nbsp;Normal Distribution with&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>μ<!-- μ --></mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu = 0\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>σ<!-- σ --></mi><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma = 1\)"}</annotation></semantics></math></h5>
+<p><img class="centerImg" src="../images/Standard-deviation-image-3.png" alt="" title="" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<h5><br />&nbsp;Normal Distribution with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu = 0\)"}</annotation></semantics></math> and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma = 3\)"}</annotation></semantics></math></h5>
+<p>We can see the first histogram represents data that are more tightly clumped up towards the middle, whereas the second histogram is a bit more spread out. The first histogram therefore has a smaller standard deviation than the second histogram.</p>
+<p>Mathematically, given a set of values&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>N</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1, x_2, \dots, x_N\)"}</annotation></semantics></math>&nbsp;the (population) standard deviation (<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C3;<!-- σ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma\)"}</annotation></semantics></math>) is</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><msqrt><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2212;<!-- − --></mo><mi>&#x03BC;<!-- μ --></mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></msqrt><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N(x_i - \mu)^2 }
+\\"}</annotation></semantics></math></p>
+<p>where&nbsp;</p>
+<ul>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03BC;<!-- μ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mu\)"}</annotation></semantics></math>&nbsp;is the (arithmetic) mean of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>N</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1, x_2, \dots, x_N\)"}</annotation></semantics></math>.</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N\)"}</annotation></semantics></math>&nbsp;is the number of values.<br />
+<p>If we are to manually calculate the standard deviation of a set of numbers&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>12</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1,4,7,12\)"}</annotation></semantics></math>.</p>
+</li>
+</ul>
+<ol>
+<li>&nbsp;We&rsquo;ll want to calculate the mean first:<br /><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>&#x03BC;<!-- μ --></mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>7</mn><mo>+</mo><mn>12</mn></mrow><mn>4</mn></mfrac><mo>=</mo><mn>6</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\mu = \frac{1+4+7+12}{4} = 6
+\\"}</annotation></semantics></math></li>
+<li>&nbsp;We then calculate the difference between each of our observed values and the mean, then square those differences so that all our values are positive.<br />Note now that all these values here can be considered an &lsquo;objective&rsquo; measure of how far each data point is from the mean, which represents the spread of data.<br />
+<table>
+<thead>
+<tr>
+<th><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><msub><mi>x</mi><mi>i</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"x_i"}</annotation></semantics></math></th>
+<th><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></th>
+<th><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"4"}</annotation></semantics></math></th>
+<th><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>7</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"7"}</annotation></semantics></math></th>
+<th><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>12</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"12"}</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>μ<!-- μ --></mi><mo>−<!-- − --></mo><msub><mi>x</mi><mi>i</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\mu-x_i"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>5</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"5"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo>−<!-- − --></mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"-1"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo>−<!-- − --></mo><mn>6</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"-6"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo stretchy="false">(</mo><mi>μ<!-- μ --></mi><mo>−<!-- − --></mo><msub><mi>x</mi><mn>1</mn></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"(\mu-x_1)^2"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>25</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"25"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"4"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>36</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"36"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>We now want the average of these measures: we add up all the prior values and divide by the number of values. What we have now is the variance&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mi>&#x03C3;<!-- σ --></mi><mn>2</mn></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\sigma^2\)"}</annotation></semantics></math>.<br /><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><msup><mi>&#x03C3;<!-- σ --></mi><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo stretchy="false">(</mo><mn>25</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>36</mn><mo stretchy="false">)</mo><mo>=</mo><mn>16.5</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+    \sigma^2 = \frac{1}{4} (25+4+1+36) = 16.5
+  \\"}</annotation></semantics></math></li>
+<li>&nbsp;Take the square root of our variance to obtain our standard deviation.<br /><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><msqrt><mn>16.5</mn></msqrt><mo>&#x2248;<!-- ≈ --></mo><mn>4.062</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+  \sigma = \sqrt{16.5} \approx 4.062
+  \\"}</annotation></semantics></math></li>
+</ol>
+<p><strong>Note:</strong>&nbsp;Variance is not explicitly addressed it does not have as much relevance to the content in these weeks. The scenarios in which one would address/use the variance is different to the scenarios where we&rsquo;d prefer the standard deviation.</p>
+<p>In addition to this, there is a distinction to be made between&nbsp;<em>population</em>&nbsp;standard deviation and&nbsp;<em>sample</em>&nbsp;standard deviation, where in most scenarios we&rsquo;re taking a sample from a population. The formula is slightly different, where we divide by&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi><mo>&#x2212;<!-- − --></mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N-1\)"}</annotation></semantics></math>&nbsp;instead of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>N</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(N\)"}</annotation></semantics></math>&nbsp;since it is mathematically proven to give a better estimate.</p>
+<span style="font-size: 15.2px;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>&#x03C3;<!-- σ --></mi><mo>=</mo><msqrt><mfrac><mn>1</mn><mrow><mi>N</mi><mo>&#x2212;<!-- − --></mo><mn>1</mn></mrow></mfrac><munderover><mo>&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#x2212;<!-- − --></mo><mi>&#x03BC;<!-- μ --></mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></msqrt><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\sigma = \sqrt{ \frac{1}{N-1} \sum_{i=1}^N(x_i - \mu)^2 }
+\\"}</annotation></semantics></math></span></div>
+<p><span style="font-size: 15.2px;">We won&rsquo;t investigate the details, but point out that the built in standard deviation&nbsp;<code>sd()</code>&nbsp;function in R uses this formula. To test against our earlier example,&nbsp;<code>sd(c(1,4,7,12))</code>&nbsp;should give approximately&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>4.69</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(4.69\)"}</annotation></semantics></math>.</span></p>
+<div>
+<h2 id="your-task">Activity</h2>
+<p>Do some independent research to find a histogram that can be cross sectioned a number of ways to express more tightly clumped data towards the middle. For example, a histogram taken from blood type data may be expressed differently when age, weight or date is used to represent the data.</p>
+<p>Consider your example in terms of the way that viewing multiple histograms of the same data can add to the conclusion you initially made about the data depending upon the selected distributions.</p>
+<p>Share your thoughts and engage with others in the discussion forum.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1 style="text-align: left;">Importing files and visualising data</h1>
+<div style="text-align: center;">
+<p style="text-align: left;">Any data we import into RStudio will typically be from some external source, for example excel files.</p>
+<p style="text-align: left;">Here we&rsquo;ll look at some of the basic methods for importing data from files and how to visualise them.</p>
+<p style="text-align: left;">The two datasets used in the video can be downloaded via the links below. We definitely recommend doing so and following along with the video.</p>
+<ul style="text-align: left;">
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/tX5a0a9RNU7JUIx" target="_blank" rel="noopener noreferrer">volley.txt</a></li>
+<li><a href="https://cloudstor.aarnet.edu.au/plus/s/4KxnEpd8Kq0Xi6M" target="_blank" rel="noopener noreferrer">ebola.csv</a></li>
+</ul>
+<h3 id="importing-data---extra-features" style="text-align: left;">Importing Data - Extra Features</h3>
+<p style="text-align: left;">The first thing we&rsquo;ll do here is refer to the <a href="https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/read.table" target="_blank" rel="noopener noreferrer">documentation</a>&nbsp;which refers to both&nbsp;<code>read.table</code>&nbsp;and&nbsp;<code>read.csv</code></p>
+<p style="text-align: left;">We&rsquo;ll explain some of the more common arguments that beginners would be interested in using, and suggest commands you can enter into the console to verify those changes.</p>
+<ul style="text-align: left;">
+<li><strong>header</strong>&nbsp;- this only takes a&nbsp;<code>TRUE</code>&nbsp;or&nbsp;<code>FALSE</code>&nbsp;value, and we want it to be&nbsp;<code>TRUE</code>&nbsp;when our dataset&rsquo;s first row contains what looks like headers.<br />We saw this in <a href="https://cloudstor.aarnet.edu.au/plus/s/4KxnEpd8Kq0Xi6M" target="_blank" rel="noopener noreferrer">ebola.csv</a>, but not <a href="https://cloudstor.aarnet.edu.au/plus/s/tX5a0a9RNU7JUIx" target="_blank" rel="noopener noreferrer">volley.txt</a>.</li>
+</ul>
+<p style="text-align: left;">Notice in the documentation how for&nbsp;<code>read.table</code>&nbsp;this is set to&nbsp;<code>FALSE</code>&nbsp;by default, and for&nbsp;<code>read.csv</code>&nbsp;this is set to &lsquo;TRUE&rsquo; by default.</p>
+<ul style="text-align: left;">
+<li>Try importing volley.txt with the header set to &lsquo;TRUE&rsquo;:<br /><code>read.table("volley.txt", header = TRUE)</code>
+<ul>
+<li>view the imported data. What happened?</li>
+</ul>
+</li>
+<li>Try importing ebola.csv with the header set to &lsquo;FALSE&rsquo;:<br /><code>read.csv("ebola.csv", header = FALSE)</code>.
+<ul>
+<li>What happened?</li>
+</ul>
+</li>
+<li><strong>sep</strong>&nbsp;- stands for &lsquo;separator&rsquo; and refers to the character(s) used to separate values within the data.
+<ul>
+<li>In a CSV (comma separated values) file, this is set to the comma character by default. It&rsquo;s rare to see separators in data that aren&rsquo;t spaces, tabs or commas, so we need not worry about this too much.</li>
+</ul>
+</li>
+<li><strong>col.names</strong>&nbsp;- allows us to specify the column names when we&rsquo;re importing data.
+<ul>
+<li>The way we do this is by using an array of strings e.g.&nbsp;<code>c("column1", "column2", "column3")</code>. By default the column names use V1, V2, V3, etc.</li>
+</ul>
+</li>
+<li>Try importing <a href="https://cloudstor.aarnet.edu.au/plus/s/tX5a0a9RNU7JUIx" target="_blank" rel="noopener noreferrer">volley.txt</a>&nbsp;and specify column names for what your best guess the values represent:<br /><code>read.table("volley.txt", col.names = c("column1", "column2", "column3", "column4"))</code></li>
+</ul>
+<p style="text-align: left;">There are a few more options that we&rsquo;ll address in the next R Tutorial!</p>
+<h3 id="visualising-data---extra-features" style="text-align: left;">Visualising Data - Extra Features</h3>
+<p style="text-align: left;">Once again, referring to the <a href="https://www.rdocumentation.org/packages/graphics/versions/3.5.1/topics/plot" target="_blank" rel="noopener noreferrer">documentation for the&nbsp;plot&nbsp;function</a>&nbsp;shows us what additional things we can do.</p>
+<p style="text-align: left;">The most relevant arguments that all take a single string as their argument are:</p>
+<ul style="text-align: left;">
+<li><code>main</code></li>
+<li><code>sub</code></li>
+<li><code>xlab</code>&nbsp;(x-axis label)</li>
+<li><code>ylab</code>&nbsp;(y-axis label)</li>
+</ul>
+<p style="text-align: left;">Try redoing your scatterplot with data from <a href="https://cloudstor.aarnet.edu.au/plus/s/tX5a0a9RNU7JUIx" target="_blank" rel="noopener noreferrer">volley.txt</a>&nbsp;and ensure that it has a title and all axes are named appropriately.</p>
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_opu5ulwo&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_heaq6w8s" width="500" height="281" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"><br />
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<article class="transcript" id="transcript-en">
+<p class="transcript__para">SPEAKER: Hello, hello. Welcome back to yet another R tutorial. Before we begin, what I would like you to do is to download the two files that are at the top of this article, just below the video. There should be one file called ebola.csv and another file called volley.txt. What I'm going to do in this video is that I'm going to demonstrate how we're going to import these data sets into R and just some simple means of visualising that data. So, pause this video, download those data sets, and then we'll get going. The first thing you should know is that data will come in many different forms.</p>
+<p class="transcript__para">And, in general, there's going to be a few main forms that we're going to work with, for the time being. One thing that is always recommended to do before you import the data into RStudio is that you can always take a look at the data first. So, assuming you've got this data in your working directory, you can click on, for example, volley.txt and it will pop up-- it will show, in the top-left window, what the data actually looks like in this kind of raw file form. So, for volley.txt, we can see a bunch of numbers. We could see four columns of numbers, and each of the numbers is separated by a space or tab.</p>
+<p class="transcript__para">Some data will appear a bit differently. That's for you to identify. And this will be important for when you're working with various different types of data. If we look at the ebola.csv-- by the way, CSV stands for Comma-Separated Values. So, if we click on that, we could do View File. And we can basically see that, OK, I can see a header with a bunch of titles, and I can see that each detail is actually separated by a comma-- hence the name and the file extension, comma-separated values. You can see, in the left column, that everything before the first comma looks like it's going to be a year. Everything before the second comma looks like it's going to be a country.</p>
+<p class="transcript__para">Everything before the third comma is going to be a name of Ebola subtype. So, if you know your biology, you should hopefully-- or you have been aware of recent news, you should hopefully be aware of the Ebola virus. So there's different types of the Ebola virus. We could see the Sudan virus, we can see the Zaire virus, and so on. Number of human cases, which will be before before the fourth comma. And, of course, this is starting to be a bit hard to see, because of the way data is formatted, which is why, when we brought them into R, you'll be able to see things as a table. You Can also open comma-separated values in Excel.</p>
+<p class="transcript__para">I will let you do that on your own. And you can kind of see how the data is more properly formatted within Excel. The important thing I want to stress here for now is that we should keep the file in comma-separated-values form, because it's actually easier to work with. And I will cover that in a bit more detail in the next video. So now we've got this data sitting there. And basically there's a few different ways you can import it. I'm going to show you the old-school way of doing it, even though some of you may have noticed a few nice, convenient buttons to click.</p>
+<p class="transcript__para">So, basically, what I want to do now is that I want to load the data into R. And I'm going to assign it to a variable. So what I'm going to do first with the volley.txt file, the simple, basic command for this one is that-- So, what I'm going to type in the console is that it's volley data-- and this is just my way of naming things. You can name it some other variable, as you like. So the first one, the first command, that I will demonstrate here is "create table" and then volley.txt. And we'll click Enter. And then we can see that, in our workspace, the volley data has appeared. And it says 21 observations of four variables.</p>
+<p class="transcript__para">Now, if we click on that, what we can see now is that we can see that R has conveniently formatted all this into a table. So, now that we've assigned this data to a variable called "volleydata," I can actually type "volleydata" in the console, just to see the data come out and kind of just see that, OK, you can see that this is indicated row 1, row 2, row 3, row 4, and so on. And, by default, what R does is that it's going to automatically assign names to the columns. And it automatically assigned them V1, V2, V3, V4, for column 1, column 2, column 3, and column 4. So you could do a similar thing with the ebola.csv.</p>
+<p class="transcript__para">But the command here is a little bit different. So what I'm going to do now, I'm going to import the Ebola data. And so I'm going to set to-- I'm going to make a variable called "eboladata." And it's read.csv. Ebola.csv. And then, once again, we see Ebola data. We click on it again. Once again, it's formatted it into a table for us. And it looks like, it looks like there's an extra column which is not meant to be there. We will talk about cleaning data in the next video. But, for now, I just want to demonstrate that we can simply import data in this way. So we can see this data nicely formatted into a table.</p>
+<p class="transcript__para">We can see the header matches the headers that we have before. But you will notice that they've actually changed that to a period instead of replacing the space. If we look at, in the normal Ebola, you see how we have Ebola subtype here, with a space between them-- sorry, with a space between Ebola and subtype. But here, when we import the data, the spaces are removed and replaced with a period. So there's going to be small things that will happen that you will need to be aware of. Now that we've imported our data, I'm just going to show you the basic commands for demonstrating how to actually get them into a histogram or in a scatterplot.</p>
+<p class="transcript__para">So we're going to work with the volley data first, and we're going to actually-- we're going to do a histogram of, I don't know, maybe of column 2. So I see V2, which is probably referring to the heights of each of the volleyball players. So now the data is put into a table or a matrix-like structure. The technical term that is used in R is called a "data frame."</p>
+<p class="transcript__para">I'm not going to go into details about the data frame, but basically you can think of them as two-dimensional arrays with just a few more convenient properties. So, with volley data, I want to get a histogram of the second column, of V2, so there's a few ways we can do this. So what we want to do now is that we wanted to show the second column of volley data as a histogram. So it looks like I can't highlight the second column, but we'll go ahead with that. So the basic command is HIST, for "histogram," And then I want to put it as an input the second column of volley data. So, volley data.</p>
+<p class="transcript__para">And then I want to use square brackets, for referring to. We want all the rows and only the second column. So the way we do that is that we only specify the column that we need. So that means I want the second column. And, if we press Enter, it will come up with a nice, little histogram with some of the default formatting options. What you will see in the article below is kind of an explanation of some of the different options there are. So there will be a few tasks [INAUDIBLE] down there, just to see how you can customise your histogram with a title, the axis, and so on. So we've got that. We can do a similar thing.</p>
+<p class="transcript__para">We say "histogram volley data." Let's say we want to look at column 4, which-- and then it will come up with its own histogram. Basically, because this is the default function with the default action, there some things taken care of. If you want a bit more power, a bit more control, there are definitely lots more options for you to do so. Next up, we have scatter plots. And basically the function for that is that we basically want to do PLOT. So, for example, what we can do is that we can-- so, in this case, PLOT means that we have to put in two arrays. So let's say we want to say plot the second column against the fourth column.</p>
+<p class="transcript__para">So the way I would do that is for the volley data-- data. So that will be comma 2, volley data, comma, 4. So that's how we would do that there. We can see a scatter plot. Now, one thing I want to stress is that the plot function will change the plot, depending on what data you put in. Once you read the documentation and explore a bit more, you'll be able to understand what's going on. For example, if I do PLOT and just "volley data," something else is going to happen. What actually happens here is that the PLOT function actually plots every variable, every column, against every other column. So here we're plotting V1 versus V1, which is a bit redundant.</p>
+<p class="transcript__para">Here we're plotting V1 versus V2. So there's just one that's more things that can happen. So it's recommended you just be a little bit careful with whatever you're putting into those functions. So what I have in the article down there, below, is kind of just an explanation of some of the extra options you can have for your histogram, your plotting functions, and some examples of how you can use them to change your plots and adjust them as needed. So, as always, happy typing!</p>
+</article>
+<h2 id="your-task" style="text-align: left;">Activity</h2>
+<p style="text-align: left;">Watch the video and work through the suggestions above. Once you have completed those activities look for other code examples that allow you to plot something.</p>
+<p style="text-align: left;">Read this article about&nbsp;<a href="http://www.sthda.com/english/wiki/correlation-analyses-in-r" target="_blank" rel="noopener">Correlation Analyses in R</a>with visualisation.&nbsp;</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+  
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>
