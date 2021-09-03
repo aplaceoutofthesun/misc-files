@@ -1,0 +1,637 @@
+================================================================================
+*                                                                              *
+*                 SIT718: Real World Analytics - Overview/Notes                *
+*                       Week 2: Summarising and Aggregating                    *
+*                                   Data in R                                  *
+*                                                                              *
+================================================================================
+
+--------------------------------------------------------------------------------
+
+================================================================================
+                              * Introduction *
+================================================================================
+--------------------------------------------------------------------------------
+
+
+================================================================================
+*
+================================================================================
+
+
+================================================================================
+                                * Lecture 2 *
+================================================================================
+
+* Summarising and Aggregating Data in R
+- Learning Aims:
+    + Data Types
+    + Data Summarisation
+    + Data Aggregation
+    + Understand the properties & notation used for aggregation functions
+    + Develop intuition & understanding in when to use the Arithmetic, Geometric,
+        or Harmonic mean to find the 'average'
+    + Begin to build proficiency in writing functions in R
+    
+--------------------------------------------------------------------------------
+* Overview of Using Data
+- Data:
+    + The facts/figures collected, analysed, and summarised for presentation and
+      interpretation
+- Variable:
+    + A characteristic or quantity of interest that can take on different values
+- Observation:
+    + A set of values corresponding to a set of variables
+- Variation:
+    + The difference in a variable measured over observations
+- Random variable/Uncertain variable:
+    + A quantity whose values are not known with certainty
+    
+
+--------------------------------------------------------------------------------
+* Types of Data
+- Population & Sample Data
+    - Population:
+        + All elements of interest
+    - Sample:
+        + Random Sampling: A sampling method to gather a representative sample
+          of the population data
+- Quantitative & Categorical Data
+    - Quantitative data:
+        + Data on which numeric & arithmetic operations such as addition, 
+          subtraction, multiplication, and division can be performed 
+        + e.g. Height, weight, or age
+    - Categorical data:
+        + Data on which numeric & arithmetic operations can not be performed.
+          The data represent groups includes rankings (e.g. finishing places in
+          a race), Classifications (e.g. brands of cereal), and Binary outcomes
+          (e.g. coin flips)
+- Cross-sectional data & TIme Series Data
+    - Cross-sectional data:
+        + Data collected from several entities at the same or approximately the
+          same point in time
+    - Time Series data:
+        + Data collected over several time periods
+            - Graphs of Time series data are frequently found in business & 
+              economic publications
+            - Graphs help analysts understand:
+                + What happened in the past
+                + Trends over time
+                + Project future levels for the time series
+ 
+--------------------------------------------------------------------------------
+* Sources of Data
+- Experimental Study
+    + Variable of interest is first identified
+    + One or more other variables are ID'd and controlled/manipulated so that
+      data can be obtained about how they influence the variable of interest
+- Non-experimental study or Observational study
+    + Makes no attempt to control the variables of interest
+    + Survey is perhaps most common type of observational study
+    
+
+--------------------------------------------------------------------------------
+* Aggregate Functions
+- In Database management, an aggregate function or aggregation function is a
+  function where the values of multiple rows are grouped together to form a 
+  single summary value
+    - Mean
+    - Maximum | Minimum
+    - Median
+    - Mode
+    - Range 
+    - Sum
+- Example: Restaurant Employee Table & avg Salary per role
+
+--------------------------------------------------------------------------------
+* The Arithmetic Mean
+- At the heart of the majority of aggregation processes
+- Also referred to as "the average", "the statistical mean", or "the mean"
+
+- Formula:
+    AM(x_1, x_2, ..., x_n) = 1/n (n Σ i=1 x_i) = (x_1 + x_2 + ... + x_n) / n
+    
+- Example:
+    Let x = (3, 2, 9, 8)
+    (i)     What is the value of n? A: 4
+    (ii)    Calculate AM(x) A: 3+2+9+8 = 22 / 4 = 5.5
+    (iii)   What will be the output if x = (9, 8, 2, 3)? A: 5.5
+    
+- One of the aims in this sequence of units is to be aware of when the Arithmetic
+  mean is inappropriate for summarising data.
+    - It is still the main *superstar* when it comes to aggregation
+    
+- Arithmetic Mean: Properties
+    - Order of  args does not affect output [Symmetry]
+    
+    - If you add a constant to every value & take the avg, the output will change
+      by that same constant [Translation Invariant]
+        - e.g. AM(4, 3, 8) = 5; AM(7, 6, 11) = 8
+    
+    - If you multiply every input by a constant, the output will change by the
+      same factor [Homogeneous]
+        - e.g. AM(3, 7, 8) = 6; AM(15, 35, 40) = 30
+    
+    - Increasing one of the inputs always increases the output [Monotone Increasing]
+        - e.g. AM(40, 57, 30) > AM(40, 57, 20)
+    
+    - If all the inputs are the same then the output will be the same [Idempotent]
+        - e.g. AM(5,5,5,5) = 5
+
+- Despite its usefulness & robustness when summarising data, the Arithmetic mean
+  is not always the best choice.
+  
+--------------------------------------------------------------------------------
+* Other Means and Averages
+- Median
+        Median(x) = {   x_(k),                  n = 2k - 1
+                    {
+                    {   x_(k) + x_(k+1) / 2,    n = 2k
+
+- where (.) means we first rearranged the data in order (increasing/decreasing)
+- The cases n = 2k - 1 and n = 2k refer to whether there is an odd or even 
+  number of data to aggregate
+
+- Example:
+    Let x = (4, 6, 9, 1), y = (2, 6, 9, 4, 106)
+    Calculate: Median(x) = ??                   
+                         = (1, 4, 6, 9):  x_k = 4, x_k+1 = 6 
+                         = (4 + 6) / 2 
+                         = 10 / 2
+                         = 5
+               
+               Median(y) = ??
+                         = (2, 4, 6, 9, 106): x_k = 6
+                         = 6
+               
+- Consider following scenarios:
+    1) Your pay increases by 10% one year & 20% the next.
+       What is the average pay increase?
+    
+    2) Vicky can paint a house in 3 hours. Simon can paint one in 5.
+       How long would it take them to paint two houses if they work together?
+       
+- 1st Scenario:
+    - Answer is not 15%
+        - e.g. Your salary is       $10000,
+               First increase:      $12000
+               Second increase:     $13200
+        - if it went up by 15%, then it would be $11500 and then $13225
+
+
+- 2nd Scenario:
+    - Not 8 hours, nor 4 hours
+        - In 8 hours: Vicky would paint more than 2 houses by herself
+        - In 4 hours: Vicky can paint 1.3 houses, while Simon has painted 0.8
+        - This would put  us over two houses
+        
+- The above scenarios require more than a simple sum & division by observations
+    - Hence the Geometric Mean and the Harmonic Mean
+    
+    - Geometric Mean
+            GM(x) = (n Π i=1 x_i) ^ 1/n = (x_1 * x_2 * ... * x_n) ^ 1/n
+
+    - Harmonic Mean
+            HM(x) = n (n Σ i=1 1/x_i) ^ -1 = n / (1/x_1 + 1/x_2 + ... + 1/x_n)
+
+- Scenarios revisited:
+    1) GM(1.2, 1.1) = sqrt(1.2 * 1.1)
+                    = 14.9%
+      - Consider: does this change if it went up by 10% the first year and 20%
+                  the second year?
+                  - No. Scales at same value
+      - What about the total amount of money earned?
+        - 1.1489 * 1.1489 * 10000 = 10000 * 1.2 * 1.1
+      - Use Geometric Mean
+        - Rate based problems
+        - Used for Compound Interest, Increase/Decreasing rates (e.g. population)
+        - Growth rate
+        - Data based on previous data
+      
+    2) Vicky can paint a house in 3 hours. Simon can paint one in 5.
+       How long would it take them to paint two houses if they work together?
+    
+            HM(3, 5) = 2 House * ( Vicky: 1 house, 3 hr 
+                                 + Simon: 1 house, 5 hr )^-1
+            HM(3, 5) = 2 * ( 1/3 + 1/5 )^-1
+                     = 2( (5 + 3) / 15 ) ^-1
+                     = 2( 15/8 )
+                     = 30/8
+      - Calculate working efficiency for e.g. workers
+      - Based on efficiency
+      - Used for e.g. estimating speed, etc
+        - Efficiency based problems
+        - work length/load
+      
+
+
+--------------------------------------------------------------------------------
+* Defining Aggregation Functions
+- Above MEANS (Arithmetic, Geometric, Harmonic) all aggregation
+- Common properties:
+    - Monotone Increasing:
+        - Input & Output follow same trend
+        - If Input increase, Output increase
+    - Boundary Conditions:
+        - When summarising data
+            - Values should be w/in range of original values 
+            - Idempotency
+            
+        - f(a, a, ..., a) = a, f(b, b, ..., b) = b, where a and b are the min 
+          and max values possible.
+          
+        - e.g. With boundary condition, if all values are over the unit interval
+          [0, 1] then f(0, 0, ..., 0) = 0 and f(1, 1, ..., 1) = 1
+          
+- All belong to the class of AVERAGING aggregation functions
+    - An aggregation function 'A' is averaging if:
+    
+                        min(x) <= A(x) <= max(x)
+    
+    - i.e. for any input vector, the output will always be between the smallest
+      and largest argument.
+
+- Averaging behaviour is a justifiable condition we may want if desiring
+   functions that output a representation of the inputs
+- Always idempotent: A(t, t, t, ..., t) = t
+
+- This is an intuitively appealing requirement when thinking about averaging.
+    - e.g. With Geometric Mean example: GM(1.2, 1.1) = 1.149
+        - Idempotency means that GM(1.149, 1.149) = 1.149
+
+
+--------------------------------------------------------------------------------
+* Applications
+- Additional aspects of these operators also make them appealing
+- E.g. GM used in ecology research to give an overall idea of abundance
+        
+        GM( s_1, s_2, ..., s_n ) = ( n Π s_i i=1 )^1/n
+
+    where: s_n = species abundance
+
+- Why?
+    - GM: Sensitive to small inputs
+    - Thus: 
+        - interpretation here is that we want the function to be more sensitive
+          to increases in rare species.
+
+
+
+--------------------------------------------------------------------------------
+* Graphs
+- 1) AM, 2) GM, 3) HM for x {0, 1}^2
+
+- AM: z = ( x + y )/ 2
+- GM: z = sqrt( x * y )
+- HM: z = 2 / ( 1/x + 1/y )
+
+- HM(x) <= GM(x) <= AM(x)
+- Given the same input: 
+    Z-value will follow trend:
+        - AM will be same or greater than GM
+        - GM will be same or greater than HM
+
+--------------------------------------------------------------------------------
+* Lipschitz Continuity
+- Caveat Emptor:
+    - Whenever using GM (when implementing in software):
+        - on the boundary the gradient becomes infinitely large.
+    - Functions which always have their gradient bounded by some constant
+        - said to be "Lipschitz continuous"
+
+================================================================================
+** Recording Paused @1:16:00
+--------------------------------------------------------------------------------
+* Practice Qs
+- 1) Are the Harmonic mean & Geometric mean homogeneous & translation invariant?
+     How about the Median?
+     Hint: Test in R.
+     A: 
+
+     
+     
+- 2) If AM(23, 42, 27, 68) = 40, without calculating, what will be the value of
+     AM(29, 48, 33, 74)?
+     Hint: Translation invariant.
+     A: AM = 46
+
+- 3) If AM(x1, x2, x3, x4) = 15, what will be the value of 
+     AM(x1 + 2, x2 + 2, x3 + 2, x4 + 2)?
+     Hint: Translation invariant.
+     A: Add constant to the final, thus AM = 17
+
+- 4) If GM(x1, x2, x3, x4) = 6, what will be the value of GM(3x1, 3x2, 3x3, 3x4)?
+     Hint: Homogeneous.
+     A: Identical to multiplying constant by the output, thus GM = 6*3 = 18
+
+- 5) Explain how the arithmetic mean, harmonic mean, and geometric mean could be
+     affected by outliers.
+     A: Arithmetic Mean
+        - Outliers can inflate the actual mean giving a result that is not
+          accurate. 
+        - Least tolerant to outliers.
+        
+        Harmonic Mean
+        - Slightly tolerant to outliers
+        
+        Geometric Mean
+        - Sensitive to very small values
+        
+        Median
+        - Most tolerant to outliers in either direction
+        
+
+- Functions provided in scripts & workshop
+    - can reuse for assignments & exam
+
+--------------------------------------------------------------------------------
+* Vector in R
+- See lecture slides 29 - 41
+
+
+================================================================================
+                                * Tutorial 2 *
+================================================================================
+
+* Q: Without assistance, calculate the AM, GM, & HM for the input vector 
+     x = < 0.6, 0.9, 0.26, 0.7 >.
+    
+    AM = sum(x) / len(x)
+       = 2.46 / 4
+       = 0.615
+    
+    GM = (x1 * x2 * x3 * x4)^(1/len(x))
+       = (0.6 * 0.9 * 0.26 * 0.7)^(1/4)
+       = 0.09828 ^ (1/4)
+       = 0.560
+    
+    HM = len(x) / (1/x1 + 1/x2 + 1/x3 + 1/x4)
+       = 4 / (1/0.6 + 1/0.9 + 1/0.26 + 1/0.7)
+       = 4 / 8.0525
+       = 0.497
+   
+- NB: HM(x) <= GM(x) <= AM(x), thus: HM(0.497) <= GM(0.560) <= AM(0.615)
+
+--------------------------------------------------------------------------------
+* R Programming
+- Control Structures
+    - "if"
+        - E.g.  if (<condition>) { 
+                        
+                        ## do_something
+                        
+                        } else {
+                        
+                        ## do_something_else
+                        
+                    }
+        
+        - E.g.  if (<condition_1>) { 
+                    
+                        ## do_something
+                        
+                        } else if (<condition_2>) {
+                        
+                        ## do_something_else
+                        
+                        } else {
+                        
+                        ## do_something_else_again
+                        
+                    }
+
+        - E.g.  if (x > 3) {
+                    
+                        y <- 10
+                    
+                        } else {
+                    
+                        y <- 0
+                    
+                    }
+        - E.g.  y <- if (x > 3) {
+                
+                    10
+                
+                    } else {
+                
+                    0
+                
+                }
+
+    - "for"
+        - Iterate over elements of an object
+        - E.g.  for (i in 1:10) {
+                    print(i)
+                }
+        
+        - E.g. x <- c("a", "b", "c", "d")
+                for (i in 1:4) {
+                    print(x[i])
+                }
+                
+
+- For & If example
+    - When dealing with messy data, checks can be implemented to ID errors that
+      would otherwise lead to inaccurate analysis.
+    - This is known as "Defensive Programming"
+    - These checks and tests can help prevent future problems
+    
+    - E.g. sumArray <- function(arrayOfNumbers) {
+                    result <- 0
+                    if (typeof(arrayOfNumbers) == "double") {
+                        for(i in c(1:length(arrayOfNumbers))) {
+                            result = result + arrayOfNumbers[i]
+                        }
+                    }
+                    result
+                } else {
+                    print("Warning: Non-Numeric element in array.")
+            }
+            
+    - Test updated sumArray with inputs:
+        - c(1, 2, 3, 4)
+        - c(9, 4, "t", 5)
+        - c("not", "a", "number")
+        - What will happen?
+        
+        
+--------------------------------------------------------------------------------
+* Power Mean
+- Best seen as a generalized mean that encompasses the AM, GM, & HM. 
+    - i.e. We can obtain {AM, GM, HM} mean from the Power mean by specifying
+           a specific "p" value:
+    
+    PM_p(x) = (1/n * n Summa i=1 x1^p)^(1/p) 
+            
+            = ( ( x1^p + x2^p + ... + xn^p ) / n ) ^ ( 1/p )
+            
+- Special Cases:    
+                    Case          |   P
+                --------------------------
+                Arithmetic Mean   |   1
+                Geometric Mean    |   0
+                Harmonic Mean     |  -1
+
+- R Code:
+            PM <- function(x, p) {
+            
+                if (p == 0) {
+                
+                    prod(x)^(1/length(x))
+                
+                } else {
+                    
+                    mean(x^p) ^ (1/p)
+                    
+                }
+                
+            
+            }
+
+--------------------------------------------------------------------------------
+* Practice Qs Using R
+- Given x = < 0.1, 0.2, 0.6, 0.9 >, calculate:
+
+i) The Arithmetic Mean:
+
+ii) The Geometric Mean:
+
+iii) The Harmonic Mean:
+
+iv) The Median:
+
+v) Compare the results:
+
+- functions:
+
+    HM <- function(x) {
+        # Function to calculate the Harmonic mean.
+        
+        if (prod(x) == 0)
+            return (0)
+        } else {
+            length(x) / sum(1/x)   
+        }
+    }
+
+
+    GM <- function(x) {
+        # Function to calculate the Geometric mean.
+        
+        if (prod(x) == 0) {
+            return(0)
+        } else {
+            prod(x) ^ (1/length(x))
+        }
+    }
+
+--------------------------------------------------------------------------------
+* Aggregation Function Definition
+- For an input vector x = | < x1, x2, ..., xn >, a multivariate function A(x)
+  can be referred to as an aggregation function if it:
+    - A) is monotone increasing (in either a strict or non-strict sense)
+        - i.e. an increase to any of the inputs cannot result in a decrease to 
+          the output.
+        - This property is expressed as:
+                
+                if x <= y then A(x) <= A(y)
+    
+    - B) satisfies the boundary conditions:
+            
+                A(a, a, ...,  a) = a,   A(b, b, ..., b) = b,
+                
+         where 'a' and 'b' are the minimum & maximum values possible.
+         
+- Aggregation Function Example
+    - A function like the product A(x, y) = xy is an aggregation function over
+      the interval [0, 1] because it is monotone & f(0, 0) = 0, and f(1, 1) = 1,
+      but not if our interval is [1, 10] since 10*10 = 100
+      
+    - We then consider averaging functions to be a special sub-class of 
+      aggregation functions
+      
+    - Definition: An aggregation function A(x) is averaging if its output is
+                  bounded between the minimum and maximum of its inputs
+                  
+    - An aggregation function A(x) defined over [a, b]^n is averaging if:
+    
+                min(x) <= A(x) <= max(x),   for all x := [a, b]^n
+
+
+--------------------------------------------------------------------------------
+* Question
+- Show that the 3-variate function,
+                
+                f(x1, x2, x3) = ( x1/2 )( x2 + x3 )
+                
+  is an aggregation function for x{1,2,3} := [0, 1], using pencil & paper.
+  
+
+--------------------------------------------------------------------------------
+* Existing Functions Using RStudio
+- Mean()
+- Median() and Mean()
+
+--------------------------------------------------------------------------------
+* Practice with RStudio: Arrays & Matrices
+- cbind and rbind: filling column & rows
+- assign vectors and perform cbind() and rbind() operations
+    - a <- c(1, 2, 3, 7, 9)
+    - a <- cbind(a, c(21, 2, 1, 5, 6))
+    - a <- cbind(a, c(2, -1, 5, 0, -1))
+    - a <- cbind(a, c(1, 9, 7, 2, 1), array(6, 5))
+    
+    - b <- c(3, 6, 1, 9, 2)
+    - b <- rbind(b, c(3, 2, 1, 8, 9))
+    - b <- rbind(b, c(4, 1, 12, 1, 2))
+    
+- Creating a Matrix
+    - Using Arrays:
+        - a = array(0, c(3, 4))
+        - matrix(nrow = , ncol = )
+        
+    - Create a 3x4 array and then assign values to different entries using the
+      following:
+        - A[3, 1] <- 4
+        - A[1,] <- c(1, 2, 3, 4)
+        - A[,2] <- c(6, 5, 4)
+        - A[2:3,3:4] <- array(-1, c(2, 2))
+        
+* Practice Questions using R
+- Define the function: 
+        
+        f(x, y) = (x^2 + y^2) / (x + y),    (x + y != 0 and f(0, 0) = 0)
+
+- Evaluate f(0.3, 0.9) and f(0.4, 0.9)
+- Based on the results, can it be stated that f is NOT an aggregation function?
+
+* Runif Function
+- The function 'runif(n, min= a, max=b)' generates an array of n random numbers
+  between 'a' & 'b'. 
+- Type runif in the console to view the documentation for this function.
+
+- Practice: Try to generate 10 numbers 5 => x <= 100 using the runif function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================================================================================
+--------------------------------------------------------------------------------
+    Π

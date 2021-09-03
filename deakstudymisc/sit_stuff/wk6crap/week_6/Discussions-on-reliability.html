@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Discussions-on-reliability-image-1.jpeg" alt="Multi-coloured balls in shape of brain" title="Multi-coloured balls in shape of brain" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Abstract image of a thinking brain.</h5>
+<h1>Discussions on reliability</h1>
+<div>
+<p>Every step of the process can be questioned in several ways. Here we present a number of questions and discussion points that can arise during your analysis.</p>
+<h4 id="reliability">Reliability</h4>
+<p>If we want to be able to make inferences or estimate the value of new data, we need to make sure our model is reliable. In statistics there is the notion of hypothesis testing, which is based on the probability of obtaining models with prior assumptions. Here we will consider more general evaluations:</p>
+<ul>
+<li>Are we evaluating an approach, or just the parameters of the model?</li>
+<li>Do we have a &lsquo;ground truth&rsquo; dataset we can use?</li>
+<li>Do we have enough data to make reliable models?</li>
+<li>How can we account for overfitting?</li>
+</ul>
+<p>We don&rsquo;t always have good conditions for being certain about our model, but we have to make sure any arguments we make can be justified both by the data and theoretically.</p>
+<h4 id="are-we-evaluating-an-approach-or-just-the-parameters-of-the-model">Are we evaluating an approach, or just the parameters of the model?</h4>
+<p>We might be looking at an overall approach to prediction or parameter estimation. In this case, we want to be able to isolate, as much as possible, the influence of our contributions.</p>
+<h4 id="example">Example:</h4>
+<p>Suppose we have a website that evaluates relevance of a website to a search query by aggregating the last 2 weeks of visits. Since website hits usually follow an exponential distribution, it has been standard practice in your company to perform a log transform of the data. You want to see if doing a piecewise linear transform of the data can achieve better results.</p>
+<p>How could you determine/show that your new approach is better?</p>
+<ul>
+<li>Two approaches? You can compare log transform and linear data transform, but it is also worth seeing what happens with raw data - so compare all three.</li>
+<li>How can you objectively say one approach is better? You need data that shows some kind of ground truth relationship between website hits and relevance for a number of cases.</li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>day1</strong></td>
+<td style="text-align: center;"><strong>day2</strong></td>
+<td style="text-align: center;"><strong>day3</strong></td>
+<td style="text-align: center;"><strong>...</strong></td>
+<td style="text-align: center;"><strong>relevance</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>24</td>
+<td>8</td>
+<td>72</td>
+</tr>
+<tr>
+<td>67</td>
+<td>3</td>
+<td>45</td>
+<td>6</td>
+<td>61</td>
+</tr>
+<tr>
+<td>43</td>
+<td>7</td>
+<td>82</td>
+<td>45</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Then we need to be able to perform a sufficient number of experiments on varied data to show that our approach is better</li>
+</ul>
+<h4 id="do-we-have-a-ground-truth-dataset-we-can-use">Do we have a &lsquo;ground truth&rsquo; dataset we can use?</h4>
+<p>There are basically two types of datasets we can use for performing experiments: synthetic and real. Both have their own drawbacks.</p>
+<h3 id="real-datasets">Real datasets</h3>
+<ul>
+<li>Difficult to obtain (permission, privacy, availability, existence).</li>
+<li>Can be incomplete.</li>
+<li>Can involve variables that are difficult to transform to numerical data.</li>
+<li>Can be too small or specific.</li>
+</ul>
+<p>Some ways we can alleviate these issues:</p>
+<ul>
+<li>Ensure the integrity of the dataset (keep good records).</li>
+<li>Make sure we understand the units.</li>
+<li>Have experiments been carried out elsewhere on the data that we can replicate?</li>
+</ul>
+<h3 id="synthetic-datasets">Synthetic datasets</h3>
+<ul>
+<li>Need to be generated in a theoretically sound way appropriate to the problem.</li>
+<li>Always carry some skepticism - what bias and distributions exist in the real dataset that would not be captured by our generated one?</li>
+</ul>
+<p>Some questions to consider when dealing with synthetic datasets:</p>
+<ul>
+<li>Should we model randomness using a uniform distribution? Normal distribution? Exponential distribution? Or some specialised way?</li>
+<li>Can we assume an underlying model and add noise? The type of noise we have, or the generation of the model, can often influence which functions will be robust in the first place (e.g. normally distributed noise with independent sources will often be aggregated best using the mean).</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<p>If you have applied some of the questioning in your analysis during these weeks, share your thoughts in the discussion forum about how you this worked for you.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

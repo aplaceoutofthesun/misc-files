@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Acquiring-and-analysing-weights-image-1.jpeg" alt="Two beasts of equal weight challenge each other" title="Two beasts of equal weight challenge each other" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Two tessellated beasts of equal weight challenge each other.</h5>
+<h1>Acquiring and analysing weights</h1>
+<div>
+<p>The next major step is to acquire weights for each of our models and check if they &lsquo;seem&rsquo; appropriate.</p>
+<p>To do this, we&rsquo;ll need a file containing functions built for the accompanying textbook of this subject.</p>
+<ol>
+<li>Download the file here: <a href="https://cloudstor.aarnet.edu.au/plus/s/BSSXGldOe7Wrepl" target="_blank" rel="noopener noreferrer">AggWaFit718.r</a></li>
+<li>Ensure the appropriate packages are installed by typing in the console:&nbsp;<code>install.packages("lpSolve")</code></li>
+<li>Open&nbsp;<code>AggWaFit718.r</code>&nbsp;in RStudio, and click on &lsquo;Source&rsquo;, which will load all the necessary functions for this step.</li>
+<li>Browse through&nbsp;<code>AggWaFit718.r</code>&nbsp;in RStudio and take note of the comments written that explain what each of the functions does.</li>
+</ol>
+<h3 id="using-aggwafit718r">Using&nbsp;<code>AggWaFit718.r</code></h3>
+<p>Some points to keep in mind regarding using&nbsp;<code>AggWaFit718.r</code>:</p>
+<p>&ldquo;For fitting, the data table needs to be in the form&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_11\)"}</annotation></semantics></math>&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_12\)"}</annotation></semantics></math>&nbsp;...&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub><mi>n</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1n\)"}</annotation></semantics></math>&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>y</mi><mn>1</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y_1\)"}</annotation></semantics></math></p>
+<ul>
+<li>
+<p>i.e. with the first n columns representing the variables and the last column representing the output.&rdquo;</p>
+<p>This means that when fitting our data to these functions, we&rsquo;ll want to put Kei&rsquo;s rating as the last column.</p>
+</li>
+<li><span style="font-family: Lato, sans-serif; font-size: 1rem;">When performing each of the fitting functions, the output is written to a text file. It is best to specify separate names as to ensure that one text file is not overwritten with another.</span></li>
+</ul>
+<p>All R code will be written with the above in mind, and will need to be adjusted appropriately for Assessment 3.</p>
+<p>The fitting functions in&nbsp;<code>AggWaFit718.r</code>&nbsp;takes in data as its input where it treats the last column as our intended output values, and the other columns as input values. It then attempts to find weights for each input by minimising the error measure, which requires optimisation knowledge (not assessed) of which the basics are covered in weeks 7 and 8.</p>
+<p>Details for this can be found in Chapter 5.3 of the prescribed textbook.</p>
+<p>The aim here is to now run these fitting functions for various models so that we can collect data on the errors, correlation, and weights. We demonstrate this for the Weighted Arithmetic Mean and expect you to do the same process for the other functions.</p>
+<h4 id="weighted-arithmetic-mean">Weighted Arithmetic Mean:</h4>
+<p><code>fit.QAM(hotelData[,c(2:10,1)],"WAMoutput.txt", "WAMstats.txt")</code></p>
+<p>Opening up &lsquo;WAMstats.txt&rsquo; should give results similar to the following:</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Measure</strong></td>
+<td style="text-align: center;"><strong>Output</strong></td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>4.20993003328861</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"4.20993003328861"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Av. abs error</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>3.12765137378224</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"3.12765137378224 "}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Pearson Correlation</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.98951986803197</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.98951986803197"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>
+<p>Spearman Correlation</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>i</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(i\)"}</annotation></semantics></math></p>
+</td>
+<td>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.983894812270749</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.983894812270749"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>w</mi><mi>i</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(w_i\)"}</annotation></semantics></math>&nbsp;(weights)</p>
+</td>
+</tr>
+<tr>
+<td>1</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.0194056285221035</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.0194056285221035"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>2</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.0390876342948007</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.0390876342948007"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>3</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.102891478464021</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.102891478464021"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>4</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.240427752211895</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.240427752211895"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>5</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.281991744682169</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.281991744682169"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>6</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.0470443873526975</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.0470443873526975"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>7</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>8</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.110916927376011</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.110916927376011"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>9</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.158234447096302</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.158234447096302"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Bear in mind that for the Weights table, the index is&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1\)"}</annotation></semantics></math>&nbsp;off the user identifiers i.e. User 2 corresponds with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>w</mi><mn>1</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(w_1\)"}</annotation></semantics></math>, User 3 corresponds with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>w</mi><mn>2</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(w_2\)"}</annotation></semantics></math>, etc.</p>
+<p>Some observations:</p>
+<ul>
+<li>We can&rsquo;t make any comment on the errors until we compare them to other models.</li>
+<li>Pearson and Spearman Correlation are very close to 1, which is promising.</li>
+<li>Highest weights are given to User 5 and User 6 which is consistent with our observations in 2.5 Exploring and Transforming the Data.</li>
+<li>User 8 having zero weight is a little strange, but given how low the weights are for User 2 and User 3, it can be considered reasonably accurate. We&rsquo;ll be aiming to see similar relative results in the other models.</li>
+</ul>
+<h4 id="power-mean-p--05">Power Mean (<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mn>0.5</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p = 0.5\)"}</annotation></semantics></math>):</h4>
+<p><code>fit.QAM(hotelData[,c(2:10,1)],"PMoutput.txt", "PMstats.txt", g=PM05, g.inv = invPM05)</code></p>
+<h4 id="quadratic-mean-power-mean-with-p--2">Quadratic Mean (Power Mean with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p=2\)"}</annotation></semantics></math>):</h4>
+<p><code>fit.QAM(hotelData[,c(2:10,1)],"QMoutput.txt", "QMstats.txt", g=QM, g.inv = invQM)</code></p>
+<h4 id="ordered-weighted-average">Ordered Weighted Average:</h4>
+<p><code>fit.OWA(hotelData[,c(2:10,1)],"OWAoutput.txt", "OWAstats.txt")</code></p>
+<h4 id="choquet-integral">Choquet Integral:</h4>
+<p>To make future calculations a little bit easier, we&rsquo;ll fit the Choquet Integral to the best 4 inputs according to the WAM:&nbsp;<code>fit.choquet(hotelData[,c(6,5,10,9,1)], "Choquetoutput1.txt", "Choquetstats1.txt")</code>. The results for this is given below (with values rounded to 4 decimal places for display purposes).</p>
+<p>You can still fit the Choquet Integral to the full set of data as follows:&nbsp;<code>fit.choquet(hotelData[,c(2:10, 1)], "Choquetoutput2.txt", "Choquetstats2.txt")</code>. This one will take a little longer to process since it&rsquo;s optimising for&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mn>2</mn><mn>9</mn></msup><mo>=</mo><mn>512</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2^9 = 512\)"}</annotation></semantics></math>&nbsp;variables instead of&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>9</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(9\)"}</annotation></semantics></math>!</p>
+<h4 id="interpreting-choquet-weights-output">Interpreting Choquet Weights Output</h4>
+<p>The weights obtained from fitting a Choquet function to data are ordered in terms of counting up the binary number representation of the set corresponding to the fuzzy measure. The table below demonstrates the result one would obtain from fitting a Choquet integral to 3 inputs (which results in&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mn>2</mn><mn>3</mn></msup><mo>=</mo><mn>8</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2^3=8\)"}</annotation></semantics></math>&nbsp;variables).</p>
+<p>Take notice of how the 1&rsquo;s in the binary numbers line up with the numbers in the fuzzy measures.</p>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Number</strong></td>
+<td style="text-align: center;"><strong>Binary Number</strong></td>
+<td style="text-align: center;"><strong>Fuzzy Measure</strong></td>
+</tr>
+<tr>
+<td>0</td>
+<td>000</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mi mathvariant="normal">&#x2205;<!-- ∅ --></mi><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{\emptyset\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>1</td>
+<td>001</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{1\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>2</td>
+<td>010</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{2\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>3</td>
+<td>011</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{2,1\}) = v(\{1,2\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{3\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{3,1\}) = v(\{1,3\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>6</td>
+<td>110</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{3,2\}) = v(\{2,3\})"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>7</td>
+<td>111</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"v(\{3,2,1\}) = v(\{1,2,3\})"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Shapley Value Results:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><msub><mi>&#x03D5;<!-- ϕ --></mi><mn>1</mn></msub><mo>=</mo><mn>0.273870573870577</mn><mo>,</mo><msub><mi>&#x03D5;<!-- ϕ --></mi><mn>2</mn></msub><mo>=</mo><mn>0.301551226551394</mn><mo>,</mo><msub><mi>&#x03D5;<!-- ϕ --></mi><mn>3</mn></msub><mo>=</mo><mn>0.220537795537936</mn><mo>,</mo><msub><mi>&#x03D5;<!-- ϕ --></mi><mn>4</mn></msub><mo>=</mo><mn>0.204040404040449</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\phi_1 = 0.273870573870577, \phi_2 = 0.301551226551394, \phi_3 = 0.220537795537936, \phi_4 = 0.204040404040449
+\\"}</annotation></semantics></math></p>
+<p>Choquet Integral Weight Results:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\{1,2,3,4\}) = 1
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.9545</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\{1,2,3\}) = 0.9545, v(\{1,2,4\}) = 1, v(\{1,3,4\}) = 1, v(\{2,3,4\}) = 1
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.4000</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.1794</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.8928</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\{1,2\}) = 0.4000, v(\{1,3\}) = 0.1794, v(\{1,4\}) = 0.8928
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.9545</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.2142</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.1428</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\{2,3\}) = 0.9545, v(\{2,4\}) = 0.2142, v(\{3,4\}) = 0.1428
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>1</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.1795</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>2</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.2143</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>3</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.1172</mn><mo>,</mo><mi>v</mi><mo stretchy="false">(</mo><mo fence="false" stretchy="false">{</mo><mn>4</mn><mo fence="false" stretchy="false">}</mo><mo stretchy="false">)</mo><mo>=</mo><mn>0.0357</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\{1\}) = 0.1795, v(\{2\}) = 0.2143, v(\{3\}) = 0.1172, v(\{4\}) = 0.0357
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>v</mi><mo stretchy="false">(</mo><mi mathvariant="normal">&#x2205;<!-- ∅ --></mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+v(\emptyset) = 0
+\\"}</annotation></semantics></math></p>
+<h2 id="your-task">Activity</h2>
+<h4 id="errorcorrelation-analysis">Error/Correlation Analysis:</h4>
+<p>Tabulate your results for both errors and both correlations for all measures. In general we&rsquo;re looking for low error values and correlations close to 1.</p>
+<ul>
+<li>Which of these models appear to the best out of the whole lot we&rsquo;ve tested?</li>
+<li>Which models seem to be relatively similar to each other?</li>
+<li>Why do you think that might be?</li>
+</ul>
+<h4 id="weight-analysis">Weight Analysis:</h4>
+<p>For each of the models, which variable (and corresponding user) do the weights favour? What does this tell us about their similarity to Kei&rsquo;s ratings? Are all the models similar in their preference? Which models appear to have slightly different preferences and why do you think that might be the case?</p>
+<p>Note that the Shapley values for the Choquet Integral can be considered as &lsquo;weights&rsquo; of each individual variable for the purposes of weight analysis.</p>
+<p>There is always the possibility that the weights may be extremely skewed towards certain variables than others, which is why it&rsquo;s important to test a variety of models. The Bike Sharing example referenced in the previous article demonstrates an instance of this happening.</p>
+<h4 id="orness-analysis">Orness Analysis:</h4>
+<p>For the OWA and Choquet Integral, what does the orness tell us about their averaging tendencies with respect to this set of inputs and associated weights?</p>
+<h4 id="fuzzy-measures-analysis">Fuzzy Measures Analysis:</h4>
+<p>Which combinations of inputs are additive, superadditive or redundant?</p>
+<p>Feel free to post your numbers and thoughts in the comments below so that we can ensure that everyone&rsquo;s results match!</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

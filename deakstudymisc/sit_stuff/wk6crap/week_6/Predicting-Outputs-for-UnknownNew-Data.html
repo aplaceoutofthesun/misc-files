@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Predicting-ouputs-for-unknown-new-data-image-1.jpeg" alt="colourful balls bouncing" title="colourful balls bouncing" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Where will the balls land?</h5>
+<h1>Predicting Outputs for Unknown/New Data</h1>
+<div>
+<p>We&rsquo;ve got our models and weights. Now we can start putting in values to estimate Kei&rsquo;s potential ratings for our three unvisited hotels.</p>
+<table>
+<tbody>
+<tr>
+<td>User/Hotel ID</td>
+<td>2</td>
+<td>826</td>
+<td>977</td>
+</tr>
+<tr>
+<td>Kei</td>
+<td>??</td>
+<td>??</td>
+<td>??</td>
+</tr>
+<tr>
+<td>User 2</td>
+<td>98</td>
+<td>94</td>
+<td>59</td>
+</tr>
+<tr>
+<td>User 3</td>
+<td>50</td>
+<td>99</td>
+<td>85</td>
+</tr>
+<tr>
+<td>User 4</td>
+<td>62</td>
+<td>63</td>
+<td>66</td>
+</tr>
+<tr>
+<td>User 5</td>
+<td>63</td>
+<td>58</td>
+<td>55</td>
+</tr>
+<tr>
+<td>User 6</td>
+<td>81</td>
+<td>96</td>
+<td>78</td>
+</tr>
+<tr>
+<td>User 7</td>
+<td>72</td>
+<td>70</td>
+<td>91</td>
+</tr>
+<tr>
+<td>User 8</td>
+<td>82</td>
+<td>91</td>
+<td>87</td>
+</tr>
+<tr>
+<td>User 9</td>
+<td>96</td>
+<td>59</td>
+<td>94</td>
+</tr>
+<tr>
+<td>User 10</td>
+<td>51</td>
+<td>86</td>
+<td>73</td>
+</tr>
+</tbody>
+</table>
+<div></div>
+<div>
+<div><br />
+<pre><code class="language-r">hotel2 = c(98,50,62,63,81,72,82,96,51)
+hotel826 = c(94,99,63,58,96,70,91,59,86) 
+hotel977 = c(59,85,66,55,78,91,87,94,73)
+</code></pre>
+</div>
+</div>
+<p>The general process is:</p>
+<h4 id="transform-our-inputs-using-the-same-transformations-used-in-our-transformation-step">1. Transform our inputs using the same transformations used in our transformation step.</h4>
+<p>Since the only transformation we did in our transformation step was divide all inputs by 100, we do the same thing here.</p>
+<div>
+<div>
+<pre><code class="language-r">hotel2 = hotel2/100
+hotel826 = hotel826/100
+hotel977 = hotel977/100
+</code></pre>
+</div>
+</div>
+<h4 id="using-our-models-of-choice-combine-our-input-with-the-weights-acquired-from-the-previous-step">2. Using our model(s) of choice, combine our input with the weights acquired from the previous step.</h4>
+<p>For the WAM:</p>
+<div>
+<div>
+<pre><code class="language-r">WAMweights = c(0.0194056285221035,0.0390876342948007,0.102891478464021,0.240427752211895,
+0.281991744682169,0.0470443873526975,0,0.110916927376011,0.158234447096302)
+QAM(hotel2, WAMweights) # 0.7032886
+QAM(hotel826, WAMweights) # 0.7663735
+QAM(hotel977, WAMweights) # 0.7273545
+</code></pre>
+</div>
+</div>
+<p>For the Choquet Integral, using the truncated version and accounting for the shifted inputs:</p>
+<div>
+<div>
+<pre><code class="language-r">Choquetweights = c(0.179487179487191,0.214285714285701,0.400000000000108,
+0.117216117216137,0.179487179487191,0.954545454545463,
+0.954545454545558,0.0357142857143169,0.892857142856606,
+0.214285714285695,1,0.142857142857174,
+1,1,1)
+choquet(hotel2[c(5,4,9,8)], Choquetweights) # 0.6739286
+choquet(hotel826[c(5,4,9,8)], Choquetweights) # 0.8691558
+choquet(hotel977[c(5,4,9,8)], Choquetweights) # 0.7464286
+</code></pre>
+</div>
+</div>
+<h4 id="transform-our-results-back-using-the-inverses-of-the-appropriate-transformations-and-check-for-consistency-as-needed">3. Transform our results back using the inverses of the appropriate transformations, and check for consistency as needed.</h4>
+<p>Since all of Kei&rsquo;s prior ratings were divided by 100 when determining weights, we need only multiply our results by 100 to obtain Kei&rsquo;s predicted ratings. At a glance we can see the relative rankings are consistent with Hotel 826 having the highest rating over Hotel 977, then Hotel 2. If this wasn&rsquo;t the case then it&rsquo;s an indicator that something may have gone wrong somewhere.</p>
+<p>The accuracy of the actual numbers itself can still be subject to question, and we can run another gamut of tests/checks (same as the ones we did while exploring our data) to ascertain our hypotheses.</p>
+<h2 id="your-task">Activity</h2>
+<p>Complete the process for the other models and let us know your best guess on what Kei&rsquo;s ratings would be!</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.r.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Borda-count-image-1.jpeg" alt="Closeup of gummy bear lollies" title="Closeup of gummy bear lollies" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>The difference between three items.</h5>
+<h1>Borda Count</h1>
+<div>
+<p>Instead of calculating the weighted average of individual scores, what if we replaced them with rankings?</p>
+<p>Let us refer back to the example presented in the topic '<strong>Motivational Example - Group Decision Making</strong>'.&nbsp;&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Candidate</strong></td>
+<td style="text-align: center;"><strong>Judge 1</strong></td>
+<td style="text-align: center;"><strong>Judge 2</strong></td>
+<td style="text-align: center;"><strong>Judge 3</strong></td>
+</tr>
+<tr>
+<td>Yezi</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>9</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"9"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>6</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"6"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"4"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Jimin</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>7</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"7"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>7</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"7"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>6</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"6"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Hyolyn</td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"4"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>8</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"8"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>8</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"8"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Instead of assigning each candidate a score and overall weighting, selection panel members can rank the candidates. Once the ranks are in, each first place vote is worth a certain number of points, each second place is worth a certain number of points (usually less) and so on. The overall winner is then the one who receives the highest number of points.</p>
+<p>Let us consider a judge&rsquo;s score to be indicative of their ranking. For example, Judge 1&rsquo;s ranking would be: Yezi&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo>&#x227B;<!-- ≻ --></mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\succ\)"}</annotation></semantics></math>&nbsp;Jimim&nbsp;<math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo>≻<!-- ≻ --></mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\succ\)"}</annotation></semantics></math>Hyolyn, since&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>9</mn><mo>&gt;</mo><mn>7</mn><mo>&gt;</mo><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(9 &gt; 7 &gt; 4\)"}</annotation></semantics></math>&nbsp;respectively. Doing the same for the other two judges give the following table of rankings.</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Candidate</strong></td>
+<td style="text-align: center;"><strong>Judge 1</strong></td>
+<td style="text-align: center;"><strong>Judge 2</strong></td>
+<td style="text-align: center;"><strong>Judge 3</strong></td>
+</tr>
+<tr>
+<td>Yezi</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"3"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"3"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Jimin</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Hyolyn</td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"3"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>If we award 2 points for first place, 1 point for second place and 0 points for third place, the candidates&rsquo; scores will be:</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Candidate</strong></td>
+<td style="text-align: center;"><strong># 1st Place</strong></td>
+<td style="text-align: center;"><strong># 2nd Place</strong></td>
+<td style="text-align: center;"><strong># 3rd Place</strong></td>
+<td style="text-align: center;"><strong>Score</strong></td>
+</tr>
+<tr>
+<td>Yezi</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo stretchy="false">(</mo><mn>2</mn><mo>&#x00D7;<!-- × --></mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>&#x00D7;<!-- × --></mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>0</mn><mo>&#x00D7;<!-- × --></mo><mn>2</mn><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"(2 \times 1) + (1 \times 0) + (0 \times 2) = 2"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Jimin</td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"3"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo stretchy="false">(</mo><mn>2</mn><mo>&#x00D7;<!-- × --></mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>&#x00D7;<!-- × --></mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>0</mn><mo>&#x00D7;<!-- × --></mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"(2 \times 0) + (1 \times 3) + (0 \times 0) = 3"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Hyolyn</td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0"}</annotation></semantics></math></td>
+<td style="text-align: center;"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mo stretchy="false">(</mo><mn>2</mn><mo>&#x00D7;<!-- × --></mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>&#x00D7;<!-- × --></mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>0</mn><mo>&#x00D7;<!-- × --></mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"(2 \times 2) + (1 \times 0) + (0 \times 1) = 4"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Note that these Borda count systems do not technically define weighting vectors since they don&rsquo;t add to 1, however they can be normalised to give equivalent results.</p>
+<h2 id="your-task">Activity</h2>
+<p>The Borda count is usually introduced in context of voting systems. What are its advantages/disadvantages and what are the alternatives? Look at this <a href="https://courses.lumenlearning.com/waymakermath4libarts/chapter/borda-count/" target="_blank" rel="noopener">example </a>and let us know in the discussion forum.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

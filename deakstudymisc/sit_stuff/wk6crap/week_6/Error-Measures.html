@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Error-measures-image-1.jpeg" alt="Cube prism on black and white" title="Cube prism on black and white" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Looking at the available information differently.</h5>
+<h1>Error Measures</h1>
+<div>
+<p>We can measure a model&rsquo;s accuracy by comparing expected outputs with actual outputs in a few different ways.</p>
+<p>We&rsquo;ll briefly mention a few error measures and how to calculate them, but not much additional analysis beyond that. For notation:</p>
+<ul>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mi>i</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_i\)"}</annotation></semantics></math>&nbsp;are our input values,</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>A</mi><mi>w</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A_w(x_i)\)"}</annotation></semantics></math>&nbsp;&nbsp;is our expected output values based on the model,</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>y</mi><mi>i</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y_i\)"}</annotation></semantics></math>&nbsp;are our observed output values.</li>
+</ul>
+<h4 id="total-squared-errorsum-of-squared-error-sse">Total Squared Error/Sum of Squared Error (SSE)</h4>
+<p>This can be described as all of the differences between the predicted and observed output values, squared and then added together.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>R</mi><mi>M</mi><mi>S</mi><mi>E</mi><mo>=</mo><msqrt><munderover><mo>&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow class="MJX-TeXAtom-ORD"><mi>n</mi></mrow></munderover><mfrac><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>w</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>&#x2212;<!-- − --></mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mi>n</mi></mfrac></msqrt><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+RMSE=\sqrt{\sum_{i=1}^{n}\frac{(A_w(x_i)-y_i)^2}{n}}
+\\"}</annotation></semantics></math></p>
+<ul>
+<li>The RMSE can be interpreted as the average difference between each prediction and the output.</li>
+<li>It is also the quadratic mean, a power mean with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p=2\)"}</annotation></semantics></math>&nbsp;,&nbsp;&nbsp;
+<ul>
+<li>so it will be affected more by larger differences.</li>
+<li>If a fitted function performs better than another in terms of RMSE, then it will also have a lower total squared error.</li>
+</ul>
+<h4 id="total-least-absolute-deviation-lad--sum-of-absolute-errors-sae">Total Least Absolute Deviation (LAD) / Sum of Absolute Errors (SAE)</h4>
+<p>The sum of all the absolute differences between predicted and observed outputs,&nbsp;&nbsp;</p>
+</li>
+</ul>
+<span style="font-size: 15.2px;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>S</mi><mi>A</mi><mi>E</mi><mo>=</mo><munderover><mo>&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow class="MJX-TeXAtom-ORD"><mi>m</mi></mrow></munderover><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><msub><mi>A</mi><mi>w</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>&#x2212;<!-- − --></mo><msub><mi>y</mi><mi>i</mi></msub><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow></mstyle><annotation encoding="latex">{"version":"1.1","math":"SAE=\sum_{i=1}^{m}|A_w(x_i)-y_i|"}</annotation></semantics></math></span></div>
+<div>
+<h4 id="average-l1-error--average-absolute-error">Average L1 error / Average Absolute Error</h4>
+<p>This is the SAE divided by the number of observations,</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>A</mi><mi>v</mi><mo>.</mo><mi>A</mi><mi>E</mi><mo>=</mo><munderover><mo>&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow class="MJX-TeXAtom-ORD"><mi>n</mi></mrow></munderover><mfrac><mrow><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><msub><mi>A</mi><mi>w</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>&#x2212;<!-- − --></mo><msub><mi>y</mi><mi>i</mi></msub><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow></mrow><mi>n</mi></mfrac></mstyle><annotation encoding="latex">{"version":"1.1","math":"Av.AE=\sum_{i=1}^{n}\frac{|A_w(x_i)-y_i|}{n}"}</annotation></semantics></math></p>
+<h4 id="pearson-correlation-r">Pearson Correlation&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>r</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(r\)"}</annotation></semantics></math></h4>
+<p>The Pearson Correlation returns a value between&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo>&#x2212;<!-- − --></mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(-1\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1\)"}</annotation></semantics></math>&nbsp;that indicates how much of a linear relationship there is between two variables, where</p>
+<ul>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>r</mi><mo>=</mo><mo>&#x2212;<!-- − --></mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(r=-1\)"}</annotation></semantics></math>&nbsp;indicates a perfect negative relationship,</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>r</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(r=0\)"}</annotation></semantics></math>&nbsp;indicates no relationship at all,</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>r</mi><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(r=1\)"}</annotation></semantics></math>&nbsp;indicates a perfect positive relationship.</li>
+</ul>
+<span style="font-family: Lato, sans-serif; font-size: 1rem;"></span></div>
+<p><span style="font-family: Lato, sans-serif; font-size: 1rem;">In terms of error analysis we want the predicted and observed outputs to be as close to each other as possible, which means that we&rsquo;re looking for our Pearson Correlation to be close to&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(1\)"}</annotation></semantics></math>.&nbsp;We would not expect to find a negative&nbsp;relationship&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mi>r</mi><mo>&lt;</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(% &lt;![CDATA[
+(r &lt; 0 )%]&gt;\)"}</annotation></semantics></math>&nbsp;at all.</span></p>
+<h4 id="spearman-correlation-rho---pronounced-rho">Spearman Correlation (<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C1;<!-- ρ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\rho\)"}</annotation></semantics></math>- pronounced 'rho')</h4>
+<p>The Spearman Correlation is similar to the Pearson Correlation but assesses monotonic relationships instead of linear relationships. In other words, it looks at whether the ranking/ordering of values relative to each other are consistent between the two variables.</p>
+<ul>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mo>&#x2212;<!-- − --></mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p=-1\)"}</annotation></semantics></math>&nbsp;indicates a monotonic decreasing relationship between the two variables.</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p=0\)"}</annotation></semantics></math>&nbsp;indicates a lack of montonicity between the two variables (i.e. a line of best fit has a few twists and turns).</li>
+<li><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>p</mi><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(p=1\)"}</annotation></semantics></math>&nbsp;indicates a monotonic increasing relationship between the two variables.</li>
+</ul>
+<p><span style="font-size: 15.2px;">For example, if our observed outputs were&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>0.5</mn><mo>,</mo><mn>0.95</mn><mo>,</mo><mn>0.3</mn><mo>,</mo><mn>0.72</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((0.5, 0.95, 0.3, 0.72)\)"}</annotation></semantics></math>&nbsp;and our predicted outputs were&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>0.7</mn><mo>,</mo><mn>0.89</mn><mo>,</mo><mn>0.66</mn><mo>,</mo><mn>0.72</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((0.7, 0.89, 0.66, 0.72)\)"}</annotation></semantics></math>, then&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>&#x03C1;<!-- ρ --></mi><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\rho=1\)"}</annotation></semantics></math>&nbsp;</span></p>
+<p>since the relative rankings/orderings between the two sets are the same.</p>
+<p>There are two interesting articles discussing the difference between Pearson Correlation and Spearman Correlation: <a href="https://support.minitab.com/en-us/minitab-express/1/help-and-how-to/modeling-statistics/regression/supporting-topics/basics/a-comparison-of-the-pearson-and-spearman-correlation-methods/" target="_blank" rel="noopener">A comparison of the Pearson and Spearman correlation methods</a>&nbsp;and <a href="https://journals.lww.com/anesthesia-analgesia/fulltext/2018/05000/correlation_coefficients__appropriate_use_and.50.aspx" target="_blank" rel="noopener">Correlation Coefficients: Appropriate Use and Interpretation</a>.</p>
+<h2 id="your-task">Activity</h2>
+<p>Calculate the goodness-of-fit for the following vectors and verify that you obtain the expected output.</p>
+<pre><code class="language-r">a = c(90, 40, 69, 31, 39, 44, 21, 81, 25, 52)
+b = c(64, 42, 65, 4, 55, 42, 18, 79, 46, 62)</code></pre>
+<p></p>
+<table>
+<tbody>
+<tr>
+<td><strong>Goodness-of-fit</strong></td>
+<td><strong>Implementation</strong></td>
+<td><strong>Expected Result</strong></td>
+</tr>
+<tr>
+<td>SSE</td>
+<td><code>sum((a-b)^2)</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2239</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2239"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td><code>sqrt(sum((a-b)^2)/length(a)</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>14.96329</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"14.96329"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>SAE</td>
+<td><code>sum(abs(a-b))</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>113</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"113"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Av.AE</td>
+<td><code>sum(abs(a-b))/length(a)</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>11.3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"11.3"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>r</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"r"}</annotation></semantics></math></td>
+<td><code>cor(a,b)</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.7711654</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.7711654"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi>&#x03C1;<!-- ρ --></mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\rho"}</annotation></semantics></math></td>
+<td><code>cor(a,b,method="spearman")</code></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>0.8024353</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"0.8024353"}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+<div><span style="font-family: Lato, sans-serif; font-size: 1rem;"></span></div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-prism.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.r.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

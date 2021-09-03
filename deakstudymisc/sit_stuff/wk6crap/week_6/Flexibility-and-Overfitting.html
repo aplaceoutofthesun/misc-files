@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Flexibility-and-overfitting-image-1.jpeg" alt="Balance cubes levitating around core" title="Balance cubes levitating around core" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>Order and movement into some kind of order.</h5>
+<h1>Flexibility and Overfitting</h1>
+<div>
+<p>Do we have enough data to make reliable models? Are the models reliable enough to predict future data?</p>
+<p>The more flexible a model is, the easier it is to find an approach that fits the data well. In general, at the bare minimum one would need at least as many data points as one has parameters but ideally we&rsquo;d want much more. Recall that for the Choquet integral we&rsquo;d have&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msup><mn>2</mn><mi>n</mi></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2^n\)"}</annotation></semantics></math>&nbsp;parameters for&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>n</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(n\)"}</annotation></semantics></math>&nbsp;variables.</p>
+<p>Often more data will contribute to longer time to process and fit the data, but too little data will either mean we can&rsquo;t interpret our model because several other models would fit just as well, or we can overfit our data.</p>
+<p><img class="centerImg" src="../images/Flexibility-and-overfitting-image-2.png" alt="" title="" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-d2l-editor-default-img-style="true" /></p>
+<h5></h5>
+<p>The left graph is an example of overfitting: it shows a model flexible enough to fit every single data point, however any new values are unlikely to lie on this line. The right graph shows a line of best fit which does not necessarily match each data point individually, but would provide a prediction that is least likely to deviate from any new values.</p>
+<p>When predicting values, we can split any &lsquo;ground truth&rsquo; dataset into training and test data. We use the training data to find our parameters and then see how well it goes in predicting values for test data. This can be made easier with some pre-testing to discern any behaviours.</p>
+<p>What we&rsquo;ll do this week is cover error measures and experiment with fitting data to models. Experimentation is key to gaining a better understanding of how each model functions with different sets of data.</p>
+<h2 id="your-task">Activity</h2>
+<p>If you are experiencing any difficulties with the programming functions presented in the content above, share your thoughts in the discussion forum.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

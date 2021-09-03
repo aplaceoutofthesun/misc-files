@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/pixel-cells-3947910_720.jpg" alt="Overview of Week 6" title="Overview of Week 6" /></p>
+<address>Pixabay<a href="https://pixabay.com/vectors/pixel-cells-download-data-transfer-3947910/" target="_blank" rel="noopener noreferrer">pixel-cells-download-data-transfer-3947910</a></address>
+<h5>Overview of Week 6</h5>
+<hr />
+<h1>Overview of Week 6</h1>
+<div>
+<p class="note3">This week, you'll be using real data sets-- for example, the Kei&rsquo;s Hotel data set and others-- to make predictions based on the data models you build. In order to build good models, you will need to make use of data transformations you have learned&nbsp; over the last couple of weeks and apply suitable transformations to your data. You will be using an R tool for these tasks, which contains all aggregation functions you have learned so far. We will provide you with this tool. Read the descriptions of the operations. You should know most of them now. The tool also contains the package LPSolve. You will get instructions to download this package and install it once you open the tool. LPSolve uses linear programming.<br /><br /> Looking forward, you'll learn linear programming in weeks 7 and 8. With the tool, you will be able to fit variables-- for example, to fit one variable with parameters you have learned from four other variables or less. In other words, you will be predicting the values of one variable from the values of several other variables using aggregation functions. Enjoy the next two weeks.</p>
+<p>Extend what you have learned in weeks 3 and 4 by using real data sets to make predictions based on the data models.</p>
+<p>Remember that building good models will require you to apply what you have learned about data transformation in&nbsp;weeks 3 and 4 and extend upon it through some programming in R.</p>
+<h3 id="this-weeks-aims">This week&rsquo;s aims</h3>
+<p>This week you will learn the following functions:</p>
+<ul>
+<li>be able to apply data fitting code in order to define parameters and interpret datasets</li>
+<li>be able to make reasonable assessments of goodness of fit and accuracy of models.</li>
+</ul>
+<p>Throughout these last few weeks we have already learnt to do a lot with R and aggregation functions. You should be able to:</p>
+<ul>
+<li>use aggregation functions defined with respect to weighting vectors to calculate the output of one or multiple input vectors</li>
+<li>for a given dataset determine by comparison whether one function (or set of weights) fits better than another.</li>
+</ul>
+<p>However, we do need the means to obtain these weights from raw data, which is where fitting methods come in. By minimising an error measure, we can obtain weights and use them in conjunction with aggregation functions to obtain meaningful models.</p>
+<h3 id="fitting-aggregation-functions">Fitting Aggregation Functions</h3>
+<p>Just like with regression in statistics, we can find the best fitting parameters for an aggregation function. The idea is usually to minimise the sum of differences between predicted and observed values, with respect to the possible choices of weighting vector<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">w</mi></mrow></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mathbf w\)"}</annotation></semantics></math>.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><msub><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">m</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">m</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">z</mi><mi mathvariant="normal">e</mi><mtext>&#xA0;</mtext></mrow><mrow class="MJX-TeXAtom-ORD"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">w</mi></mrow></mrow></msub><munderover><mo movablelimits="false">&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>D</mi></munderover><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">(</mo><msub><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mi>j</mi></msub><mo stretchy="false">)</mo><mo>&#x2212;<!-- − --></mo><msub><mi>y</mi><mi>j</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mstyle><annotation encoding="latex">{"version":"1.1","math":"\mathrm{minimize \ }_{\mathbf w} \sum\limits_{j=1}^D (A(\mathbf x_j) - y_j)^2"}</annotation></semantics></math></p>
+<p>where&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo>&#x2026;<!-- … --></mo><mo>,</mo><mi>D</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(j = 1,2,\ldots,D\)"}</annotation></semantics></math>&nbsp;are the data points that we have observations for,&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>y</mi><mi>j</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y_j\)"}</annotation></semantics></math>&nbsp;is our observed output,&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mi>j</mi></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\mathbf x_j\)"}</annotation></semantics></math>&nbsp;is the input vector associated with that output and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>A</mi><mo stretchy="false">(</mo><msub><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">x</mi></mrow><mi>j</mi></msub><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(A(\mathbf x_j)\)"}</annotation></semantics></math>&nbsp;is our predicted value.</p>
+<p>Usually, however, it&rsquo;s a slightly harder problem than in the usual statistical approach because we have restrictions on our weights.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><msub><mi>w</mi><mi>i</mi></msub><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn><mo>,</mo><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="normal">f</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">r</mi><mtext>&#xA0;</mtext><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi></mrow><mi>i</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"w_i \geq 0, \mathrm{for \ all} i"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><munderover><mo movablelimits="false">&#x2211;<!-- ∑ --></mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>w</mi><mi>i</mi></msub><mo>=</mo><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\sum\limits_{i=1}^n w_i =1"}</annotation></semantics></math></p>
+<p>We can also minimize least absolute deviation.</p>
+<p>We can essentially use this process for one of two purposes:</p>
+<ul>
+<li>predicting the outputs for unknown/new data</li>
+<li>making inferences about the &lsquo;importance&rsquo; of each variable based on the fitted weighting vector.</li>
+</ul>
+<h2 id="your-task">Activity</h2>
+<p>You will be supplied with the appropriate R tools to complete the tasks this week. These R tools require the use of a package &lsquo;lpSolve&rsquo;, which uses linear programming (introduced in weeks 7 and 8).</p>
+<p>For now, type the following in your RStudio console to install the package onto your system:</p>
+<ul>
+<li>install.packages(lpSolve).</li>
+</ul>
+<p>IpSolve uses linear programming which you will be introduced to greater detail in weeks 7 and 8.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>
