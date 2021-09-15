@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.overrides.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<p><img src="../images/Example-toy-company-image-1.jpeg" alt="Red model train engine car rounds a curved track of a mountain in a lush green and woods landscape" title="Red model train engine car rounds a curved track of a mountain in a lush green and woods landscape" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<address><a href="https://www.gettyimages.com.au" target="_blank" rel="noopener noreferrer">&copy; Getty Images</a></address>
+<h5>A model train</h5>
+<h1>Example - Toy company</h1>
+<p></p>
+<p>We are in charge of a toy company currently producing two types of toys: soldiers and trains.</p>
+<p>After some research and data collection/analysis, these are the facts that we have determined:</p>
+<p>Each soldier built:</p>
+<ul>
+<li>sells for&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>27</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$27\)"}</annotation></semantics></math>&nbsp;and uses&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>10</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$10\)"}</annotation></semantics></math>&nbsp;worth of raw materials</li>
+<li>costs x$14$$ for labour per unit</li>
+<li>requires 2 hours of finishing labour per unit</li>
+<li>requires 1 hour of carpentry labour per unit</li>
+</ul>
+<p>Each train built:&nbsp;</p>
+<ul>
+<li>sells for&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>21</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$21\)"}</annotation></semantics></math>&nbsp;and uses&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>9</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$9\)"}</annotation></semantics></math>&nbsp;worth of raw materials</li>
+<li>costs&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>10</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$10\)"}</annotation></semantics></math>&nbsp;for labour per unitrequires 1 hour of finishing labour per unit</li>
+<li>requires 1 hour of carpentry labour per unit</li>
+</ul>
+<p>Resources:</p>
+<ul>
+<li>unlimited raw material</li>
+<li>100 hours of available finishing labour every week</li>
+<li>80 hours of available carpentry labour every week</li>
+</ul>
+<p>Demand:</p>
+<ul>
+<li>since trains are a new product, demand is unknown</li>
+<li>previous data shows that at least 40 soldiers are bought each week&nbsp;</li>
+</ul>
+<p>We&rsquo;ll make the assumption that every product produced is sold, and that our objective is to maximise our profit. Before we build an LP model, though, it may help to organise the above data into a table and do some calculations.</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td><strong>Finishing Labour</strong></td>
+<td><strong>Carpentry Labour</strong></td>
+<td><strong>Profit</strong></td>
+</tr>
+<tr>
+<td>Soldier</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"2"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>27</mn><mo>&#x2212;<!-- − --></mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>10</mn><mo>&#x2212;<!-- − --></mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>14</mn><mo>=</mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>3</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\$27-\$10-\$14 =\$3"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Trains</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>1</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"1"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>21</mn><mo>&#x2212;<!-- − --></mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>9</mn><mo>&#x2212;<!-- − --></mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>10</mn><mo>=</mo><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>2</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\$21-\$9-\$10 = \$2"}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td>Labour Limits</td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"100"}</annotation></semantics></math></td>
+<td><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mn>80</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"80"}</annotation></semantics></math></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Now we can build our LP model!</p>
+<h4 id="decision-variables">Decision Variables</h4>
+<p>Let&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>s</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(s\)"}</annotation></semantics></math>&nbsp;be the number of soldiers to be produced each week, and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>t</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(t\)"}</annotation></semantics></math>&nbsp;be the number of trains to be produced each week.&nbsp;</p>
+<h4 id="objective-function">Objective Function:</h4>
+<p>The breakdown for this calculation would be:</p>
+<p></p>
+<p><img src="../a36.png" alt="a" title="a" style="max-width: 100%;" data-d2l-editor-default-img-style="true" /></p>
+<p>which matches up with the values in our Profit column. Alternatively, we can just read off the numbers in the Profit column, since the calculations have been done there already.</p>
+<p>Since we want to maximise our profit, our objective function is:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtext>max&#xA0;</mtext><mi>z</mi><mo>=</mo><mn>3</mn><mi>s</mi><mo>+</mo><mn>2</mn><mi>t</mi><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\text{max } z = 3s+2t
+\\"}</annotation></semantics></math></p>
+<h4 id="constraints">Constraints</h4>
+<p>Each week, we cannot use more than 100&nbsp;hours of finishing labour. We can read this off the first column of our table.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mn>2</mn><mi>s</mi><mo>+</mo><mi>t</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+2s+t \leq 100
+\\"}</annotation></semantics></math></p>
+<p>Each week, we cannot use more than 80 hours of carpentry labour, which reads off the second column of our table.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>+</mo><mi>t</mi><mo>&#x2264;<!-- ≤ --></mo><mn>80</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s+t \leq 80
+\\"}</annotation></semantics></math></p>
+<p>Maximum weekly demand of 40 soldiers.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>&#x2265;<!-- ≥ --></mo><mn>40</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s \geq 40
+\\"}</annotation></semantics></math></p>
+<p>Non-negativity constraints (since we cannot have a negative amount of soldiers and trains).</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>,</mo><mi>t</mi><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s, t \geq 0
+\\"}</annotation></semantics></math></p>
+<p>Our full LP model combines all the equations together, giving us:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtext>max&#xA0;</mtext><mi>z</mi><mo>=</mo><mn>3</mn><mi>s</mi><mo>+</mo><mn>2</mn><mi>t</mi><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\text{max } z = 3s+2t
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mn>2</mn><mi>s</mi><mo>+</mo><mi>t</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+2s+t \leq 100
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>+</mo><mi>t</mi><mo>&#x2264;<!-- ≤ --></mo><mn>80</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s+t \leq 80
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>&#x2265;<!-- ≥ --></mo><mn>40</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s \geq 40
+\\"}</annotation></semantics></math></p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mi>s</mi><mo>,</mo><mi>t</mi><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+s, t \geq 0
+\\"}</annotation></semantics></math></p>
+<p>The solution to this LP is to build 40 soldiers and 20 trains, resulting in&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi mathvariant="normal">&#x0024;<!-- $ --></mi><mn>160</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(\$160\) "}</annotation></semantics></math>&nbsp;total profit. We'll confirm this solution when&nbsp;we&nbsp;solve it via the graphical method, as shown below.&nbsp;</p>
+<p><img src="PastedImage_9bd82fol45bf4un3lv9ays7j7ts5xh16001122221174.png" data-d2l-editor-default-img-style="true" style="max-width: 100%;" /></p>
+<h2 id="your-task">Activity</h2>
+<p>This scenario is (obviously) simplified for the purposes of demonstrating linear programming. Typically the values given are usually not so clear-cut, and some of these values can only be found through data analysis and further calculations.</p>
+<ul>
+<li>Which values do you think are more/less plausible in terms of how they&rsquo;re obtained through data analysis? Which of these values would be less concrete and need a bit more leeway?</li>
+</ul>
+<p>In&nbsp;weeks 1en&amp;dash6&nbsp;we went through a process of collecting, cleaning then transforming data, then we aimed to fit it to certain models and used that to estimate certain data points.</p>
+<ul>
+<li>Where do you imagine this kind of modelling fits into, or deviates from, the above pipeline and why?</li>
+</ul>
+<p>Realistically it is typical for clients to come back with changing requirements or a constraint that they had previously forgotten about.</p>
+<ul>
+<li>What are some &lsquo;unexpected&rsquo; constraints that can happen to this scenario?</li>
+</ul>
+<p></p>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

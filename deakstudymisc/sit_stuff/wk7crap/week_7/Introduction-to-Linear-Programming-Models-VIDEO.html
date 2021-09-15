@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1>Introduction to Linear Programming Models</h1>
+<div>
+<p>Apply linear programming modelling to real world scenarios in order to make decisions.</p>
+<p>The core idea of linear programming (and operations research/predictive analytics in general) is that we build a model based on the scenario and data given, then use that model to inform our decisions.</p>
+<p>Linear programming is the first of many techniques that allows us to express a problem, with a set of quantified limitations, and an &lsquo;optimised&rsquo; solution.</p>
+<p>It has proven it&rsquo;s value in areas such resource management, amongst others, to improve the efficiency of processes, such as manufacturing and energy, food and agriculture production, engineering, and transport.</p>
+<h3 id="elements-of-a-linear-programming-model">Elements of a Linear Programming Model</h3>
+<p>A linear programming (LP) model typically contains:</p>
+<p><strong>decision variables</strong>&nbsp;which usually represent an amount or quantity of material.</p>
+<p>An&nbsp;<strong>objective function</strong>&nbsp;which represents what we want to maximimse/minimise e.g. minimising costs, maximising profits.</p>
+<p>Some models may not necessarily have objective functions - these problems are called&nbsp;<strong>constraint satisfaction</strong>&nbsp;problems.</p>
+<p>It is possible to combine multiple objectives into a single objective function.&nbsp;<strong>constraints</strong>&nbsp;which represent any restrictions on the problem itself e.g. resource/budget constraints demand/supply, etc.</p>
+<p>Some problems may not have any constraints at all and as such are called&nbsp;<strong>unconstrained optimisation</strong>&nbsp;problems, which includes machine learning and AI problems.</p>
+<p>All equations (objective function, constraints) in a LP model are linear, meaning that we cannot multiply any variables together or take powers of any variables. Such would increase the complexity of the problem and change its nature.</p>
+<p>For example:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd /></mtr><mtr><mtd><mn>4</mn><mi>x</mi><mo>+</mo><mn>3</mn><mi>y</mi><mo>,</mo><mo>&#x2212;<!-- − --></mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn><mi>y</mi><mo>&#x2265;<!-- ≥ --></mo><mn>2</mn></mtd><mtd><mspace width="1em" /><mtext>Linear</mtext></mtd></mtr><mtr><mtd /></mtr><mtr><mtd><mi>x</mi><mi>y</mi><mo>+</mo><mn>4</mn><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mo>&#x2212;<!-- − --></mo><mn>1</mn><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x2212;<!-- − --></mo><msup><mi>y</mi><mn>2</mn></msup></mtd><mtd><mspace width="1em" /><mtext>Non-linear</mtext></mtd></mtr><mtr><mtd /></mtr></mtable></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\begin{align} 
+\\
+4x+3y, -2x+5y \geq 2 &amp; \quad \text{Linear}\\
+\\
+xy+4y \leq -1, x^2-y^2 &amp; \quad \text{Non-linear}\\
+\\ \end{align} %]&gt;"}</annotation></semantics></math></p>
+<h4 id="applications-of-operations-researchpredictive-analytics">Applications of Operations Research/Predictive Analytics</h4>
+<p>Linear programming is just the start of a family of techniques in operations research that aims to build models for various scenarios. For now, here are some interesting articles that demonstrate the power of operations research and predictive analytics!</p>
+<ul>
+<li>Skull deformities in children can cause developmental difficulties, but the surgery required to reshape these skulls is very difficult as surgeons are required to eye-ball much of their efforts.</li>
+</ul>
+<p>Using a <a href="https://uwaterloo.ca/combinatorics-and-optimization/news/optimization-techniques-guide-surgeons-sickkids" target="_blank" rel="noopener noreferrer">combination of integer programming</a>&nbsp;(an extension of linear programming) and dynamic programming, researchers at the University of Waterloo were able to determine an algorithm that recommends to surgeons where they should cut the skull for the best results.</p>
+<ul>
+<li>Hearthstone is a popular digital card game made by Blizzard Entertainment. One component of Hearthstone is called the &lsquo;Arena&rsquo;, where players build a deck of cards (from a pseudo-random selection) and then duel against other players.</li>
+</ul>
+<p>This blog post by a senior data scientist describes how they ensure that the win rates in Arena are fair using a <a href="https://playhearthstone.com/en-us/blog/22788308" target="_blank" rel="noopener noreferrer">combination of data analysis and unconstrained optimisation.</a></p>
+<ul>
+<li>Biarri is an Australian-based company that focuses on the use of commercial mathematics to provide solutions to various problems to a number of companies all over the globe.</li>
+</ul>
+<p>This blog post briefly describes their <a href="https://biarri.com/biarri-score-predictive-analytics-better-integrated-healthcare/" target="_blank" rel="noopener noreferrer">application of predictive analytics</a>&nbsp;to anticipate patient readmission rates and to better manage the hospital&rsquo;s overall effectiveness of care.</p>
+<p>There is an interesting paper about using a stochastic optimisation for<a href="http://www.optimization-online.org/DB_HTML/2020/04/7719.html" target="_blank" rel="noopener">ventilator allocation to combat COVID-19</a>.</p>
+<p style="text-align: center;"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_qefbves9&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_a4uhaeft" width="500" height="281" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="your-task">Activity</h2>
+<p>Let us know if you&rsquo;ve heard of and/or found any interesting case studies that describe operations research and/or predictive analytics in action!</p>
+<p>Since AI and machine learning problems generally fall under this category and are more commonly reported in the media, we&rsquo;d love to hear about those kinds of problems as well.</p>
+<p>Share any exciting find in the discussion forum and respond to others with your own observations on what they have found.&nbsp;</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

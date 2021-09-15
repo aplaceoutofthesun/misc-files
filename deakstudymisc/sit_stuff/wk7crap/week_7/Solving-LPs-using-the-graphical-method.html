@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1>Solving LPs Using The Graphical Method</h1>
+<p></p>
+<p>Now let&rsquo;s start figuring out solutions for our toy company in a visual way!</p>
+<p>We&rsquo;ll start by looking at the LP model from our 'Toy Company Example'.&nbsp;</p>
+<p>The goal is to sketch all constraints and the objective function in order to find the optimal solution.</p>
+<p>We repeat the LP model here but with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>s</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(s\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>t</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(t\)"}</annotation></semantics></math>&nbsp;replaced with&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x\)"}</annotation></semantics></math>&nbsp;and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y\)"}</annotation></semantics></math>&nbsp;respectively for the purposes of aligning them to the standard&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>&#x2212;<!-- − --></mo><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x-y\)"}</annotation></semantics></math>&nbsp;axes.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtext>max&#xA0;</mtext><mi>z</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi><mspace linebreak="newline" /><mspace linebreak="newline" /><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn><mspace linebreak="newline" /><mspace linebreak="newline" /><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>80</mn><mspace linebreak="newline" /><mspace linebreak="newline" /><mi>x</mi><mo>&#x2265;<!-- ≥ --></mo><mn>40</mn><mspace linebreak="newline" /><mspace linebreak="newline" /><mi>x</mi><mo>,</mo><mi>y</mi><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\text{max } z = 3x+2y
+\\
+
+\\
+2x+y \leq 100 
+\\
+
+\\
+x+y \leq 80 
+\\
+
+\\
+x \geq 40
+\\
+
+\\
+x, y \geq 0 
+\\"}</annotation></semantics></math></p>
+<p>We will aim to solve this using a graphical method which involves sketching these equations and areas on a graph.</p>
+<p>The video above will demonstrate the full process which expands on the writeup below.</p>
+<h4 id="sketching-constraints">Sketching Constraints</h4>
+<p>The easiest way to draw straight lines on a graph is to find any two points on the line, plot them on the graph and then draw the line through them.</p>
+<p>The easiest two points to find are the&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x\)"}</annotation></semantics></math>-intercept and the&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y\)"}</annotation></semantics></math>&nbsp;-intercept i.e. the&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x\)"}</annotation></semantics></math>-coordinate at&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y=0\)"}</annotation></semantics></math>&nbsp;and the&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y\)"}</annotation></semantics></math>-coordinate at&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x\)"}</annotation></semantics></math>&nbsp;respectively.</p>
+<h4 id="example">Example:</h4>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2x+y \leq 100\)"}</annotation></semantics></math>&nbsp;we want to first draw the line&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2x+y = 100\)"}</annotation></semantics></math>&nbsp;.&nbsp; We find our two points as follows:</p>
+<ul>
+<li>Setting&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x=0\)"}</annotation></semantics></math>&nbsp;gives us&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi><mo>=</mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y=100\)"}</annotation></semantics></math>, and therefore our first coordinate is&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>100</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((0,100)\)"}</annotation></semantics></math>.</li>
+<li>Setting&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y=0\)"}</annotation></semantics></math>&nbsp;gives us<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mi>x</mi><mo>=</mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2x = 100\)"}</annotation></semantics></math>, giving us&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>=</mo><mn>50</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x=50\)"}</annotation></semantics></math>&nbsp;and therefore our second coordinate is&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>50</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((50,0)\)"}</annotation></semantics></math>.</li>
+</ul>
+<p><span style="font-size: 15.2px;"></span></p>
+<p></p>
+<p><span style="font-size: 15.2px;">To determine which side of the line to shade (to represent the inequality), choose a random point on one side and see if it satisfies the constraint. If it does, we can shade the side containing the point, and it not, we shade the other side.</span></p>
+<h4 id="example-1">Example:</h4>
+<p>With&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2x+y \leq 100\)"}</annotation></semantics></math>,&nbsp;let&rsquo;s test the point&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((0,0)\)"}</annotation></semantics></math>. Substituting&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((x,y) = (0,0)\)"}</annotation></semantics></math>&nbsp;into our inequality gives us&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mo>&#x00D7;<!-- × --></mo><mn>0</mn><mo>+</mo><mn>0</mn><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2\times 0 + 0 \leq 100\)"}</annotation></semantics></math>&nbsp;which is satisfied, so therefore we can shade the bottom left side of the line (making sure to keep within the axes!).</p>
+<p>After we do this for all constraints, the area where all the shading overlaps is called a&nbsp;<strong>feasible region</strong>. This is where we&rsquo;ll look for our optimal solution using the objective function.</p>
+<h3 id="types-of-solutions">Types of Solutions</h3>
+<h4 id="feasible-solution"><em>feasible solution</em></h4>
+<p>Is one that satisfies all constraints. For example, the point&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>0</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x = 0, y = 0\)"}</annotation></semantics></math>&nbsp;is a feasible solution although not the best solution.</p>
+<p>The collection of points in the graph that make up a feasible solution is called the&nbsp;<strong>feasible region</strong>.</p>
+<h4 id="infeasible-solution"><em>infeasible solution</em></h4>
+<p>Is one that violates one or more of the constraints. For example,&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>x</mi><mo>=</mo><mn>50</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>50</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x = 50, y = 50\)"}</annotation></semantics></math>&nbsp;is an infeasible solution since it violates the constraint&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(2x+y \leq 100\)"}</annotation></semantics></math>.</p>
+<p>A&nbsp;<em>optimal solution</em>&nbsp;is a feasible solution that satisfies the objective function (which in this case, is maximising the profit).</p>
+<p>It is possible to have more than one optimal solution and we will look at cases where this occurs.</p>
+<h4 id="finding-the-optimal-solution">Finding the Optimal Solution</h4>
+<p>Finding the optimal solution visually requires sketching our objective function and moving it up and down the graph until we reach the edge of the feasible region.</p>
+<p>We start with a value estimate for&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>z</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(z\)"}</annotation></semantics></math>&nbsp;(e.g.&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>z</mi><mo>=</mo><mn>50</mn></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(z=50\)"}</annotation></semantics></math>.&nbsp;&nbsp;</p>
+<p>and sketch our first&nbsp;<strong>isocost/isoprofit</strong>&nbsp;line. The goal is now to maintain the slope of this line (e.g. with a ruler) and since our objective is to maximise our profit, we&rsquo;ll want to move our objective function up until we reach a corner or an edge of the feasible region.</p>
+<h3 id="types-of-solutions-1">Types of Solutions</h3>
+<p>Using the graphical method, there are four different scenarios that can happen:</p>
+<ol>
+<li><strong>Single feasible solution</strong>&nbsp;- As we saw in our Toy Company example, the objective function stops at a single corner of the feasible region, giving a single optimal solution.</li>
+<li><strong>No solution</strong>&nbsp;- LPs without a feasible region will have no solution.</li>
+<li><strong>Infinite Solutions</strong>&nbsp;- This happens when the objective function lines up with an edge on the feasible region. This means that any point along that edge is also an optimal solution.</li>
+<li><strong>Unbounded Feasible Region</strong>&nbsp;- There also exist LPs with feasible regions that are not enclosed. With a maximisation function, this effectively means that there is no optimal solution since we can always find a bigger one.</li>
+</ol>
+<h2 id="your-task">Activity</h2>
+<p>The solutions to the LPs given in the topic 'Assembly Line'&nbsp;are as below. Solve them using the graphical method - the solutions can be found <a href="https://cloudstor.aarnet.edu.au/plus/s/BIMRosNnYJm7fbW" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<h4 id="farmer-daves-decision-problem">Farmer Dave&rsquo;s Decision Problem</h4>
+<p>Let&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1\)"}</annotation></semantics></math>&nbsp;be the number of pounds of Feed 1 to purchase, and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>2</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_2\)"}</annotation></semantics></math>&nbsp;be the number of pounds of Feed 2 to purchase. The LP model can be given by:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd><mtext>min&#xA0;</mtext></mtd><mtd><mn>10</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>3</mn><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi>s</mi><mo>.</mo><mi>t</mi><mo>.</mo></mtd><mtd><mn>3</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>2</mn><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>60</mn></mtd></mtr><mtr><mtd /><mtd><mn>7</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>2</mn><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>84</mn></mtd></mtr><mtr><mtd /><mtd><mn>3</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>6</mn><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>72</mn></mtd></mtr><mtr><mtd /><mtd><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn></mtd></mtr></mtable><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\\
+\begin{align}
+\text{min } &amp; 10x_1 + 3x_2 
+\\
+s.t. &amp; 3x_1 + 2x_2 \geq 60 
+\\
+&amp; 7x_1+2x_2 \geq 84
+\\
+&amp; 3x_1+6x_2 \geq 72
+\\
+&amp; x_1, x_2 \geq 0
+\end{align}
+\\ %]&gt;"}</annotation></semantics></math></p>
+<h4 id="farmer-vickys-decision-problem">Farmer Vicky&rsquo;s Decision Problem</h4>
+<p>Let&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>1</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_1\)"}</annotation></semantics></math>&nbsp;be the number of kgs of corn to purchase and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><msub><mi>x</mi><mn>2</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(x_2\)"}</annotation></semantics></math>&nbsp;&nbsp;be the number of kgs of soybean to purchase. To minimise the cost, we have</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtext>min&#xA0;</mtext><mi>z</mi><mo>=</mo><mn>0.3</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>0.9</mn><msub><mi>x</mi><mn>2</mn></msub><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+\text{min } z = 0.3x_1 + 0.9x_2
+\\"}</annotation></semantics></math></p>
+<p>Daily requirement constraint:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>800</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+x_1 + x_2 \geq 800
+\\"}</annotation></semantics></math></p>
+<p>At least 30% protein:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd /><mtd><mfrac><mrow><mn>0.09</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>0.6</mn><msub><mi>x</mi><mn>2</mn></msub></mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac><mo>&#x2265;<!-- ≥ --></mo><mn>0.3</mn></mtd></mtr><mtr><mtd><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /></mtd><mtd><mn>0.09</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>0.6</mn><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>0.3</mn><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /></mtd><mtd><mi></mi><mo>&#x2212;<!-- − --></mo><mn>0.21</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>0.3</mn><msub><mi>x</mi><mn>2</mn></msub><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn></mtd></mtr></mtable></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\\
+\begin{align}
+&amp; \frac{0.09x_1 + 0.6x_2}{x_1+x_2} \geq 0.3
+\\
+\implies &amp; 0.09x_1+0.6x_2 \geq 0.3(x_1+x_2)
+\\
+\implies &amp; -0.21x_1 + 0.3x_2 \geq 0
+\end{align} %]&gt;"}</annotation></semantics></math></p>
+<p>At most 5% fibre:</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mo>&#x2212;<!-- − --></mo><mn>0.03</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>0.01</mn><msub><mi>x</mi><mn>1</mn></msub><mo>&#x2264;<!-- ≤ --></mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+-0.03x_1 + 0.01x_1 \leq 0
+\\"}</annotation></semantics></math></p>
+<div><span style="font-size: 15.2px;"></span></div>
+<div><span style="font-size: 15.2px;"></span></div>
+<hr />
+<p style="text-align: center;"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_kiwe073q&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_ge57waub" width="500" height="281" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<div style="padding-top: 20px;"><a href="#" class="navrep-button" target="_parent" title="Previous" style="padding: .5rem .5rem; font-size: 12pt; float: left;"> &lt; Previous</a> <a href="#" class="navrep-button" target="_parent" title="Next" style="padding: .5rem .5rem; font-size: 12pt; float: right;">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>

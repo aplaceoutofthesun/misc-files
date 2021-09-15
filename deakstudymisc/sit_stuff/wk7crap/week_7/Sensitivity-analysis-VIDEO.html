@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SEBE Template</title>
+<link rel="stylesheet" type="text/css" href="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-fl.css">
+</head>
+<!-- ------------------------------------------- -->
+<body class="cloudFirst">
+<h1>Sensitivity Analysis</h1>
+<div>
+<p><strong>How much flexibility do we have with our current solution?</strong></p>
+<p>Often times clients will want to know how much leeway and/or flexibility they have with their resources. Sensitivity analysis is the term given to this area and the types of analyses used is dependent on context (i.e. not restricted to linear programming). Let us approach this using the LP from 1.06 Toy Company which we repeat here below.</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd /></mtr><mtr><mtd><mtext>max&#xA0;</mtext><mi>z</mi></mtd><mtd><mi></mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi></mtd></mtr><mtr><mtd /></mtr><mtr><mtd /></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi></mtd><mtd><mi></mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mtd></mtr><mtr><mtd /></mtr><mtr><mtd /></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi></mtd><mtd><mi></mi><mo>&#x2264;<!-- ≤ --></mo><mn>80</mn></mtd></mtr><mtr><mtd /></mtr><mtr><mtd /></mtr><mtr><mtd><mi>x</mi></mtd><mtd><mi></mi><mo>&#x2265;<!-- ≥ --></mo><mn>40</mn></mtd></mtr><mtr><mtd /></mtr><mtr><mtd /></mtr><mtr><mtd><mi>x</mi><mo>,</mo><mi>y</mi></mtd><mtd><mi></mi><mo>&#x2265;<!-- ≥ --></mo><mn>0</mn></mtd></mtr><mtr><mtd /></mtr></mtable><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\begin{align}
+\\
+\text{max } z &amp; = 3x+2y \\
+\\
+
+\\
+2x+y &amp; \leq 100 \\
+\\
+\\
+x+y &amp; \leq 80 \\
+\\
+\\
+x &amp; \geq 40 \\
+\\
+\\
+x, y &amp; \geq 0\\
+\\
+\end{align}
+\\ %]&gt;"}</annotation></semantics></math></p>
+<p>The video above demonstrates a visual and interactive way of approaching it, which you can do yourself in <a href="https://www.desmos.com/calculator" target="_blank" rel="noopener noreferrer">Desmos</a> as well. This should hopefully give you a few ideas and insights to help reinforce the analysis below.</p>
+<p>The question we want to answer in this analysis below is:</p>
+<p>How would changes in the problem&rsquo;s objective function coefficients affect the optimal solution? That is, in the objective function&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mn>3</mn><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mn>2</mn><msub><mi>x</mi><mn>2</mn></msub></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(3x_1 + 2x_2\)"}</annotation></semantics></math>, what happens if we changed the 3 and/or the 2? In terms of the original problem, this is basically asking &lsquo;What is the range of profit I can make off a soldier or a train?&rsquo;</p>
+<p>We&rsquo;ll address this problem with respect to the soldier.</p>
+<p>The way to approach this analytically is to rewrite all the constraints in &lsquo;slope-intercept&rsquo; form, which is the form&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>c</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y = mx+c\)"}</annotation></semantics></math> or a similar variant, where&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>m</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(m\)"}</annotation></semantics></math> is the slope and&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>c</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(c\)"}</annotation></semantics></math> is the&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>y</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(y\)"}</annotation></semantics></math>-intercept.&nbsp;The goal is to identify the slope of each of the constraints and the objective function at the optimal solution.<span style="text-decoration: line-through;"></span></p>
+<p><span style="text-decoration: line-through;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd><mn>160</mn><mo>=</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi></mtd><mtd><mi></mi><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /><mi>y</mi><mo>=</mo><mo>&#x2212;<!-- − --></mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>x</mi><mo>+</mo><mn>160</mn></mtd></mtr><mtr><mtd><mn>2</mn><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>100</mn></mtd><mtd><mi></mi><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mo>&#x2212;<!-- − --></mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>100</mn></mtd></mtr><mtr><mtd><mi>x</mi><mo>+</mo><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mn>80</mn></mtd><mtd><mi></mi><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /><mi>y</mi><mo>&#x2264;<!-- ≤ --></mo><mo>&#x2212;<!-- − --></mo><mi>x</mi><mo>+</mo><mn>80</mn></mtd></mtr></mtable><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\\
+\begin{align}
+160 = 3x+2y &amp; \implies y = -\frac{3}{2}x + 160
+\\
+2x+y \leq 100 &amp; \implies y \leq -2x + 100
+\\
+x+y \leq 80 &amp; \implies y \leq -x + 80
+\end{align}
+\\ %]&gt;"}</annotation></semantics></math></span></p>
+<p><a href="../images/Sensitivitiy-analysis-image-1.png" target="_blank" rel="noopener noreferrer">Graphical Method Slopes Image</a>&nbsp;</p>
+<p>If we pivot at&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>40</mn><mo>,</mo><mn>20</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((40, 20)\)"}</annotation></semantics></math>&nbsp;in a clockwise direction, making the slope of the objective function approach<span style="text-decoration: line-through;"></span> -2, we&nbsp;approach the slope of the finishing constraint. Beyond this point, the optimal solution changes from&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>40</mn><mo>,</mo><mn>20</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((40,20)\)"}</annotation></semantics></math> to&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mo stretchy="false">(</mo><mn>50</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mstyle><annotation encoding="latex">{"version":"1.1","math":"\((50,0)\)"}</annotation></semantics></math>.<span style="text-decoration: line-through;"></span></p>
+<p>Moving in an anticlockwise direction, the slope of the objective function does not approach any constraint in particular as it moves towards 0. However our optimal solution still won&rsquo;t change.</p>
+<p>Therefore, to keep the current solution optimal, the slope of the objective function would have to be between -2 and 0 for the current optimal solution to remain optimal. We can technically move beyond 0</p>
+<p>The way to write this algebraically is to start with the objective function, but to replace the coefficient of interest with a dummy variable (we use&nbsp;<math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mstyle><mi>c</mi></mstyle><annotation encoding="latex">{"version":"1.1","math":"\(c\)"}</annotation></semantics></math> here).</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd><mi>z</mi></mtd><mtd><mi></mi><mo>=</mo><mi>c</mi><mi>x</mi><mo>+</mo><mn>2</mn><mi>y</mi></mtd></mtr><mtr><mtd><mspace width="thickmathspace" /><mo stretchy="false">&#x27F9;<!-- ⟹ --></mo><mspace width="thickmathspace" /><mi>y</mi></mtd><mtd><mi></mi><mo>=</mo><mo>&#x2212;<!-- − --></mo><mfrac><mi>c</mi><mn>2</mn></mfrac><mi>x</mi><mo>+</mo><mi>z</mi></mtd></mtr></mtable></mstyle><annotation encoding="latex">{"version":"1.1","math":"% &lt;![CDATA[
+\\
+\begin{align}
+z &amp; = cx + 2y
+\\
+\implies y &amp; = -\frac{c}{2}x + z
+\\
+\end{align} %]&gt;"}</annotation></semantics></math></p>
+<p>Since we&rsquo;ve established the slope to be between -2 and 0, we can write:<span style="text-decoration: line-through;"></span></p>
+<p><span style="text-decoration: line-through;"><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mo>&#x2212;<!-- − --></mo><mn>2</mn><mo>&#x2264;<!-- ≤ --></mo><mo>&#x2212;<!-- − --></mo><mfrac><mi>c</mi><mn>2</mn></mfrac><mo>&#x2264;<!-- ≤ --></mo><mn>0</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+-2 \leq -\frac{c}{2} \leq 0
+\\"}</annotation></semantics></math></span></p>
+<p>Multiplying all sides by -2 (note that multiplying by a negative number flips the signs) gives</p>
+<p><math title=""  xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mstyle><mspace linebreak="newline" /><mn>0</mn><mo>&#x2264;<!-- ≤ --></mo><mi>c</mi><mo>&#x2264;<!-- ≤ --></mo><mn>4</mn><mspace linebreak="newline" /></mstyle><annotation encoding="latex">{"version":"1.1","math":"\\
+0 \leq c \leq 4
+\\
+"}</annotation></semantics></math></p>
+<p>Therefore the current solution would remain optimal as long as the first coefficient (i.e. profit per soldier) is between 0 and 4. If we go beyond 4, then we&rsquo;d need to adjust production from making 40 soldiers and 20 trains, to making 50 soldiers and 0 trains instead to maximise our profit.</p>
+<p style="text-align: center;"><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2006242/sp/200624200/embedIframeJs/uiconf_id/32026212/partner_id/2006242?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_fb5hsw34&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=0_52328t58" width="500" height="281" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe></p>
+<table class="tableClear" style="width: 880px;">
+<tbody>
+<tr>
+<td style="width: 59px;"></td>
+<td style="width: 466.433px;"><a id="viewTranscript">View transcript</a></td>
+<td style="width: 271.567px;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="your-task">Activity</h2>
+<p>If you are experiencing any difficulties with the programming functions presented in the content above, share your thoughts in the discussion forum.</p>
+</div>
+<hr />
+<div style="padding-top: 20px;"><a href="#" class="navrep-button  navrep-button-prev" target="_parent" title="Previous"> &lt; Previous</a> <a href="#" class="navrep-button navrep-button-next" target="_parent" title="Next">Next &gt;</a></div>
+<p style="padding-bottom: 50px;"></p>
+</body>
+<script defer type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/sebe-master.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-intmedia-donotedit/templates/open-source-css-and-js/prism/prism.js"></script>
+
+<script  type="text/javascript">
+function localProc(){
+
+  console.log("");
+  console.log("ready!");
+
+ 
+}
+</script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-video.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-mathjax.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl-nav.js"></script>
+<script type="text/javascript" src="/content/enforced/384049-SEBE_LST_01/z-sebe-lst-learning-design/fl-dual-delivery/js/sebe-fl.js"></script>
+</html>
